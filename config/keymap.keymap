@@ -20,11 +20,11 @@
 
         layer_0 {
             bindings = <
-&none  &none               &none             &none           &none             &none                                           &none        &none  &none               &none                  &none                  &none
-&none  &kp Q               &kp W             &kp E           &kp R             &kp T                                           &kp Y        &kp U  &kp I               &kp O                  &kp P                  &none
-&none  &kp A               &kp S             &kp D           &kp F             &kp G                 &none      &none          &kp H        &kp J  &kp K               &kp L                  &kp MINUS              &none
-&none  &mt LEFT_CONTROL Z  &mt LEFT_SHIFT X  &mt LEFT_ALT C  &kp V             &kp B                 &kp TAB    &kp ESCAPE     &kp N        &kp M  &mt LEFT_ALT COMMA  &mt LEFT_SHIFT PERIOD  &mt LEFT_CONTROL FSLH  &none
-&none  &kp ESCAPE          &kp LGUI          &kp LALT        &lt 1 LANGUAGE_2  &mt LEFT_SHIFT SPACE  &lt 3 TAB  &kp BACKSPACE  &lt 2 ENTER  &none  &none               &kp LEFT_GUI           &kp LANGUAGE_1         &none
+&none  &none               &none             &none           &none             &none                                                  &none        &none  &none               &none                  &none                  &none
+&none  &kp Q               &kp W             &kp E           &kp R             &kp T                                                  &kp Y        &kp U  &kp I               &kp O                  &kp P                  &none
+&none  &kp A               &kp S             &kp D           &kp F             &kp G                 &none             &none          &kp H        &kp J  &kp K               &kp L                  &kp MINUS              &none
+&none  &mt LEFT_CONTROL Z  &mt LEFT_SHIFT X  &mt LEFT_ALT C  &kp V             &kp B                 &kp TAB           &kp ESCAPE     &kp N        &kp M  &mt LEFT_ALT COMMA  &mt LEFT_SHIFT PERIOD  &mt LEFT_CONTROL FSLH  &none
+&none  &kp LANGUAGE_2      &kp LGUI          &kp LALT        &lt 1 LANGUAGE_2  &mt LEFT_SHIFT SPACE  &lt 3 LANGUAGE_1  &kp BACKSPACE  &lt 2 ENTER  &none  &none               &kp LEFT_GUI           &kp LANGUAGE_1         &none
             >;
         };
 
