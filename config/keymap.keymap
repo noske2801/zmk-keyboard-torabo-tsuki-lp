@@ -40,11 +40,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans            &trans            &trans      &trans      &trans                      &trans          &trans         &trans            &trans             &trans         &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  &kp LS(N6)      &kp LS(N7)     &kp LS(N8)        &kp LS(N9)         &kp LS(N0)     &trans
-&trans  &kp N1            &kp N2            &kp N3      &kp N4      &kp N5      &trans  &trans  &kp LEFT_BRACE  &kp MINUS      &kp EQUAL         &kp RIGHT_BRACE    &kp COLON      &trans
-&trans  &kp N6            &kp N7            &kp N8      &kp N9      &kp N0      &trans  &trans  &kp LS(MINUS)   &kp LS(EQUAL)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
-&trans  &trans            &trans            &trans      &trans      &trans      &trans  &trans  &kp TAB         &kp DEL        &trans            &trans             &trans         &trans
+&trans  &trans            &trans                      &trans                    &trans           &trans                       &trans           &trans          &trans          &trans           &trans         &trans
+&trans  &trans            &kp KP_NUMBER_7             &kp KP_NUMBER_8           &kp KP_NUMBER_9  &kp CARET                    &kp F5           &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11        &trans
+&trans  &kp KP_NUMBER_0   &kp KP_NUMBER_4             &kp KP_NUMBER_5           &kp KP_NUMBER_6  &kp PERCENT  &trans  &trans  &kp HOME         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END        &trans
+&trans  &kp LEFT_CONTROL  &mt LEFT_SHIFT KP_NUMBER_1  &mt LEFT_ALT KP_NUMBER_2  &kp KP_NUMBER_3  &trans       &trans  &trans  &kp KP_MULTIPLY  &kp KP_PLUS     &kp KP_COMMA    &kp KP_DOT       &kp KP_DIVIDE  &trans
+&trans  &trans            &trans                      &trans                    &trans           &trans       &trans  &trans  &trans           &trans          &trans          &trans           &trans         &trans
             >;
         };
 
