@@ -30,11 +30,11 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4   &trans     &mkp MB5   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans            &trans             &trans        &trans       &trans                       &trans  &trans            &trans             &trans     &trans         &trans
+&trans  &kp SINGLE_QUOTE  &kp AMPERSAND      &kp LPAR      &kp RPAR     &kp GRAVE                    &kp AT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON  &kp SEMI       &trans
+&trans  &kp EXCLAMATION   &kp DOUBLE_QUOTES  &kp HASH      &kp PERCENT  &kp PIPE    &trans  &trans   &trans  &mkp LCLK         &mkp MCLK          &mkp RCLK  &kp UNDER      &trans
+&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT     &kp LEFT_ALT  &kp SPACE    &kp DOLLAR  &trans  &trans   &trans  &mkp MB4          &trans             &mkp MB5   &kp BACKSLASH  &trans
+&trans  &trans            &trans             &trans        &trans       &trans      &trans  &kp DEL  &trans  &trans            &trans             &trans     &trans         &trans
             >;
         };
 
