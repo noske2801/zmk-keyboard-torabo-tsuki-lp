@@ -20,16 +20,66 @@
         };
     };
 
+    macros {
+        /omit-if-no-ref/
+
+        /* AMLを解除するマクロ */
+        exit_AML: exit_AML {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&tog_off 7>;
+        };
+
+        /omit-if-no-ref/
+
+        /* KeyPress後にAMLを解除するマクロ */
+        kp_exit_AML: kp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
+        };
+    };
+
+    behaviors {
+        /omit-if-no-ref/
+
+        /* レイヤーを無効化するbehavior */
+        tog_off: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+
+        /omit-if-no-ref/
+
+        /* ホールド時はkp、タップ時はkp_exit_AMLを使うhold-tap behavior (修飾キーではmtの代わりにこれを使用)*/
+        mt_exit_AML_on_tap: mt_exit_AML_on_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_exit_AML_ON_TAP";
+            bindings = <&kp>, <&kp_exit_AML>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
             bindings = <
-&none  &none               &none             &none           &none             &none                                           &none        &none  &none               &none                  &none                  &none
-&none  &kp Q               &kp W             &kp E           &kp R             &kp T                                           &kp Y        &kp U  &kp I               &kp O                  &kp P                  &none
-&none  &kp A               &kp S             &kp D           &kp F             &kp G                 &none      &none          &kp H        &kp J  &kp K               &kp L                  &kp MINUS              &none
-&none  &mt LEFT_CONTROL Z  &mt LEFT_SHIFT X  &mt LEFT_ALT C  &kp V             &kp B                 &kp TAB    &mo 1          &kp N        &kp M  &mt LEFT_ALT COMMA  &mt LEFT_SHIFT PERIOD  &mt LEFT_CONTROL FSLH  &none
-&none  &kp ESCAPE          &kp LGUI          &kp LALT        &lt 1 LANGUAGE_2  &mt LEFT_SHIFT SPACE  &lt 3 TAB  &kp BACKSPACE  &lt 2 ENTER  &none  &none               &kp LEFT_GUI           &kp LANGUAGE_1         &none
+&none  &none                               &none                             &none                           &none             &none                                           &none        &none  &none                               &none                                  &none                                  &none
+&none  &kp Q                               &kp W                             &kp E                           &kp R             &kp T                                           &kp Y        &kp U  &kp I                               &kp O                                  &kp P                                  &none
+&none  &kp A                               &kp S                             &kp D                           &kp F             &kp G                 &none      &none          &kp H        &kp J  &kp K                               &kp L                                  &kp MINUS                              &none
+&none  &mt_exit_AML_on_tap LEFT_CONTROL Z  &mt_exit_AML_on_tap LEFT_SHIFT X  &mt_exit_AML_on_tap LEFT_ALT C  &kp V             &kp B                 &kp TAB    &mo 1          &kp N        &kp M  &mt_exit_AML_on_tap LEFT_ALT COMMA  &mt_exit_AML_on_tap LEFT_SHIFT PERIOD  &mt_exit_AML_on_tap LEFT_CONTROL FSLH  &none
+&none  &kp ESCAPE                          &kp LGUI                          &kp LALT                        &lt 1 LANGUAGE_2  &mt LEFT_SHIFT SPACE  &lt 3 TAB  &kp BACKSPACE  &lt 2 ENTER  &none  &none                               &kp LEFT_GUI                           &kp LANGUAGE_1                         &none
             >;
         };
 
