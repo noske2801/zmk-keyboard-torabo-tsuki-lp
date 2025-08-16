@@ -4,36 +4,32 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include "torabo_tsuki_lp_layouts.dtsi"
 
-/ {
-    /*
-     * Custom scroll configuration
-     *
-     * To adjust scroll behavior, modify the values below and re-build the firmware.
-     *
-     * Direction:
-     *   - To invert vertical scroll, change `vert-multiplier` to a negative value (e.g., -1).
-     *   - To invert horizontal scroll, change `horz-multiplier` to a negative value (e.g., -1).
-     *
-     * Speed:
-     *   - To double the speed, either double the `multiplier` or halve the `divisor`.
-     *   - To halve the speed, either halve the `multiplier` or double the `divisor`.
-     *   - Example: `multiplier = <2>`, `divisor = <1>` doubles the speed.
-     *   - Example: `multiplier = <1>`, `divisor = <2>` halves the speed.
-     */
-    custom_scroll_config {
-        vert-multiplier = <1>;
-        vert-divisor = <2>;
-        horz-multiplier = <-1>;
-        horz-divisor = <3>;
-    };
+/*
+ * Custom scroll configuration
+ *
+ * To adjust scroll behavior, modify the values below and re-build the firmware.
+ *
+ * Direction:
+ *   - To invert vertical scroll, change `VERT_MULT` to a negative value (e.g., -1).
+ *   - To invert horizontal scroll, change `HORZ_MULT` to a negative value (e.g., -1).
+ *
+ * Speed:
+ *   - To double the speed, change `VERT_MULT` to 2 (and `VERT_DIV` to 1).
+ *   - To halve the speed, change `VERT_DIV` to 2 (and `VERT_MULT` to 1).
+ */
+#define VERT_MULT   1
+#define VERT_DIV    1
+#define HORZ_MULT   1
+#define HORZ_DIV    1
 
+/ {
     scroll_scaler: scroll_scaler {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
         type = <INPUT_EV_REL>;
         codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
-        multipliers = <&custom_scroll_config.vert-multiplier &custom_scroll_config.horz-multiplier>;
-        divisors = <&custom_scroll_config.vert-divisor &custom_scroll_config.horz-divisor>;
+        multipliers = <VERT_MULT HORZ_MULT>;
+        divisors = <VERT_DIV HORZ_DIV>;
     };
 
     chosen {
