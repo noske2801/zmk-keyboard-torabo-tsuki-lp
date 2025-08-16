@@ -6,9 +6,25 @@
 #include <layout_shift.dtsi>
 #include <layout_shift_kp_override.dtsi>
 
-/* マウスキー(&mkp)を押したらオートマウスレイヤーを延長する */
-&mkp_input_listener {
+/* オートマウスレイヤーの設定*/
+&mkp_input_listener { /* マウスキー(&mkp)を押したらオートマウスレイヤーを延長する */
     input-processors = <&zip_temp_layer 5 1500>; /* (AMLを適用するレイヤー, レイヤーが解除されるまでの時間(ms)) */
+};
+
+&zip_temp_layer {
+    require-prior-idle-ms = <200>; /* キー入力から指定の時間(ms)、AMLを有効にしない(誤爆防止) */
+    excluded-positions = < /* ここで指定しないキー(非マウスキー)を押したとき、AMLを解除 */
+        33 // J
+        34 // K
+        35 // L
+        39 // Z(Ctrl)
+        40 // X(Shift)
+        41 // C(Alt)
+        42 // V(Space)
+        47 // M
+        48 // ,
+        49 // .
+    >;
 };
 
 /* Mod-Tap */
