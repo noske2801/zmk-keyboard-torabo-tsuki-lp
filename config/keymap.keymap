@@ -11,6 +11,20 @@
     input-processors = <&zip_temp_layer 5 1500>; /* (AMLを適用するレイヤー, レイヤーが解除されるまでの時間(ms)) */
 };
 
+/* Mod-Tap */
+&mt {
+    tapping-term-ms = <200>;
+    quick-tap-ms = <250>;
+    flavor = "balanced";
+};
+
+/* Layer-Tap */
+&lt {
+    tapping-term-ms = <200>;
+    quick-tap-ms = <250>;
+    flavor = "balanced";
+};
+
 / {
     combos {
         compatible = "zmk,combos";
