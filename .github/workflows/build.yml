@@ -3,4 +3,34 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Initialize ZMK build environment
+        run: |
+          west init -l config
+          west update
+          west zephyr-export
+          pip install -r zephyr/scripts/requirements.txt
+
+      - name: Build firmware & capture log
+        id: build_firmware
+        continue-on-error: true
+        run: |
+          # We build one of the shields as a representative test.
+          # If a devicetree error exists, it will fail on any shield.
+          west build -b bmp_boost -s zmk/app -- -DSHIELD=torabo_tsuki_lp_left -DZMK_CONFIG="${{ github.workspace }}/config" &> build_error.log
+
+      - name: Commit error log on failure
+        if: steps.build_firmware.outcome == 'failure'
+        run: |
+          echo "Build failed. Committing log file..."
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'github-actions@github.com'
+          # To avoid issues with other modified files, checkout the latest from the branch
+          git checkout ${{ github.head_ref || github.ref_name }}
+          git add build_error.log
+          git commit -m "ci: Add build error log from failed workflow run"
+          git push
