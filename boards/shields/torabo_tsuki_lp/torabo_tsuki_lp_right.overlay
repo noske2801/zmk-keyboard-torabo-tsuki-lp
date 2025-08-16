@@ -2,6 +2,10 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+&zip_temp_layer {
+    require-prior-idle-ms = <200>; /* キー入力から指定の時間(ms)、AMLを有効にしない(誤爆防止) */
+};
+
 &trackball_listener {
     input-processors = <
 
@@ -9,7 +13,7 @@
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
 
         /* オートマウスレイヤーの設定 */
-        &zip_temp_layer 5 10000 /* AMLを適用するレイヤー, タイムアウトまでの時間 */
+        &zip_temp_layer 5 1500 /* (AMLを適用するレイヤー, レイヤーが解除されるまでの時間(ms)) */
     >;
 };
 
