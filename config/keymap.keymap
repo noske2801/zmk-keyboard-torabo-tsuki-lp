@@ -20,11 +20,11 @@
 
         layer_0 {
             bindings = <
-&none  &none               &none             &none           &none             &none                                         &none        &none  &none               &none                  &none                  &none
-&none  &kp Q               &kp W             &kp E           &kp R             &kp T                                         &kp Y        &kp U  &kp I               &kp O                  &kp P                  &none
-&none  &kp A               &kp S             &kp D           &kp F             &kp G                 &none    &none          &kp H        &kp J  &kp K               &kp L                  &kp MINUS              &none
-&none  &mt LEFT_CONTROL Z  &mt LEFT_SHIFT X  &mt LEFT_ALT C  &kp V             &kp B                 &kp TAB  &mo 3          &kp N        &kp M  &mt LEFT_ALT COMMA  &mt LEFT_SHIFT PERIOD  &mt LEFT_CONTROL FSLH  &none
-&none  &kp ESCAPE          &kp LGUI          &kp LALT        &lt 1 LANGUAGE_2  &mt LEFT_SHIFT SPACE  &mo 3    &kp BACKSPACE  &lt 2 ENTER  &none  &none               &kp LEFT_GUI           &kp LANGUAGE_1         &none
+&none  &none               &none             &none           &none             &none                                           &none        &none  &none               &none                  &none                  &none
+&none  &kp Q               &kp W             &kp E           &kp R             &kp T                                           &kp Y        &kp U  &kp I               &kp O                  &kp P                  &none
+&none  &kp A               &kp S             &kp D           &kp F             &kp G                 &none      &none          &kp H        &kp J  &kp K               &kp L                  &kp MINUS              &none
+&none  &mt LEFT_CONTROL Z  &mt LEFT_SHIFT X  &mt LEFT_ALT C  &kp V             &kp B                 &kp TAB    &mo 1          &kp N        &kp M  &mt LEFT_ALT COMMA  &mt LEFT_SHIFT PERIOD  &mt LEFT_CONTROL FSLH  &none
+&none  &kp ESCAPE          &kp LGUI          &kp LALT        &lt 1 LANGUAGE_2  &mt LEFT_SHIFT SPACE  &lt 3 TAB  &kp BACKSPACE  &lt 2 ENTER  &none  &none               &kp LEFT_GUI           &kp LANGUAGE_1         &none
             >;
         };
 
@@ -40,11 +40,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans            &trans                      &trans                    &trans           &trans                       &trans           &trans          &trans          &trans           &trans         &trans
-&trans  &kp F7            &kp KP_NUMBER_7             &kp KP_NUMBER_8           &kp KP_NUMBER_9  &kp CARET                    &kp F5           &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11        &trans
-&trans  &kp KP_NUMBER_0   &kp KP_NUMBER_4             &kp KP_NUMBER_5           &kp KP_NUMBER_6  &kp PERCENT  &trans  &trans  &kp HOME         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END        &trans
-&trans  &kp LEFT_CONTROL  &mt LEFT_SHIFT KP_NUMBER_1  &mt LEFT_ALT KP_NUMBER_2  &kp KP_NUMBER_3  &trans       &trans  &trans  &kp KP_MULTIPLY  &kp KP_PLUS     &kp KP_COMMA    &kp KP_DOT       &kp KP_DIVIDE  &trans
-&trans  &trans            &trans                      &trans                    &trans           &trans       &trans  &trans  &trans           &trans          &trans          &trans           &trans         &trans
+&trans  &trans                        &trans                      &trans                    &trans           &trans                       &trans           &trans          &trans          &trans           &trans         &trans
+&trans  &none                         &kp KP_NUMBER_7             &kp KP_NUMBER_8           &kp KP_NUMBER_9  &kp CARET                    &kp F5           &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11        &trans
+&trans  &kp KP_NUMBER_0               &kp KP_NUMBER_4             &kp KP_NUMBER_5           &kp KP_NUMBER_6  &kp PERCENT  &trans  &trans  &kp HOME         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END        &trans
+&trans  &mt LEFT_CONTROL KP_NUMBER_0  &mt LEFT_SHIFT KP_NUMBER_1  &mt LEFT_ALT KP_NUMBER_2  &kp KP_NUMBER_3  &trans       &trans  &trans  &kp KP_MULTIPLY  &kp KP_PLUS     &kp COMMA       &kp KP_DOT       &kp KP_DIVIDE  &trans
+&trans  &trans                        &trans                      &trans                    &trans           &trans       &trans  &trans  &trans           &trans          &trans          &trans           &trans         &trans
             >;
         };
 
@@ -52,8 +52,8 @@
             bindings = <
 &trans  &trans        &trans  &trans  &trans  &trans                   &trans                &trans                &trans        &trans           &trans          &trans
 &trans  &out OUT_USB  &kp F7  &kp F8  &kp F9  &kp F12                  &kp LS(LC(NUMBER_1))  &kp LC(LS(NUMBER_2))  &kp LC(N0)    &kp LS(LG(S))    &trans          &trans
-&trans  &out OUT_BLE  &kp F4  &kp F5  &kp F9  &kp F11  &trans  &trans  &trans                &kp C_VOLUME_DOWN     &kp K_MUTE    &kp C_VOLUME_UP  &kp LC(LG(T))   &trans
-&trans  &bt BT_NXT    &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans                &mmv MOVE_LEFT        &mmv MOVE_UP  &mmv MOVE_LEFT   &mmv MOVE_LEFT  &trans
+&trans  &out OUT_BLE  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &trans                &kp C_VOLUME_DOWN     &kp K_MUTE    &kp C_VOLUME_UP  &kp LC(LG(T))   &trans
+&trans  &bt BT_NXT    &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans                &mmv MOVE_LEFT        &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &trans
 &trans  &trans        &trans  &trans  &trans  &trans   &trans  &trans  &trans                &trans                &trans        &trans           &trans          &trans
             >;
         };
