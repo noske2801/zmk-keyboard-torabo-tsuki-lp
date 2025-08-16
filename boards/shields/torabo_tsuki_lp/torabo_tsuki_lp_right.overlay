@@ -7,7 +7,7 @@
 };
 
 &trackball_listener {
-    input-processors =
+    input-processors = <
         /* カーソル方向の反転 */
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
 
