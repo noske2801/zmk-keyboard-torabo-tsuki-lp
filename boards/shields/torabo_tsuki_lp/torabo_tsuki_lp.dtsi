@@ -1,5 +1,6 @@
 #include <zephyr/dt-bindings/gpio/nordic-nrf-gpio.h>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <input/processors.dtsi>
 #include "torabo_tsuki_lp_layouts.dtsi"
 
 / {
@@ -90,6 +91,10 @@
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        scroller {
+            layers = <6>;
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        };
     };
 
     vbatt: vbatt {
