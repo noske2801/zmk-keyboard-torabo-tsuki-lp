@@ -3,7 +3,14 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &trackball_listener {
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    input-processors = <
+
+        /* カーソル方向の反転 */
+        &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+
+        /* オートマウスレイヤーの設定 */
+        &zip_temp_layer 5 10000 /* AMLを適用するレイヤー, タイムアウトまでの時間 */
+    >;
 };
 
 &size_s_transform {
