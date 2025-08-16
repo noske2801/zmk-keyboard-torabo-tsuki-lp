@@ -95,11 +95,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans                                 &trans                               &trans                             &trans                    &trans                       &trans           &trans          &trans          &trans           &trans         &trans
-&trans  &none                                  &kp KP_NUMBER_7                      &kp KP_NUMBER_8                    &kp KP_NUMBER_9           &kp CARET                    &kp F5           &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11        &trans
-&trans  &kp KP_NUMBER_0                        &kp KP_NUMBER_4                      &kp KP_NUMBER_5                    &kp KP_NUMBER_6           &kp PERCENT  &trans  &trans  &kp HOME         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END        &trans
-&trans  &kp_exit_AML LEFT_CONTROL KP_NUMBER_0  &kp_exit_AML LEFT_SHIFT KP_NUMBER_1  &kp_exit_AML LEFT_ALT KP_NUMBER_2  &kp_exit_AML KP_NUMBER_3  &trans       &trans  &trans  &kp KP_MULTIPLY  &kp KP_PLUS     &kp COMMA       &kp KP_DOT       &kp KP_DIVIDE  &trans
-&trans  &trans                                 &trans                               &trans                             &trans                    &trans       &trans  &trans  &trans           &trans          &trans          &trans           &trans         &trans
+&trans  &trans                                        &trans                                      &trans                                    &trans                    &trans                       &trans           &trans          &trans          &trans           &trans         &trans
+&trans  &none                                         &kp KP_NUMBER_7                             &kp KP_NUMBER_8                           &kp KP_NUMBER_9           &kp CARET                    &kp F5           &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp F11        &trans
+&trans  &kp KP_NUMBER_0                               &kp KP_NUMBER_4                             &kp KP_NUMBER_5                           &kp KP_NUMBER_6           &kp PERCENT  &trans  &trans  &kp HOME         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END        &trans
+&trans  &mt_exit_AML_on_tap LEFT_CONTROL KP_NUMBER_0  &mt_exit_AML_on_tap LEFT_SHIFT KP_NUMBER_1  &mt_exit_AML_on_tap LEFT_ALT KP_NUMBER_2  &kp_exit_AML KP_NUMBER_3  &trans       &trans  &trans  &kp KP_MULTIPLY  &kp KP_PLUS     &kp COMMA       &kp KP_DOT       &kp KP_DIVIDE  &trans
+&trans  &trans                                        &trans                                      &trans                                    &trans                    &trans       &trans  &trans  &trans           &trans          &trans          &trans           &trans         &trans
             >;
         };
 
