@@ -10,25 +10,27 @@
  * To adjust scroll behavior, modify the values below and re-build the firmware.
  *
  * Direction:
- *   - To invert vertical scroll, change `VERT_MULT` to a negative value (e.g., -1).
- *   - To invert horizontal scroll, change `HORZ_MULT` to a negative value (e.g., -1).
+ *   - To invert vertical scroll, change `SCROLL_Y_MULT` to a negative value (e.g., -1).
+ *   - To invert horizontal scroll, change `SCROLL_X_MULT` to a negative value (e.g., -1).
  *
  * Speed:
- *   - To double the speed, change `VERT_MULT` to 2 (and `VERT_DIV` to 1).
- *   - To halve the speed, change `VERT_DIV` to 2 (and `VERT_MULT` to 1).
+ *   - To double the speed, change the `_MULT` value to 2.
+ *   - To halve the speed, change the `_DIV` value to 2.
  */
-#define VERT_MULT   1
-#define VERT_DIV    1
-#define HORZ_MULT   1
-#define HORZ_DIV    1
+#define SCROLL_Y_MULT   1  // Vertical
+#define SCROLL_Y_DIV    1
+#define SCROLL_X_MULT   1  // Horizontal
+#define SCROLL_X_DIV    1
 
 / {
-    scroll_scaler: scroll_scaler {
+    // This scaler adjusts the raw X/Y movement from the trackball
+    // BEFORE it gets mapped to scroll events.
+    pointer_scaler: pointer_scaler {
         compatible = "zmk,input-processor-scaler";
         type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
-        multipliers = <VERT_MULT HORZ_MULT>;
-        divisors = <VERT_DIV HORZ_DIV>;
+        codes = <INPUT_REL_X INPUT_REL_Y>;
+        multipliers = <SCROLL_X_MULT SCROLL_Y_MULT>;
+        divisors = <SCROLL_X_DIV SCROLL_Y_DIV>;
     };
 
     chosen {
@@ -108,7 +110,8 @@
         device = <&trackball>;
         scroller {
             layers = <6>;
-            input-processors = <&zip_xy_to_scroll_mapper &scroll_scaler>;
+            // Correct processing chain: scale the pointer input, then map it to scroll.
+            input-processors = <&pointer_scaler &zip_xy_to_scroll_mapper>;
         };
     };
 
