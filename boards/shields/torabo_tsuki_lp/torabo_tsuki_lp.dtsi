@@ -27,6 +27,7 @@
     // BEFORE it gets mapped to scroll events.
     pointer_scaler: pointer_scaler {
         compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <0>;
         type = <INPUT_EV_REL>;
         codes = <INPUT_REL_X INPUT_REL_Y>;
         multipliers = <SCROLL_X_MULT SCROLL_Y_MULT>;
