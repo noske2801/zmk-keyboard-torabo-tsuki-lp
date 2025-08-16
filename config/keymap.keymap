@@ -70,20 +70,6 @@
             flavor = "balanced";
             quick-tap-ms = <200>;
         };
-
-        // Keep the original key_press behavior for ZMK core components // for zmk-layout-shift
-        original_key_press: original_key_press {
-            compatible = "zmk,behavior-key-press";
-            #binding-cells = <1>;
-            label = "KEY_PRESS";
-        };
-
-        // Override the existing &kp behavior to use our custom implementation // for zmk-layout-shift
-        kp: key_press {
-            compatible = "zmk,behavior-layout-shift-key-press";
-            #binding-cells = <1>;
-            label = "LAYOUT_SHIFT_KEY_PRESS";
-        };
     };
 
     keymap {
@@ -123,7 +109,7 @@
             bindings = <
 &trans  &trans        &trans           &trans           &trans           &trans                   &trans                &trans                &trans        &trans           &trans          &trans
 &trans  &out OUT_USB  &kp F7           &kp F8           &kp F9           &kp F12                  &kp LS(LC(NUMBER_1))  &kp LC(LS(NUMBER_2))  &kp LC(N0)    &kp LS(LG(S))    &trans          &trans
-&trans  &out OUT_BLE  &kp F4           &kp F5           &kp F6           &kp F11  &trans  &trans  &tog_ls               &kp C_VOLUME_DOWN     &kp K_MUTE    &kp C_VOLUME_UP  &kp LC(LG(T))   &trans
+&trans  &out OUT_BLE  &kp F4           &kp F5           &kp F6           &kp F11  &trans  &trans  &trans                &kp C_VOLUME_DOWN     &kp K_MUTE    &kp C_VOLUME_UP  &kp LC(LG(T))   &trans
 &trans  &bt BT_NXT    &kp_exit_AML F1  &kp_exit_AML F2  &kp_exit_AML F3  &kp F10  &trans  &trans  &trans                &mmv MOVE_LEFT        &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &trans
 &trans  &trans        &trans           &trans           &trans           &trans   &trans  &trans  &trans                &trans                &trans        &trans           &trans          &trans
             >;
@@ -133,7 +119,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tog_ls /* Layout Shift 切り替え */
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
