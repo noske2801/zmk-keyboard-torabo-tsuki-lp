@@ -65,14 +65,14 @@
 
         mkp_MB5 {
             bindings = <&mkp MB5>;
-            key-positions = <36 37>;
+            key-positions = <36 35>;
             layers = <0 5 6>;
         };
 
         kp_ESC {
             bindings = <&kp ESCAPE>;
-            key-positions = <14 15>;
-            layers = <0>;
+            key-positions = <14 13>;
+            layers = <0 5>;
         };
 
         CTRL_W {
@@ -175,12 +175,15 @@
 
         /* &kp の定義を上書き zmk-layout-shift/dts/layout_shift_kp_override.dtsi */
         // Keep the original key_press behavior for ZMK core components
+
         original_key_press: original_key_press {
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
             label = "KEY_PRESS";
         };
+
         // Override the existing &kp behavior to use our custom implementation
+
         kp: key_press {
             compatible = "zmk,behavior-layout-shift-key-press";
             #binding-cells = <1>;
@@ -225,7 +228,7 @@
             bindings = <
 &trans  &trans  &trans           &trans           &trans           &trans                   &trans                &trans                &trans          &trans           &trans         &trans
 &trans  &trans  &kp F7           &kp F8           &kp F9           &kp F12                  &kp LS(LC(NUMBER_1))  &kp LC(LS(NUMBER_2))  &kp LC(N0)      &kp LS(LG(S))    &trans         &trans
-&trans  &trans  &kp F4           &kp F5           &kp F6           &kp F11  &trans  &trans  &trans                &kp C_VOLUME_DOWN     &mmv MOVE_UP    &kp C_VOLUME_UP  &kp LC(LG(T))  &trans
+&trans  &trans  &kp F4           &kp F5           &kp F6           &kp F11  &trans  &trans  &sc_chrome_translate  &kp C_VOLUME_DOWN     &mmv MOVE_UP    &kp C_VOLUME_UP  &kp LC(LG(T))  &trans
 &trans  &trans  &kp_exit_AML F1  &kp_exit_AML F2  &kp_exit_AML F3  &kp F10  &trans  &trans  &trans                &mmv MOVE_LEFT        &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans         &trans
 &trans  &trans  &trans           &trans           &trans           &trans   &trans  &mo 4   &trans                &trans                &trans          &trans           &trans         &trans
             >;
