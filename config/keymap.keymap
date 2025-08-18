@@ -24,6 +24,8 @@
     require-prior-idle-ms = <200>; /* キー入力から指定の時間(ms)、AMLを有効にしない(誤爆防止) */
     excluded-positions = <
  /* ここで指定しないキー(非マウスキー)を押したとき、AMLを解除 */
+        14 // W
+        15 // E
         20 // I
         21 // O
         26 // S
@@ -156,6 +158,21 @@
             quick-tap-ms = <200>;
         };
 
+        /omit-if-no-ref/
+        
+        /* ホールド時はkp、タップ時はkp_exit_AMLを使うhold-tap (修飾キーではmtの代わりにこれを使用)*/
+
+        lt_exit_AML_on_tap: lt_exit_AML_on_tap {
+            compatible = "zmk,behavior-layer-tap";
+            label = "LT_exit_AML_ON_TAP";
+            bindings = <&mo>, <&kp_exit_AML>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+        };
+
         /* Shiftキーを無効にしてIME_ONにする */
 
         mm_IME_ON: mo_IME_ON {
@@ -211,7 +228,7 @@
         DEFAULT {
             bindings = <
 &none  &none                               &none                             &none                           &none             &none                                           &none        &none  &none                               &none                                  &none                  &none
-&none  &kp Q                               &kp W                             &kp E                           &kp R             &kp T                                           &kp Y        &kp U  &kp_exit_AML I                      &kp_exit_AML O                         &kp P                  &none
+&none  &kp Q                               &kp_exit_AML W                    &kp_exit_AML E                  &kp R             &kp T                                           &kp Y        &kp U  &kp_exit_AML I                      &kp_exit_AML O                         &kp P                  &none
 &none  &kp A                               &kp_exit_AML S                    &kp_exit_AML D                  &kp F             &kp G                 &none      &none          &kp H        &kp J  &kp K                               &kp L                                  &kp MINUS              &none
 &none  &mt_exit_AML_on_tap LEFT_CONTROL Z  &mt_exit_AML_on_tap LEFT_SHIFT X  &mt_exit_AML_on_tap LEFT_ALT C  &kp_exit_AML V    &kp B                 &kp TAB    &mo 1          &kp N        &kp M  &mt_exit_AML_on_tap LEFT_ALT COMMA  &mt_exit_AML_on_tap LEFT_SHIFT PERIOD  &mt LEFT_CONTROL FSLH  &none
 &none  &kp LANGUAGE_2                      &kp LGUI                          &kp LALT                        &lt 1 LANGUAGE_2  &mt LEFT_SHIFT SPACE  &lt 3 TAB  &kp BACKSPACE  &lt 2 ENTER  &none  &none                               &kp LEFT_GUI                           &mm_IME_ON             &none
@@ -260,11 +277,11 @@
 
         MOUSE {
             bindings = <
-&trans  &trans                              &trans                            &trans                          &trans                       &trans                  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans                              &trans                            &trans                          &trans                       &trans                  &trans  &trans     &mo 6      &mo 6      &trans  &trans
-&trans  &trans                              &mo 6                             &mo 6                           &trans                       &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
-&trans  &mt_exit_AML_on_tap LEFT_CONTROL Z  &mt_exit_AML_on_tap LEFT_SHIFT X  &mt_exit_AML_on_tap LEFT_ALT C  &mt_exit_AML_on_tap SPACE V  &trans  &trans  &trans  &trans  &trans     &mo 6      &mo 6      &trans  &trans
-&trans  &trans                              &trans                            &trans                          &trans                       &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans                              &trans                            &trans                          &trans                       &trans                  &trans  &trans     &trans                     &trans                     &trans  &trans
+&trans  &trans                              &lt_exit_AML_on_tap 6             &lt_exit_AML_on_tap 6           &trans                       &trans                  &trans  &trans     &lt_exit_AML_on_tap 6      &lt_exit_AML_on_tap 6      &trans  &trans
+&trans  &trans                              &lt_exit_AML_on_tap 6             &lt_exit_AML_on_tap 6           &trans                       &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK                  &mkp RCLK                  &trans  &trans
+&trans  &mt_exit_AML_on_tap LEFT_CONTROL Z  &mt_exit_AML_on_tap LEFT_SHIFT X  &mt_exit_AML_on_tap LEFT_ALT C  &mt_exit_AML_on_tap SPACE V  &trans  &trans  &trans  &trans  &trans     &lt_exit_AML_on_tap 6      &lt_exit_AML_on_tap 6      &trans  &trans
+&trans  &trans                              &trans                            &trans                          &trans                       &trans  &trans  &trans  &trans  &trans     &trans                     &trans                     &trans  &trans
             >;
         };
 
