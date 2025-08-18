@@ -24,6 +24,8 @@
     require-prior-idle-ms = <200>; /* キー入力から指定の時間(ms)、AMLを有効にしない(誤爆防止) */
     excluded-positions = <
  /* ここで指定しないキー(非マウスキー)を押したとき、AMLを解除 */
+        20 // I
+        21 // O
         33 // J
         34 // K
         35 // L
@@ -31,7 +33,6 @@
         40 // X(Shift)
         41 // C(Alt)
         42 // V(Space)
-        47 // M
         48 // ,
         49 // .
     >;
@@ -207,11 +208,11 @@
 
         DEFAULT {
             bindings = <
-&none  &none                               &none                             &none                           &none             &none                                           &none        &none  &none               &none                  &none                  &none
-&none  &kp Q                               &kp W                             &kp E                           &kp R             &kp T                                           &kp Y        &kp U  &kp I               &kp O                  &kp P                  &none
-&none  &kp A                               &kp S                             &kp D                           &kp F             &kp G                 &none      &none          &kp H        &kp J  &kp K               &kp L                  &kp MINUS              &none
-&none  &mt_exit_AML_on_tap LEFT_CONTROL Z  &mt_exit_AML_on_tap LEFT_SHIFT X  &mt_exit_AML_on_tap LEFT_ALT C  &kp_exit_AML V    &kp B                 &kp TAB    &mo 1          &kp N        &kp M  &mt LEFT_ALT COMMA  &mt LEFT_SHIFT PERIOD  &mt LEFT_CONTROL FSLH  &none
-&none  &kp LANGUAGE_2                      &kp LGUI                          &kp LALT                        &lt 1 LANGUAGE_2  &mt LEFT_SHIFT SPACE  &lt 3 TAB  &kp BACKSPACE  &lt 2 ENTER  &none  &none               &kp LEFT_GUI           &mm_IME_ON             &none
+&none  &none                               &none                             &none                           &none             &none                                           &none        &none  &none                               &none                                  &none                  &none
+&none  &kp Q                               &kp W                             &kp E                           &kp R             &kp T                                           &kp Y        &kp U  &kp_exit_AML I                      &kp_exit_AML O                         &kp P                  &none
+&none  &kp A                               &kp S                             &kp D                           &kp F             &kp G                 &none      &none          &kp H        &kp J  &kp K                               &kp L                                  &kp MINUS              &none
+&none  &mt_exit_AML_on_tap LEFT_CONTROL Z  &mt_exit_AML_on_tap LEFT_SHIFT X  &mt_exit_AML_on_tap LEFT_ALT C  &kp_exit_AML V    &kp B                 &kp TAB    &mo 1          &kp N        &kp M  &mt_exit_AML_on_tap LEFT_ALT COMMA  &mt_exit_AML_on_tap LEFT_SHIFT PERIOD  &mt LEFT_CONTROL FSLH  &none
+&none  &kp LANGUAGE_2                      &kp LGUI                          &kp LALT                        &lt 1 LANGUAGE_2  &mt LEFT_SHIFT SPACE  &lt 3 TAB  &kp BACKSPACE  &lt 2 ENTER  &none  &none                               &kp LEFT_GUI                           &mm_IME_ON             &none
             >;
         };
 
@@ -258,9 +259,9 @@
         MOUSE {
             bindings = <
 &trans  &trans            &trans          &trans        &trans     &trans                  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans            &trans          &trans        &trans     &trans                  &trans  &mo 6      &mo 6      &mo 6      &trans  &trans
-&trans  &trans            &mo 6           &trans        &trans     &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 6   &trans
-&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp SPACE  &trans  &trans  &trans  &trans  &mo 6      &mo 6      &mo 6      &trans  &trans
+&trans  &trans            &trans          &trans        &trans     &trans                  &trans  &trans     &mo 6      &mo 6      &trans  &trans
+&trans  &trans            &mo 6           &trans        &trans     &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
+&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp SPACE  &trans  &trans  &trans  &trans  &trans     &mo 6      &mo 6      &trans  &trans
 &trans  &trans            &trans          &trans        &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
             >;
         };
