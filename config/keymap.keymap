@@ -277,11 +277,11 @@
 
         MOUSE {
             bindings = <
-&trans  &trans                              &trans                            &trans                          &trans                       &trans                  &trans  &trans     &trans                     &trans                     &trans  &trans
-&trans  &trans                              &lt_exit_AML_on_tap 6             &lt_exit_AML_on_tap 6           &trans                       &trans                  &trans  &trans     &lt_exit_AML_on_tap 6      &lt_exit_AML_on_tap 6      &trans  &trans
-&trans  &trans                              &lt_exit_AML_on_tap 6             &lt_exit_AML_on_tap 6           &trans                       &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK                  &mkp RCLK                  &trans  &trans
-&trans  &mt_exit_AML_on_tap LEFT_CONTROL Z  &mt_exit_AML_on_tap LEFT_SHIFT X  &mt_exit_AML_on_tap LEFT_ALT C  &mt_exit_AML_on_tap SPACE V  &trans  &trans  &trans  &trans  &trans     &lt_exit_AML_on_tap 6      &lt_exit_AML_on_tap 6      &trans  &trans
-&trans  &trans                              &trans                            &trans                          &trans                       &trans  &trans  &trans  &trans  &trans     &trans                     &trans                     &trans  &trans
+&trans  &trans                              &trans                            &trans                          &trans                       &trans                  &trans  &trans     &trans                       &trans                        &trans  &trans
+&trans  &trans                              &lt_exit_AML_on_tap 6 W           &lt_exit_AML_on_tap 6 E         &trans                       &trans                  &trans  &trans     &lt_exit_AML_on_tap 6 I      &lt_exit_AML_on_tap 6 O       &trans  &trans
+&trans  &trans                              &lt_exit_AML_on_tap 6 S           &lt_exit_AML_on_tap 6 D         &trans                       &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK                    &mkp RCLK                     &trans  &trans
+&trans  &mt_exit_AML_on_tap LEFT_CONTROL Z  &mt_exit_AML_on_tap LEFT_SHIFT X  &mt_exit_AML_on_tap LEFT_ALT C  &mt_exit_AML_on_tap SPACE V  &trans  &trans  &trans  &trans  &trans     &lt_exit_AML_on_tap 6 COMMA  &lt_exit_AML_on_tap 6 PERIOD  &trans  &trans
+&trans  &trans                              &trans                            &trans                          &trans                       &trans  &trans  &trans  &trans  &trans     &trans                       &trans                        &trans  &trans
             >;
         };
 
