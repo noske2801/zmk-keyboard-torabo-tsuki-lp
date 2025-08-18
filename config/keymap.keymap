@@ -163,7 +163,7 @@
         /* ホールド時はkp、タップ時はkp_exit_AMLを使うhold-tap (修飾キーではmtの代わりにこれを使用)*/
 
         lt_exit_AML_on_tap: lt_exit_AML_on_tap {
-            compatible = "zmk,behavior-layer-tap";
+            compatible = "zmk,behavior-hold-tap";
             label = "LT_exit_AML_ON_TAP";
             bindings = <&mo>, <&kp_exit_AML>;
 
