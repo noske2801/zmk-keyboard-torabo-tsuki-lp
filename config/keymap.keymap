@@ -101,6 +101,21 @@
             bindings = <&kp LS(LC(T))>;
             key-positions = <18 22>;
         };
+
+        kp_BACKSPACE {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <14 15>;
+        };
+
+        kp_DELETE {
+            bindings = <&kp DELETE>;
+            key-positions = <20 21>;
+        };
+
+        kp_TAB {
+            bindings = <&kp TAB>;
+            key-positions = <16 17>;
+        };
     };
 
     macros {
