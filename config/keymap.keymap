@@ -91,30 +91,9 @@
             key-positions = <21 22>;
         };
 
-        mo_SCROLL {
-            bindings = <&mo 6>;
-            key-positions = <34 35>;
-            layers = <0 5 6>;
-        };
-
         kp_CTRL_SHIFT_T {
             bindings = <&kp LS(LC(T))>;
             key-positions = <18 22>;
-        };
-
-        kp_BACKSPACE {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <14 15>;
-        };
-
-        kp_DELETE {
-            bindings = <&kp DELETE>;
-            key-positions = <20 21>;
-        };
-
-        kp_TAB {
-            bindings = <&kp TAB>;
-            key-positions = <16 17>;
         };
     };
 
@@ -298,11 +277,11 @@
 
         MOUSE {
             bindings = <
-&trans  &trans                              &trans                            &trans                          &trans                       &trans                  &trans  &trans     &trans                       &trans                        &trans  &trans
-&trans  &trans                              &lt_exit_AML_on_tap 6 W           &lt_exit_AML_on_tap 6 E         &trans                       &trans                  &trans  &trans     &lt_exit_AML_on_tap 6 I      &lt_exit_AML_on_tap 6 O       &trans  &trans
-&trans  &trans                              &lt_exit_AML_on_tap 6 S           &lt_exit_AML_on_tap 6 D         &trans                       &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK                    &mkp RCLK                     &trans  &trans
-&trans  &mt_exit_AML_on_tap LEFT_CONTROL Z  &mt_exit_AML_on_tap LEFT_SHIFT X  &mt_exit_AML_on_tap LEFT_ALT C  &mt_exit_AML_on_tap SPACE V  &trans  &trans  &trans  &trans  &trans     &lt_exit_AML_on_tap 6 COMMA  &lt_exit_AML_on_tap 6 PERIOD  &trans  &trans
-&trans  &trans                              &trans                            &trans                          &trans                       &trans  &trans  &trans  &trans  &trans     &trans                       &trans                        &trans  &trans
+&trans  &trans                              &trans                            &trans                          &trans                       &trans                  &trans  &trans     &trans                   &trans                   &trans  &trans
+&trans  &trans                              &lt_exit_AML_on_tap 6 W           &lt_exit_AML_on_tap 6 E         &trans                       &trans                  &trans  &trans     &lt_exit_AML_on_tap 6 I  &lt_exit_AML_on_tap 6 O  &trans  &trans
+&trans  &trans                              &trans                            &trans                          &trans                       &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK                &mkp RCLK                &trans  &trans
+&trans  &mt_exit_AML_on_tap LEFT_CONTROL Z  &mt_exit_AML_on_tap LEFT_SHIFT X  &mt_exit_AML_on_tap LEFT_ALT C  &mt_exit_AML_on_tap SPACE V  &trans  &trans  &trans  &trans  &trans     &trans                   &trans                   &trans  &trans
+&trans  &trans                              &trans                            &trans                          &trans                       &trans  &trans  &trans  &trans  &trans     &trans                   &trans                   &trans  &trans
             >;
         };
 
