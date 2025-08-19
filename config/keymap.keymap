@@ -282,11 +282,11 @@
 
         DEFAULT {
             bindings = <
-&none  &none             &none             &none              &none              &none                                 &none        &none             &none              &none              &none                 &none
-&none  &kp Q             &kp_exit_AML W    &kp_exit_AML E     &kp R              &kp T                                 &kp Y        &kp U             &kp_exit_AML I     &kp_exit_AML O     &kp P                 &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LALT S  &mt_mod_L LSHFT D  &mt_mod_L LCTRL F  &kp G            &none      &none     &kp H        &mt_mod_R LCRLT J  &mt_mod_R LSHFT K  &mt_mod_R LALT L  &mt_mod_R LGUI MINUS  &none
-&none  &kp Z             &kp  X            &kp  C             &kp V              &kp B            &kp TAB    &mo 1     &kp N        &kp M             &kp  COMMA         &kp  DOT           &kp  FSLH             &none
-&none  &kp LANG2         &kp LGUI          &kp LALT           &lt 1 LANG2        &mt LSHFT SPACE  &lt 3 TAB  &kp BSPC  &lt 2 ENTER  &none             &none              &kp LGUI           &mm_IME_ON            &none
+&none  &none             &none             &none              &none              &none                                 &none        &none              &none              &none             &none                 &none
+&none  &kp Q             &kp_exit_AML W    &kp_exit_AML E     &kp R              &kp T                                 &kp Y        &kp U              &kp_exit_AML I     &kp_exit_AML O    &kp P                 &none
+&none  &mt_mod_L LGUI A  &mt_mod_L LALT S  &mt_mod_L LSHFT D  &mt_mod_L LCTRL F  &kp G            &none      &none     &kp H        &mt_mod_R LCTRL J  &mt_mod_R LSHFT K  &mt_mod_R LALT L  &mt_mod_R LGUI MINUS  &none
+&none  &kp Z             &kp  X            &kp  C             &kp V              &kp B            &kp TAB    &mo 1     &kp N        &kp M              &kp  COMMA         &kp  DOT          &kp  FSLH             &none
+&none  &kp LANG2         &kp LGUI          &kp LALT           &lt 1 LANG2        &mt LSHFT SPACE  &lt 3 TAB  &kp BSPC  &lt 2 ENTER  &none              &none              &kp LGUI          &mm_IME_ON            &none
             >;
         };
 
