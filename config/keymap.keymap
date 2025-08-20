@@ -1,10 +1,10 @@
 #include <dt-bindings/zmk/modifiers.h>
-#include <layout_shift.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <layout_shift.dtsi>
 
 #define DEFAULT 0
 #define SYMBOLS 1
@@ -86,11 +86,6 @@
             bindings = <&kp LC(W)>;
             key-positions = <32 36>;
             layers = <0 2 5>;
-        };
-
-        kp_RIGHT_ESC {
-            bindings = <&kp ESCAPE>;
-            key-positions = <21 22>;
         };
 
         mo_SCROLL {
@@ -282,31 +277,31 @@
 
         DEFAULT {
             bindings = <
-&none  &none             &none             &none              &none              &none                                 &none        &none              &none              &none             &none                 &none
-&none  &kp Q             &kp_exit_AML W    &kp_exit_AML E     &kp R              &kp T                                 &kp Y        &kp U              &kp_exit_AML I     &kp_exit_AML O    &kp P                 &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LALT S  &mt_mod_L LSHFT D  &mt_mod_L LCTRL F  &kp G            &none      &none     &kp H        &mt_mod_R LCTRL J  &mt_mod_R LSHFT K  &mt_mod_R LALT L  &mt_mod_R LGUI MINUS  &none
-&none  &kp Z             &kp  X            &kp  C             &kp V              &kp B            &kp TAB    &mo 1     &kp N        &kp M              &kp  COMMA         &kp  DOT          &kp  FSLH             &none
-&none  &kp LANG2         &kp LGUI          &kp LALT           &lt 1 LANG2        &mt LSHFT SPACE  &lt 3 TAB  &kp BSPC  &lt 2 ENTER  &none              &none              &kp LGUI          &mm_IME_ON            &none
+&none  &none             &none              &none              &none              &none                                 &none        &none             &none                  &none                &none                &none
+&none  &kp Q             &kp_exit_AML W     &kp_exit_AML E     &kp R              &kp T                                 &kp Y        &kp U             &kp_exit_AML I         &kp_exit_AML O       &kp P                &none
+&none  &kp A             &kp S              &kp D              &kp F              &kp G            &none      &none     &kp H        &kp J             &kp K                  &kp L                &kp MINUS            &none
+&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V   &kp B            &kp TAB    &mo 1     &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LGUI FSLH  &none
+&none  &kp LANG2         &kp LGUI           &kp LALT           &lt 1 LANG2        &mt LSHFT SPACE  &lt 3 TAB  &kp BSPC  &lt 2 ENTER  &none             &none                  &kp LGUI             &mm_IME_ON           &none
             >;
         };
 
         SYMBOLS {
             bindings = <
-&trans  &trans               &trans              &trans                &trans                &trans                    &trans      &trans                &trans                &trans                &trans                &trans
-&trans  &trans               &kp DQT             &kp LPAR              &kp RPAR              &trans                    &kp AT      &kp EQUAL             &kp LT                &kp GT                &kp PRCNT             &trans
-&trans  &mt_mod_L LGUI AMPS  &mt_mod_L LALT SQT  &mt_mod_L LSHFT LBKT  &mt_mod_L LCTRL RBKT  &trans  &trans   &trans   &kp PIPE    &mt_mod_R LCTRL HASH  &mt_mod_R LSHFT SEMI  &mt_mod_R LALT COLON  &mt_mod_R LGUI UNDER  &trans
-&trans  &trans               &kp  GRAVE          &kp LBRC              &kp RBRC              &trans  &trans   &trans   &kp DOLLAR  &kp STAR              &kp EXCL              &kp QMARK             &kp BSLH              &trans
-&trans  &trans               &trans              &trans                &trans                &trans  &trans   &kp DEL  &trans      &trans                &trans                &trans                &trans                &trans
+&trans  &trans    &trans                 &trans                &trans               &trans                    &trans      &trans               &trans                &trans                 &trans               &trans
+&trans  &trans    &kp DQT                &kp LPAR              &kp RPAR             &trans                    &kp AT      &kp EQUAL            &kp LT                &kp GT                 &kp PRCNT            &trans
+&trans  &kp AMPS  &kp SQT                &kp LBKT              &kp RBKT             &trans  &trans   &trans   &kp PIPE    &kp HASH             &kp SEMI              &kp COLON              &kp UNDER            &trans
+&trans  &kp LGUI  &mt_mod_L LCTRL GRAVE  &mt_mod_L LSHFT LBRC  &mt_mod_L LALT RBRC  &trans  &trans   &trans   &kp DOLLAR  &mt_mod_R LALT STAR  &mt_mod_R LSHFT EXCL  &mt_mod_R LCTRL QMARK  &mt_mod_R LGUI BSLH  &trans
+&trans  &trans    &trans                 &trans                &trans               &trans  &trans   &kp DEL  &trans      &trans               &trans                &trans                 &trans               &trans
             >;
         };
 
         NUMPAD {
             bindings = <
-&trans  &trans                &trans                &trans                 &trans                 &trans                     &trans    &trans           &trans     &trans       &trans         &trans
-&trans  &trans                &kp KP_N7             &kp KP_N8              &kp KP_N9              &kp CARET                  &kp F5    &kp LS(LC(TAB))  &kp UP     &kp LC(TAB)  &kp F11        &trans
-&trans  &mt_mod_L LGUI KP_N0  &mt_mod_L LALT KP_N4  &mt_mod_L LSHFT KP_N5  &mt_mod_L LCTRL KP_N6  &kp EQUAL  &trans  &trans  &kp HOME  &kp LEFT         &kp DOWN   &kp RIGHT    &kp END        &trans
-&trans  &kp KP_N0             &kp KP_N1             &kp KP_N2              &kp KP_N3              &kp TILDE  &trans  &trans  &trans    &kp KP_PLUS      &kp COMMA  &kp KP_DOT   &kp KP_DIVIDE  &trans
-&trans  &trans                &trans                &trans                 &trans                 &trans     &trans  &trans  &trans    &trans           &trans     &trans       &trans         &trans
+&trans  &trans                &trans                 &trans                 &trans                &trans                     &trans    &trans           &trans     &trans       &trans         &trans
+&trans  &trans                &kp KP_N7              &kp KP_N8              &kp KP_N9             &kp CARET                  &kp F5    &kp LS(LC(TAB))  &kp UP     &kp LC(TAB)  &kp F11        &trans
+&trans  &kp KP_N0             &kp KP_N4              &kp KP_N5              &kp KP_N6             &kp EQUAL  &trans  &trans  &kp HOME  &kp LEFT         &kp DOWN   &kp RIGHT    &kp END        &trans
+&trans  &mt_mod_L LGUI KP_N0  &mt_mod_L LCTRL KP_N1  &mt_mod_L LSHFT KP_N2  &mt_mod_L LALT KP_N3  &kp TILDE  &trans  &trans  &trans    &kp KP_PLUS      &kp COMMA  &kp KP_DOT   &kp KP_DIVIDE  &trans
+&trans  &trans                &trans                 &trans                 &trans                &trans     &trans  &trans  &trans    &trans           &trans     &trans       &trans         &trans
             >;
         };
 
@@ -332,11 +327,11 @@
 
         MOUSE {
             bindings = <
-&trans  &trans                      &trans                      &trans                       &trans                       &trans                                 &trans  &trans     &trans                   &trans                   &trans                &trans
-&trans  &trans                      &lt_exit_AML_on_tap 6 W     &lt_exit_AML_on_tap 6 E      &trans                       &trans                                 &trans  &trans     &lt_exit_AML_on_tap 6 I  &lt_exit_AML_on_tap 6 O  &trans                &trans
-&trans  &mt_exit_AML_on_tap LGUI A  &mt_exit_AML_on_tap LALT S  &mt_exit_AML_on_tap LSHFT D  &mt_exit_AML_on_tap LCTRL F  &trans                 &trans  &trans  &trans  &mkp LCLK  &mkp MCLK                &mkp RCLK                &mt_mod_R LGUI MINUS  &trans
-&trans  &trans                      &trans                      &trans                       &trans                       &trans                 &trans  &trans  &trans  &trans     &trans                   &trans                   &trans                &trans
-&trans  &trans                      &trans                      &trans                       &trans                       &mt_mod_L SPACE SPACE  &trans  &trans  &trans  &trans     &trans                   &trans                   &trans                &trans
+&trans  &trans                      &trans                       &trans                       &trans                      &trans                  &trans  &trans     &trans                   &trans                   &trans                &trans
+&trans  &trans                      &lt_exit_AML_on_tap 6 W      &lt_exit_AML_on_tap 6 E      &trans                      &trans                  &trans  &trans     &lt_exit_AML_on_tap 6 I  &lt_exit_AML_on_tap 6 O  &trans                &trans
+&trans  &trans                      &trans                       &trans                       &trans                      &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK                &mkp RCLK                &mt_mod_R LGUI MINUS  &trans
+&trans  &mt_exit_AML_on_tap LGUI Z  &mt_exit_AML_on_tap LCTRL X  &mt_exit_AML_on_tap LSHFT C  &mt_exit_AML_on_tap LALT V  &trans  &trans  &trans  &trans  &trans     &trans                   &trans                   &trans                &trans
+&trans  &trans                      &trans                       &trans                       &trans                      &trans  &trans  &trans  &trans  &trans     &trans                   &trans                   &trans                &trans
             >;
         };
 
