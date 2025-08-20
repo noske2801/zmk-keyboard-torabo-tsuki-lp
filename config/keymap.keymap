@@ -32,15 +32,15 @@
         15 // E(SCROLL)
         20 // I(SCROLL)
         21 // O(SCROLL)
-        25 // A(GUI)
-        26 // S(Ctrl)
-        27 // D(Shift)
-        28 // F(Alt)
-        33 // J(Alt)
-        34 // K(Shift)
-        35 // L(Ctrl)
-        36 // MINUS(GUI)
-        57 // SandS(SPACE)
+        39 // Z(GUI)
+        40 // X(Ctrl)
+        41 // C(Shift)
+        42 // V(Alt)
+        47 // M(Alt)
+        48 // COMMA(Shift)
+        49 // DOT(Ctrl)
+        50 // FSLH(GUI)
+        57 // SandS(Shift)
     >;
 };
 
@@ -306,11 +306,11 @@
 
         MOUSE {
             bindings = <
-&trans  &trans                      &trans                       &trans                       &trans                      &trans                  &trans  &trans     &trans                   &trans                   &trans                &trans
-&trans  &trans                      &lt_exit_AML_on_tap 6 W      &lt_exit_AML_on_tap 6 E      &trans                      &trans                  &trans  &trans     &lt_exit_AML_on_tap 6 I  &lt_exit_AML_on_tap 6 O  &trans                &trans
-&trans  &trans                      &trans                       &trans                       &trans                      &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK                &mkp RCLK                &mt_mod_R LGUI MINUS  &trans
-&trans  &mt_exit_AML_on_tap LGUI Z  &mt_exit_AML_on_tap LCTRL X  &mt_exit_AML_on_tap LSHFT C  &mt_exit_AML_on_tap LALT V  &trans  &trans  &trans  &trans  &trans     &trans                   &trans                   &trans                &trans
-&trans  &trans                      &trans                       &trans                       &trans                      &trans  &trans  &trans  &trans  &trans     &trans                   &trans                   &trans                &trans
+&trans  &trans                      &trans                       &trans                       &trans                      &trans                  &trans  &trans     &trans                   &trans                   &trans  &trans
+&trans  &trans                      &lt_exit_AML_on_tap 6 W      &lt_exit_AML_on_tap 6 E      &trans                      &trans                  &trans  &trans     &lt_exit_AML_on_tap 6 I  &lt_exit_AML_on_tap 6 O  &trans  &trans
+&trans  &trans                      &trans                       &trans                       &trans                      &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK                &mkp RCLK                &trans  &trans
+&trans  &mt_exit_AML_on_tap LGUI Z  &mt_exit_AML_on_tap LCTRL X  &mt_exit_AML_on_tap LSHFT C  &mt_exit_AML_on_tap LALT V  &trans  &trans  &trans  &trans  &trans     &trans                   &trans                   &trans  &trans
+&trans  &trans                      &trans                       &trans                       &trans                      &trans  &trans  &trans  &trans  &trans     &trans                   &trans                   &trans  &trans
             >;
         };
 
