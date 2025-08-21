@@ -37,6 +37,10 @@
         28 // F(Alt)
         29 // G(Space)
 
+        33 // J(LMB)
+        34 // K(MMB)
+        35 // L(RMB)
+
         39 // Z(GUI)
         40 // X(Ctrl)
         41 // C(Shift)
@@ -47,7 +51,7 @@
         48 // COMMA(Shift)
         49 // DOT(Ctrl)
         50 // FSLH(GUI)
-        
+
         57 // SandS(Shift)
     >;
 };
