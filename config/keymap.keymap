@@ -17,42 +17,49 @@
 #define KEYS_R 18 19 20 21 22 32 33 34 35 36 45 46 47 48 49 50 62 63 64
 #define THUMBS 56 57 58 59 60 61
 
-/* オートマウスレイヤーの設定 */
+// オートマウスレイヤーの設定
 
 &mkp_input_listener {
-    input-processors = <&zip_temp_layer MOUSE 10000>; /* マウスボタンを押した後、指定の時間(ms)AMLを延長 */
+    input-processors = <&zip_temp_layer MOUSE 10000>; // マウスボタンを押した後、指定の時間(ms)AMLを延長
 };
 
 &zip_temp_layer {
-    require-prior-idle-ms = <200>; /* キー入力から指定の時間(ms)、AMLを有効にしない(誤爆防止) */
-    excluded-positions = <
- /* ここで指定しないキー(非マウスキー)を押したとき、AMLを解除 */
+    require-prior-idle-ms = <200>; // キー入力から指定の時間(ms)、AMLを有効にしない(誤爆防止)
+    excluded-positions = < /* ここで指定しないキー(非マウスキー)を押したとき、AMLを解除 */
         14 // W(SCROLL)
         15 // E(SCROLL)
         20 // I(SCROLL)
         21 // O(SCROLL)
+
+        25 // A(GUI)
+        26 // S(Ctrl)
+        27 // D(Shift)
+        28 // F(Alt)
+        29 // G(Space)
+
         39 // Z(GUI)
         40 // X(Ctrl)
         41 // C(Shift)
         42 // V(Alt)
+        43 // B(Space)
+
         47 // M(Alt)
         48 // COMMA(Shift)
         49 // DOT(Ctrl)
         50 // FSLH(GUI)
+        
         57 // SandS(Shift)
     >;
 };
 
-/* Mod-Tap */
-
+// Mod-Tap
 &mt {
     tapping-term-ms = <200>;
     quick-tap-ms = <250>;
     flavor = "balanced";
 };
 
-/* Layer-Tap */
-
+// Layer-Tap
 &lt {
     tapping-term-ms = <200>;
     quick-tap-ms = <250>;
@@ -96,8 +103,7 @@
     macros {
         /omit-if-no-ref/
 
-        /* AMLを解除するマクロ */
-
+        // AMLを解除するマクロ
         exit_AML: exit_AML {
             compatible = "zmk,behavior-macro";
             wait-ms = <0>;
@@ -108,8 +114,7 @@
 
         /omit-if-no-ref/
 
-        /* KeyPress後にAMLを解除するマクロ */
-
+        // KeyPress後にAMLを解除するマクロ
         kp_exit_AML: kp_exit_AML {
             compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
@@ -118,6 +123,7 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
         };
 
+        // GoogleChromeでページ翻訳を行うショートカット
         sc_chrome_translate: sc_chrome_translate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -129,8 +135,7 @@
     behaviors {
         /omit-if-no-ref/
 
-        /* レイヤーを無効化するbehavior */
-
+        // レイヤーを無効化するbehavior
         tog_off: toggle_layer_off {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -142,6 +147,7 @@
 
         /* ホールド時はkp、タップ時はkp_exit_AMLを使うhold-tap (修飾キーではmtの代わりにこれを使用)*/
 
+        // 右手用修飾キー
         mt_mod_L: mt_mod_L {
             compatible = "zmk,behavior-hold-tap";
             label = "mt_mod_L";
@@ -157,6 +163,7 @@
 
         /omit-if-no-ref/
 
+        // 右手用修飾キー
         mt_mod_R: mt_mod_R {
             compatible = "zmk,behavior-hold-tap";
             label = "mt_mod_R";
@@ -173,6 +180,7 @@
 
         /omit-if-no-ref/
 
+        // MOUSEレイヤー用修飾キー
         mt_exit_AML_on_tap: mt_exit_AML_on_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_exit_AML_ON_TAP";
@@ -186,8 +194,7 @@
 
         /omit-if-no-ref/
 
-        /* ホールド時はkp、タップ時はkp_exit_AMLを使うhold-tap (修飾キーではmtの代わりにこれを使用)*/
-
+        // ホールド時はkp、タップ時はkp_exit_AMLを使うhold-tap (修飾キーではmtの代わりにこれを使用)
         lt_exit_AML_on_tap: lt_exit_AML_on_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_exit_AML_ON_TAP";
@@ -200,7 +207,7 @@
             hold-while-undecided;
         };
 
-        /* Shiftキーを無効にしてIME_ONにする */
+        // Shiftキーを無効にしてIME_ONにする
 
         mm_IME_ON: mo_IME_ON {
             compatible = "zmk,behavior-mod-morph";
@@ -208,11 +215,10 @@
             bindings = <&kp LANGUAGE_1>, <&kp LANGUAGE_1>;
 
             mods = <(MOD_LSFT | MOD_RSFT)>;
-            keep-mods = <0>; /* 明示的にShiftキーを無効化 */
+            keep-mods = <0>; // 明示的にShiftキーを無効化
         };
 
-        /* <Shift + ,>で<!>を入力 */
-
+        // <Shift + ,>で<!>を入力
         mm_COMMA_EXCLAMATION: mm_COMMA_EXCLAMATION {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -221,8 +227,7 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        /* <Shift + .>で<?>を入力 */
-
+        // <Shift + .>で<?>を入力
         mm_PERIOD_QUESTION: mm_PERIOD_QUESTION {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -231,9 +236,8 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
-        /* &kp の定義を上書き zmk-layout-shift/dts/layout_shift_kp_override.dtsi */
+        // &kp の定義を上書き zmk-layout-shift/dts/layout_shift_kp_override.dtsi
         // Keep the original key_press behavior for ZMK core components
-
         original_key_press: original_key_press {
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
@@ -241,7 +245,6 @@
         };
 
         // Override the existing &kp behavior to use our custom implementation
-
         kp: key_press {
             compatible = "zmk,behavior-layout-shift-key-press";
             #binding-cells = <1>;
