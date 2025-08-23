@@ -99,6 +99,16 @@
             bindings = <&kp LS(LC(T))>;
             key-positions = <18 22>;
         };
+
+        Win+1_Bandicam {
+            bindings = <&kp LG(N1)>;
+            key-positions = <43 46>;
+        };
+
+        Win+2_Rapture {
+            bindings = <&kp LG(N2)>;
+            key-positions = <16 22>;
+        };
     };
 
     macros {
