@@ -246,7 +246,6 @@
 
         // &kp の定義を上書き zmk-layout-shift/dts/layout_shift_kp_override.dtsi
         // Keep the original key_press behavior for ZMK core components
-        /omit-if-no-ref/
         original_key_press: original_key_press {
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
@@ -254,7 +253,6 @@
         };
 
         // Override the existing &kp behavior to use our custom implementation
-        /omit-if-no-ref/
         kp: key_press {
             compatible = "zmk,behavior-layout-shift-key-press";
             #binding-cells = <1>;
