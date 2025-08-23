@@ -187,7 +187,7 @@
         /omit-if-no-ref/
         mt_mod_MOUSE: mt_mod_MOUSE {
             compatible = "zmk,behavior-hold-tap";
-            label = "mt_mod_L";
+            label = "mt_mod_MOUSE";
             bindings = <&kp>, <&kp_exit_AML>;
 
             #binding-cells = <2>;
@@ -203,7 +203,7 @@
         /omit-if-no-ref/
         lt_SCROLL: lt_SCROLL {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_exit_AML_ON_TAP";
+            label = "lt_SCROLL";
             bindings = <&mo>, <&kp_exit_AML>;
 
             #binding-cells = <2>;
