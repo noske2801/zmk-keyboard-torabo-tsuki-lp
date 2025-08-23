@@ -53,6 +53,7 @@
 };
 
 // Mod-Tap
+
 &mt {
     tapping-term-ms = <200>;
     quick-tap-ms = <250>;
@@ -60,6 +61,7 @@
 };
 
 // Layer-Tap
+
 &lt {
     tapping-term-ms = <200>;
     quick-tap-ms = <250>;
@@ -112,7 +114,9 @@
 
     macros {
         // AMLを解除するマクロ
+
         /omit-if-no-ref/
+
         exit_AML: exit_AML {
             compatible = "zmk,behavior-macro";
             wait-ms = <0>;
@@ -122,7 +126,9 @@
         };
 
         // KeyPress後にAMLを解除するマクロ
+
         /omit-if-no-ref/
+
         kp_exit_AML: kp_exit_AML {
             compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
@@ -132,7 +138,9 @@
         };
 
         // GoogleChromeでページ翻訳を行うショートカット
+
         /omit-if-no-ref/
+
         sc_chrome_translate: sc_chrome_translate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -143,7 +151,9 @@
 
     behaviors {
         // レイヤーを無効化するbehavior
+
         /omit-if-no-ref/
+
         tog_off: toggle_layer_off {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -152,23 +162,30 @@
         };
 
         // 左手用修飾キー
+
         /omit-if-no-ref/
+
         mt_mod_L: mt_mod_L {
             compatible = "zmk,behavior-hold-tap";
             label = "mt_mod_L";
-            bindings = <&kp>, <&kp_exit_AML>; // Tap時にMOUSEレイヤーを離脱
-
+            bindings = <&kp>, <&kp_exit_AML>;
+ // Tap時にMOUSEレイヤーを離脱
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <350>;
             quick-tap-ms = <175>;
+
             // require-prior-idle-ms = <150>;
+
             hold-trigger-key-positions = <KEYS_R THUMBS>; // 右手キーが押されたら即時Hold判定
             hold-trigger-on-release; // 上の設定を"右手キーが離されたら"に変更
+            require-prior-idle-ms = <120>;
         };
 
         // 右手用修飾キー
+
         /omit-if-no-ref/
+
         mt_mod_R: mt_mod_R {
             compatible = "zmk,behavior-hold-tap";
             label = "mt_mod_R";
@@ -178,13 +195,18 @@
             flavor = "balanced";
             tapping-term-ms = <350>;
             quick-tap-ms = <175>;
+
             // require-prior-idle-ms = <150>;
+
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
+            require-prior-idle-ms = <120>;
         };
 
         // MOUSEレイヤー用修飾キー
+
         /omit-if-no-ref/
+
         mt_mod_MOUSE: mt_mod_MOUSE {
             compatible = "zmk,behavior-hold-tap";
             label = "mt_mod_MOUSE";
@@ -194,13 +216,17 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
+
             // require-prior-idle-ms = <150>;
             // hold-trigger-key-positions = <KEYS_L_CSASP KEYS_R THUMBS>;
+
             hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始
         };
 
         // SCROLLレイヤー用 Layer/Tap
+
         /omit-if-no-ref/
+
         lt_SCROLL: lt_SCROLL {
             compatible = "zmk,behavior-hold-tap";
             label = "lt_SCROLL";
@@ -214,8 +240,10 @@
         };
 
         // Shiftキーを無効にしてIME_ONにする
+
         /omit-if-no-ref/
-        mm_IME_ON: mo_IME_ON {
+
+        mm_IME_ON: mm_IME_ON {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LANGUAGE_1>, <&kp LANGUAGE_1>;
@@ -225,7 +253,9 @@
         };
 
         // <Shift + ,>で<!>を入力
+
         /omit-if-no-ref/
+
         mm_COMMA_EXCLAMATION: mm_COMMA_EXCLAMATION {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -235,7 +265,9 @@
         };
 
         // <Shift + .>で<?>を入力
+
         /omit-if-no-ref/
+
         mm_PERIOD_QUESTION: mm_PERIOD_QUESTION {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -246,6 +278,7 @@
 
         // &kp の定義を上書き zmk-layout-shift/dts/layout_shift_kp_override.dtsi
         // Keep the original key_press behavior for ZMK core components
+
         original_key_press: original_key_press {
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
@@ -253,6 +286,7 @@
         };
 
         // Override the existing &kp behavior to use our custom implementation
+
         kp: key_press {
             compatible = "zmk,behavior-layout-shift-key-press";
             #binding-cells = <1>;
