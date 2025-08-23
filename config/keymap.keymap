@@ -320,11 +320,11 @@
 
         MOUSE {
             bindings = <
-&trans  &trans                      &trans                       &trans                       &trans                      &trans                                       &trans  &trans     &trans                   &trans                   &trans  &trans
-&trans  &trans                      &lt_exit_AML_on_tap 6 W      &lt_exit_AML_on_tap 6 E      &trans                      &trans                                       &trans  &trans     &lt_exit_AML_on_tap 6 I  &lt_exit_AML_on_tap 6 O  &trans  &trans
-&trans  &mt_exit_AML_on_tap LGUI A  &mt_exit_AML_on_tap LCTRL S  &mt_exit_AML_on_tap LSHFT D  &mt_exit_AML_on_tap LALT F  &mt_exit_AML_on_tap SPACE G  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK                &mkp RCLK                &trans  &trans
-&trans  &mt_exit_AML_on_tap LGUI Z  &mt_exit_AML_on_tap LCTRL X  &mt_exit_AML_on_tap LSHFT C  &mt_exit_AML_on_tap LALT V  &mt_exit_AML_on_tap SPACE B  &trans  &trans  &trans  &trans     &trans                   &trans                   &trans  &trans
-&trans  &trans                      &trans                       &trans                       &trans                      &trans                       &trans  &trans  &trans  &trans     &trans                   &trans                   &trans  &trans
+&trans  &trans            &trans                   &trans                   &trans            &trans                             &trans  &trans     &trans                   &trans                   &trans  &trans
+&trans  &trans            &lt_exit_AML_on_tap 6 W  &lt_exit_AML_on_tap 6 E  &trans            &trans                             &trans  &trans     &lt_exit_AML_on_tap 6 I  &lt_exit_AML_on_tap 6 O  &trans  &trans
+&trans  &mt_mod_L LGUI A  &mt_mod_L LCTRL S        &mt_mod_L LSHFT D        &mt_mod_L LALT F  &mt_mod_L SPACE G  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK                &mkp RCLK                &trans  &trans
+&trans  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X        &mt_mod_L LSHFT C        &mt_mod_L LALT V  &mt_mod_L SPACE B  &trans  &trans  &trans  &trans     &trans                   &trans                   &trans  &trans
+&trans  &trans            &trans                   &trans                   &trans            &trans             &trans  &trans  &trans  &trans     &trans                   &trans                   &trans  &trans
             >;
         };
 
