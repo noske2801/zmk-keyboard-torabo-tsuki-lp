@@ -122,7 +122,7 @@
         };
 
         // KeyPress後にAMLを解除するマクロ
-.       /omit-if-no-ref/
+        /omit-if-no-ref/
         kp_exit_AML: kp_exit_AML {
             compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
