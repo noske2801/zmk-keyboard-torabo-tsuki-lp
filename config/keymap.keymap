@@ -169,7 +169,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "mt_mod_L";
             bindings = <&kp>, <&kp_exit_AML>;
- // Tap時にMOUSEレイヤーを離脱
+
+            // Tap時にMOUSEレイヤーを離脱
+
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <350>;
@@ -179,7 +181,7 @@
 
             hold-trigger-key-positions = <KEYS_R THUMBS>; // 右手キーが押されたら即時Hold判定
             hold-trigger-on-release; // 上の設定を"右手キーが離されたら"に変更
-            require-prior-idle-ms = <120>;
+            require-prior-idle-ms = <200>;
         };
 
         // 右手用修飾キー
@@ -200,7 +202,7 @@
 
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
-            require-prior-idle-ms = <120>;
+            require-prior-idle-ms = <200>;
         };
 
         // MOUSEレイヤー用修飾キー
