@@ -84,7 +84,7 @@
             layers = <0 5 6>;
         };
 
-        kp_LEFT_ESC {
+        kp_ESC {
             bindings = <&kp ESCAPE>;
             key-positions = <14 13>;
             layers = <0 5>;
@@ -101,14 +101,34 @@
             key-positions = <18 22>;
         };
 
-        Win+1_Bandicam {
+        kp_Win+1_Bandicam {
             bindings = <&kp LG(N1)>;
             key-positions = <43 46>;
         };
 
-        Win+2_Rapture {
+        kp_Win+2_Rapture {
             bindings = <&kp LG(N2)>;
             key-positions = <16 22>;
+        };
+
+        kp_Ctrl+C {
+            bindings = <&kp LC(C)>;
+            key-positions = <35 41>;
+        };
+
+        kp_Ctrl+V {
+            bindings = <&kp LC(V)>;
+            key-positions = <35 42>;
+        };
+
+        kp_Ctrl+Z {
+            bindings = <&kp LC(Z)>;
+            key-positions = <39 35>;
+        };
+
+        kp_Ctrl+X {
+            bindings = <&kp LC(X)>;
+            key-positions = <40 35>;
         };
     };
 
