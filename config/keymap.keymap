@@ -101,32 +101,32 @@
             key-positions = <18 22>;
         };
 
-        kp_Win+1_Bandicam {
+        kp_Win1_Bandicam {
             bindings = <&kp LG(N1)>;
             key-positions = <43 46>;
         };
 
-        kp_Win+2_Rapture {
+        kp_Win2_Rapture {
             bindings = <&kp LG(N2)>;
             key-positions = <16 22>;
         };
 
-        kp_Ctrl+C {
+        kp_CtrlC {
             bindings = <&kp LC(C)>;
             key-positions = <35 41>;
         };
 
-        kp_Ctrl+V {
+        kp_CtrlV {
             bindings = <&kp LC(V)>;
             key-positions = <35 42>;
         };
 
-        kp_Ctrl+Z {
+        kp_CtrlZ {
             bindings = <&kp LC(Z)>;
             key-positions = <39 35>;
         };
 
-        kp_Ctrl+X {
+        kp_CtrlX {
             bindings = <&kp LC(X)>;
             key-positions = <40 35>;
         };
