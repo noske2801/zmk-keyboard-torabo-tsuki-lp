@@ -28,11 +28,6 @@
     require-prior-idle-ms = <200>; // キー入力から指定の時間(ms)、AMLを有効にしない(誤爆防止)
     excluded-positions = <
  /* ここで指定しないキー(非マウスキー)を押したとき、AMLを解除 */
-        14 // W(SCROLL)
-        15 // E(SCROLL)
-        20 // I(SCROLL)
-        21 // O(SCROLL)
-
         25 // A(GUI)
         26 // S(Ctrl)
         27 // D(Shift)
@@ -109,26 +104,6 @@
         kp_Win2_Rapture {
             bindings = <&kp LG(N2)>;
             key-positions = <16 22>;
-        };
-
-        kp_CtrlC {
-            bindings = <&kp LC(C)>;
-            key-positions = <35 41>;
-        };
-
-        kp_CtrlV {
-            bindings = <&kp LC(V)>;
-            key-positions = <35 42>;
-        };
-
-        kp_CtrlZ {
-            bindings = <&kp LC(Z)>;
-            key-positions = <39 35>;
-        };
-
-        kp_CtrlX {
-            bindings = <&kp LC(X)>;
-            key-positions = <40 35>;
         };
     };
 
@@ -322,7 +297,7 @@
         DEFAULT {
             bindings = <
 &none  &none             &none              &none              &none             &none                                   &none        &none             &none                  &none                &none                 &none
-&none  &kp Q             &kp_exit_AML W     &kp_exit_AML E     &kp R             &kp T                                   &kp Y        &kp U             &kp_exit_AML I         &kp_exit_AML O       &kp P                 &none
+&none  &kp Q             &kp W              &lt 6 E            &kp R             &kp T                                   &kp Y        &kp U             &lt 6 I                &kp O                &kp P                 &none
 &none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &mt_mod_L SPACE G  &none      &none     &kp H        &kp J             &kp K                  &kp L                &mt_mod_R LGUI MINUS  &none
 &none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &mt_mod_L SPACE B  &kp TAB    &mo 1     &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LGUI FSLH   &none
 &none  &kp LANG2         &kp LGUI           &kp LALT           &lt 1 LANG2       &mt LSHFT SPACE    &lt 3 TAB  &kp BSPC  &lt 2 ENTER  &none             &none                  &kp LGUI             &mm_IME_ON            &none
