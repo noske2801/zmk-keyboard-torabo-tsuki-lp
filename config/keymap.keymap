@@ -101,12 +101,12 @@
             key-positions = <18 22>;
         };
 
-        kp_Win1_Bandicam {
+        kp_Win1 {
             bindings = <&kp LG(N1)>;
             key-positions = <43 46>;
         };
 
-        kp_Win2_Rapture {
+        kp_Win2 {
             bindings = <&kp LG(N2)>;
             key-positions = <16 22>;
         };
@@ -314,18 +314,18 @@
 &none  &none             &none              &none              &none             &none                                          &none        &none             &none                  &none                &none                 &none
 &none  &kp Q             &kp_exit_AML W     &kp_exit_AML E     &kp R             &kp T                                          &kp Y        &kp U             &kp_exit_AML I         &kp_exit_AML O       &kp P                 &none
 &none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &mt_mod_L SPACE G  &none             &none     &kp H        &kp J             &kp K                  &kp L                &mt_mod_R LGUI MINUS  &none
-&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &mt_mod_L SPACE B  &kp TAB           &mo 1     &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LGUI FSLH   &none
+&none  &kp Z             &kp X              &kp C              &kp V             &kp B              &kp TAB           &mo 1     &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LGUI FSLH   &none
 &none  &none             &kp LGUI           &kp LALT           &lt 1 LANG2       &mt LSHFT SPACE    &lt 3 LANGUAGE_1  &kp BSPC  &lt 2 ENTER  &none             &none                  &kp LGUI             &none                 &none
             >;
         };
 
         SYMBOLS {
             bindings = <
-&trans  &trans               &trans                 &trans                &trans               &trans                   &trans      &trans               &trans                &trans                 &trans                &trans
-&trans  &trans               &kp DQT                &kp LPAR              &kp RPAR             &trans                   &kp AT      &kp EQUAL            &kp LT                &kp GT                 &kp PRCNT             &trans
-&trans  &mt_mod_L LGUI AMPS  &mt_mod_L LCTRL SQT    &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &trans  &trans  &trans   &kp PIPE    &mt_mod_R LALT HASH  &mt_mod_R LSHFT SEMI  &mt_mod_R LCTRL COLON  &mt_mod_R LGUI UNDER  &trans
-&trans  &kp LGUI             &mt_mod_L LCTRL GRAVE  &mt_mod_L LSHFT LBRC  &mt_mod_L LALT RBRC  &trans  &trans  &trans   &kp DOLLAR  &mt_mod_R LALT STAR  &mt_mod_R LSHFT EXCL  &mt_mod_R LCTRL QMARK  &mt_mod_R LGUI BSLH   &trans
-&trans  &trans               &trans                 &trans                &trans               &trans  &trans  &kp DEL  &trans      &trans               &trans                &trans                 &trans                &trans
+&trans  &trans               &trans               &trans                &trans               &trans                   &trans      &trans               &trans                &trans                 &trans                &trans
+&trans  &trans               &kp DQT              &kp LPAR              &kp RPAR             &trans                   &kp AT      &kp EQUAL            &kp LT                &kp GT                 &kp PRCNT             &trans
+&trans  &mt_mod_L LGUI AMPS  &mt_mod_L LCTRL SQT  &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &trans  &trans  &trans   &kp PIPE    &kp HASH             &kp SEMI              &kp COLON              &mt_mod_R LGUI UNDER  &trans
+&trans  &trans               &kp GRAVE            &kp LBRC              &kp RBRC             &trans  &trans  &trans   &kp DOLLAR  &mt_mod_R LALT STAR  &mt_mod_R LSHFT EXCL  &mt_mod_R LCTRL QMARK  &mt_mod_R LGUI BSLH   &trans
+&trans  &trans               &trans               &trans                &trans               &trans  &trans  &kp DEL  &trans      &trans               &trans                &trans                 &trans                &trans
             >;
         };
 
@@ -341,11 +341,11 @@
 
         EXTRA {
             bindings = <
-&trans  &trans  &trans           &trans           &trans           &trans                   &trans                &trans             &trans          &trans           &trans         &trans
-&trans  &trans  &kp F7           &kp F8           &kp F9           &kp F12                  &kp LS(LC(N1))        &kp LS(LC(APOS))   &kp LC(N0)      &kp LS(LG(S))    &trans         &trans
-&trans  &trans  &kp F4           &kp F5           &kp F6           &kp F11  &trans  &trans  &sc_chrome_translate  &kp C_VOLUME_DOWN  &mmv MOVE_UP    &kp C_VOLUME_UP  &kp LC(LG(T))  &trans
-&trans  &trans  &kp_exit_AML F1  &kp_exit_AML F2  &kp_exit_AML F3  &kp F10  &trans  &trans  &trans                &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans         &trans
-&trans  &trans  &trans           &trans           &trans           &trans   &trans  &mo 4   &trans                &trans             &trans          &trans           &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans                &trans             &trans          &trans           &trans         &trans
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12                  &kp LS(LC(N1))        &kp LS(LC(APOS))   &kp LC(N0)      &kp LS(LG(S))    &trans         &trans
+&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &sc_chrome_translate  &kp C_VOLUME_DOWN  &mmv MOVE_UP    &kp C_VOLUME_UP  &kp LC(LG(T))  &trans
+&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans                &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &mo 4   &trans                &trans             &trans          &trans           &trans         &trans
             >;
         };
 
