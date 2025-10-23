@@ -323,7 +323,7 @@
 &none  &kp Q             &kp W              &kp_exit_AML E     &kp R             &kp T                                           &kp Y        &kp U             &kp_exit_AML I         &kp O                &kp P                 &none
 &none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G               &none             &none     &kp H        &kp J             &kp K                  &kp L                &mt_mod_R LGUI MINUS  &none
 &none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B               &kp TAB           &mo 1     &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LGUI FSLH   &none
-&none  &none             &kp LGUI           &kp LALT           &lt 1 LANG2       &SandS LSHFT SPACE  &lt 3 LANGUAGE_1  &kp BSPC  &lt 2 ENTER  &none             &none                  &kp LGUI             &none                 &none
+&none  &none             &kp LGUI           &kp LALT           &lt 1 LANG2       &mt_SandS LSHFT SPACE  &lt 3 LANGUAGE_1  &kp BSPC  &lt 2 ENTER  &none             &none                  &kp LGUI             &none                 &none
             >;
         };
 
