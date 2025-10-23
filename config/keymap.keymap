@@ -371,7 +371,7 @@
             bindings = <
 &trans  &trans  &trans                 &trans                 &trans                &trans                     &trans  &trans     &trans          &trans     &trans  &trans
 &trans  &trans  &trans                 &lt_SCROLL 6 E         &trans                &trans                     &trans  &trans     &lt_SCROLL 6 I  &trans     &trans  &trans
-&trans  &trans  &mt_mod_MOUSE LCTRL S  &mt_mod_MOUSE LSHFT D  &mt_mod_MOUSE LALT F  &tnras     &trans  &trans  &trans  &mkp LCLK  &mkp MCLK       &mkp RCLK  &trans  &trans
+&trans  &trans  &mt_mod_MOUSE LCTRL S  &mt_mod_MOUSE LSHFT D  &mt_mod_MOUSE LALT F  &trans     &trans  &trans  &trans  &mkp LCLK  &mkp MCLK       &mkp RCLK  &trans  &trans
 &trans  &trans  &mt_mod_MOUSE LCTRL X  &mt_mod_MOUSE LSHFT C  &mt_mod_MOUSE LALT V  &trans     &trans  &trans  &trans  &trans     &trans          &trans     &trans  &trans
 &trans  &trans  &trans                 &trans                 &trans                &kp SPACE  &trans  &trans  &trans  &trans     &trans          &trans     &trans  &trans
             >;
