@@ -66,13 +66,13 @@
 
         mkp_MB4 {
             bindings = <&mkp MB4>;
-            key-positions = <32 33>;
+            key-positions = <46 47>;
             layers = <0 5 6>;
         };
 
         mkp_MB5 {
             bindings = <&mkp MB5>;
-            key-positions = <36 35>;
+            key-positions = <49 50>;
             layers = <0 5 6>;
         };
 
@@ -111,6 +111,26 @@
         kp_WIN {
             bindings = <&kp LGUI>;
             key-positions = <13 22>;
+        };
+
+        kp_BACKSPACE {
+            bindings = <&kp BSPC>;
+            key-positions = <32 33>;
+        };
+
+        kp_DELETE {
+            bindings = <&kp DEL>;
+            key-positions = <36 35>;
+        };
+
+        kp_CTRL_C {
+            bindings = <&kp LC(C)>;
+            key-positions = <40 41>;
+        };
+
+        kp_CTRL_V {
+            bindings = <&kp LC(V)>;
+            key-positions = <40 42>;
         };
     };
 
