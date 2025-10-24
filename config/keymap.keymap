@@ -66,13 +66,13 @@
 
         mkp_MB4 {
             bindings = <&mkp MB4>;
-            key-positions = <46 47>;
+            key-positions = <32 33>;
             layers = <0 5 6>;
         };
 
         mkp_MB5 {
             bindings = <&mkp MB5>;
-            key-positions = <49 50>;
+            key-positions = <36 35>;
             layers = <0 5 6>;
         };
 
@@ -115,13 +115,13 @@
 
         kp_BACKSPACE {
             bindings = <&kp BSPC>;
-            key-positions = <32 33>;
+            key-positions = <22 21>;
             layers = <0 2 3 5 6>;
         };
 
         kp_DELETE {
             bindings = <&kp DEL>;
-            key-positions = <33 32>;
+            key-positions = <22 21>;
             layers = <1>;
         };
 
@@ -354,7 +354,7 @@
 &trans  &trans               &kp DQT                &kp LPAR              &kp RPAR             &trans                  &kp AT      &kp EQUAL            &kp LT                &kp GT                 &kp PRCNT             &trans
 &trans  &mt_mod_L LGUI AMPS  &mt_mod_L LCTRL SQT    &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &trans  &trans  &trans  &kp PIPE    &mt_mod_R LALT HASH  &mt_mod_R LSHFT SEMI  &mt_mod_R LCTRL COLON  &mt_mod_R LGUI UNDER  &trans
 &trans  &kp LGUI             &mt_mod_L LCTRL GRAVE  &mt_mod_L LSHFT LBRC  &mt_mod_L LALT RBRC  &trans  &trans  &trans  &kp DOLLAR  &mt_mod_R LALT STAR  &mt_mod_R LSHFT EXCL  &mt_mod_R LCTRL QMARK  &mt_mod_R LGUI BSLH   &trans
-&trans  &trans               &trans                 &trans                &trans               &trans  &trans  &trans  &kp BSPC    &trans               &trans                &trans                 &trans                &trans
+&trans  &trans               &trans                 &trans                &trans               &trans  &trans  &trans  &trans      &trans               &trans                &trans                 &trans                &trans
             >;
         };
 
@@ -374,7 +374,7 @@
 &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12                  &kp LS(LC(N1))        &kp LS(LC(APOS))   &kp LC(N0)      &kp LS(LG(S))    &trans         &trans
 &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &sc_chrome_translate  &kp C_VOLUME_DOWN  &mmv MOVE_UP    &kp C_VOLUME_UP  &kp LC(LG(T))  &trans
 &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans                &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans  &mo 4   &kp DEL               &trans             &trans          &trans           &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &mo 4   &trans                &trans             &trans          &trans           &trans         &trans
             >;
         };
 
