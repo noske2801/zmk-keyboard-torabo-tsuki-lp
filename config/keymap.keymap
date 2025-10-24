@@ -105,7 +105,7 @@
 
         kp_TAB {
             bindings = <&kp TAB>;
-            key-positions = <47 48>;
+            key-positions = <47 46>;
         };
 
         kp_WIN {
