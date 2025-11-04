@@ -1,27 +1,3 @@
 #include "torabo_tsuki_lp.dtsi"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
-
-&trackball_listener {
-    input-processors = <
-        /* カーソル方向の反転 */
-        &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-
-        /* カーソル速度の変更 */
-        &zip_x_scaler 1 1 /* X軸方向の速度を a/b倍 に調整 */
-        &zip_y_scaler 1 1 /* Y軸方向の速度を a/b倍 に調整 */
-
-        /* オートマウスレイヤーの設定 */
-        &zip_temp_layer 5 10000 /* (AMLを適用するレイヤー, レイヤーが解除されるまでの時間(ms)) */
-    >;
-
-    /* スクロール機能の追加 */
-    scroller {
-        layers = <6>; /* このレイヤーにいるとき自動的にスクロールモードに変更 */
-        input-processors = <
-            &zip_xy_to_scroll_mapper
-            &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT) /* X軸方向の動きを反転 */
-            &zip_scroll_scaler 1 10 /* スクロールの速度を a/b倍 に調整 */
-        >;
-    };
-};
