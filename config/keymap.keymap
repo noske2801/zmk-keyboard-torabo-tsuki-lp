@@ -56,8 +56,7 @@
     lowspeedmode {
         layers = <EXTRA>;
         input-processors = <
-            &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-            &zip_xy_scaler 1 2 /* カーソル速度を a/b倍 に調整 */
+            &zip_xy_scaler 1 3 /* カーソル速度を a/b倍 に調整 */
             &zip_temp_layer MOUSE 10000
         >;
         process-next;
@@ -92,6 +91,7 @@
     tapping-term-ms = <200>;
     quick-tap-ms = <250>;
     flavor = "hold-preferred";
+    hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始    
 };
 
 / {
