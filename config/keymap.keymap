@@ -56,7 +56,7 @@
     auto-mouse-layer {
         layers = <MOUSE>;
         input-processors = <&zip_temp_layer MOUSE 10000>; /* (AMLを適用するレイヤー, レイヤーが解除されるまでの時間(ms)) */
-    }
+    };
 
     /* スクロール機能の追加 */
     scroller {
