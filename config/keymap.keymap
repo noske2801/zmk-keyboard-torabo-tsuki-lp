@@ -50,14 +50,8 @@
         /* カーソル速度の変更 */
         &zip_x_scaler 1 1 /* X軸方向の速度を a/b倍 に調整 */
         &zip_y_scaler 1 1 /* Y軸方向の速度を a/b倍 に調整 */
+        &zip_temp_layer 5 10000 /* (AMLを適用するレイヤー, レイヤーが解除されるまでの時間(ms)) */
     >;
-
-    /* オートマウスレイヤーの設定 */
-    auto-mouse-layer {
-        layers = <3 5>;
-        input-processors = <&zip_temp_layer 5 10000>; /* (AMLを適用するレイヤー, レイヤーが解除されるまでの時間(ms)) */
-        process-next;
-    };
 
     /* スクロール機能の追加 */
     scroller {
