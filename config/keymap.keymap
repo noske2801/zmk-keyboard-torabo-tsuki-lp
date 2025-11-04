@@ -396,7 +396,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                   &trans                &trans            &trans        &trans         &trans         &trans
 &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12                  &kp LS(LC(N1))        &kp LS(LC(APOS))  &kp LC(N0)    &kp LS(LG(S))  &trans         &trans
-&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &sc_chrome_translate  &trans            &trans        &trans         &kp LC(LG(T))  &trans
+&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &sc_chrome_translate  &kp C_VOL_DN      &trans        &kp C_VOL_UP   &kp LC(LG(T))  &trans
 &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans                &trans            &kp C_VOL_DN  &kp C_VOL_UP   &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans   &trans  &mo 4   &trans                &trans            &trans        &trans         &trans         &trans
             >;
