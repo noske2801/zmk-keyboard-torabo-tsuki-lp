@@ -161,7 +161,7 @@
 
         kp_LANG1 {
             bindings = <&kp LANG1>;
-            key-positions = <56 60>;
+            key-positions = <60 57>;
         };
     };
 
