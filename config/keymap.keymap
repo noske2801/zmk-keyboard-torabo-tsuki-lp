@@ -158,6 +158,11 @@
             bindings = <&kp LC(V)>;
             key-positions = <40 42>;
         };
+
+        kp_LANG1 {
+            bindings = <&kp LANG1>;
+            key-positions = <56 60>;
+        };
     };
 
     macros {
@@ -364,31 +369,31 @@
 
         DEFAULT {
             bindings = <
-&none  &none             &none              &none              &none             &none                                             &none        &none             &none                  &none                &none                 &none
-&none  &kp Q             &kp W              &kp_exit_AML E     &kp R             &kp T                                             &kp Y        &kp U             &kp_exit_AML I         &kp O                &kp P                 &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G            &none             &none          &kp H        &kp J             &kp K                  &kp L                &mt_mod_R LGUI MINUS  &none
-&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B            &kp TAB           &mo 1          &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LGUI FSLH   &none
-&none  &none             &kp LGUI           &kp LALT           &lt 1 LANG2       &mt LSHFT SPACE  &lt 3 LANGUAGE_1  &kp BACKSPACE  &lt 2 ENTER  &none             &none                  &kp LGUI             &none                 &none
+&none  &none             &none              &none              &none             &none                            &none        &none             &none                  &none                &none                 &none
+&none  &kp Q             &kp W              &kp_exit_AML E     &kp R             &kp T                            &kp Y        &kp U             &kp_exit_AML I         &kp O                &kp P                 &none
+&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G            &none    &none  &kp H        &kp J             &kp K                  &kp L                &mt_mod_R LGUI MINUS  &none
+&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B            &kp TAB  &mo 1  &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LGUI FSLH   &none
+&none  &none             &kp LGUI           &kp LALT           &lt 1 LANG2       &mt LSHFT SPACE  &none    &none  &lt 2 ENTER  &none             &none                  &kp LGUI             &none                 &none
             >;
         };
 
         LOWER {
             bindings = <
-&trans  &trans               &trans                 &trans                &trans               &trans                   &trans      &trans               &trans                &trans                 &trans                &trans
-&trans  &trans               &kp DQT                &kp LPAR              &kp RPAR             &trans                   &kp AT      &kp EQUAL            &kp LT                &kp GT                 &kp PRCNT             &trans
-&trans  &mt_mod_L LGUI AMPS  &mt_mod_L LCTRL SQT    &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &trans  &trans  &trans   &kp PIPE    &mt_mod_R LALT HASH  &mt_mod_R LSHFT SEMI  &mt_mod_R LCTRL COLON  &mt_mod_R LGUI UNDER  &trans
-&trans  &kp LGUI             &mt_mod_L LCTRL GRAVE  &mt_mod_L LSHFT LBRC  &mt_mod_L LALT RBRC  &trans  &trans  &trans   &kp DOLLAR  &mt_mod_R LALT STAR  &mt_mod_R LSHFT EXCL  &mt_mod_R LCTRL QMARK  &mt_mod_R LGUI BSLH   &trans
-&trans  &trans               &trans                 &trans                &trans               &trans  &trans  &kp DEL  &trans      &trans               &trans                &trans                 &trans                &trans
+&trans  &trans               &trans                 &trans                &trans               &trans                  &trans      &trans               &trans                &trans                 &trans                &trans
+&trans  &trans               &kp DQT                &kp LPAR              &kp RPAR             &trans                  &kp AT      &kp EQUAL            &kp LT                &kp GT                 &kp DEL               &trans
+&trans  &mt_mod_L LGUI AMPS  &mt_mod_L LCTRL SQT    &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &trans  &trans  &trans  &kp PIPE    &mt_mod_R LALT HASH  &mt_mod_R LSHFT SEMI  &mt_mod_R LCTRL COLON  &mt_mod_R LGUI UNDER  &trans
+&trans  &kp LGUI             &mt_mod_L LCTRL GRAVE  &mt_mod_L LSHFT LBRC  &mt_mod_L LALT RBRC  &trans  &trans  &trans  &kp DOLLAR  &mt_mod_R LALT STAR  &mt_mod_R LSHFT EXCL  &mt_mod_R LCTRL QMARK  &mt_mod_R LGUI BSLH   &trans
+&trans  &trans               &trans                 &trans                &trans               &trans  &trans  &trans  &mo 3       &trans               &trans                &trans                 &trans                &trans
             >;
         };
 
         RAISE {
             bindings = <
 &trans  &trans                &trans                 &trans                 &trans                &trans                     &trans    &trans           &trans     &trans       &trans         &trans
-&trans  &trans                &kp KP_N7              &kp KP_N8              &kp KP_N9             &kp CARET                  &kp F5    &kp LS(LC(TAB))  &kp UP     &kp LC(TAB)  &kp F11        &trans
+&trans  &kp PERCENT           &kp KP_N7              &kp KP_N8              &kp KP_N9             &kp CARET                  &kp F5    &kp LS(LC(TAB))  &kp UP     &kp LC(TAB)  &kp BSPC       &trans
 &trans  &mt_mod_L LGUI KP_N0  &mt_mod_L LCTRL KP_N4  &mt_mod_L LSHFT KP_N5  &mt_mod_L LALT KP_N6  &kp EQUAL  &trans  &trans  &kp HOME  &kp LEFT         &kp DOWN   &kp RIGHT    &kp END        &trans
-&trans  &mt_mod_L LGUI KP_N0  &mt_mod_L LCTRL KP_N1  &mt_mod_L LSHFT KP_N2  &mt_mod_L LALT KP_N3  &kp TILDE  &trans  &trans  &trans    &kp KP_PLUS      &kp COMMA  &kp KP_DOT   &kp KP_DIVIDE  &trans
-&trans  &trans                &trans                 &trans                 &trans                &trans     &trans  &trans  &trans    &trans           &trans     &trans       &trans         &trans
+&trans  &mt_mod_L LGUI KP_N0  &mt_mod_L LCTRL KP_N1  &mt_mod_L LSHFT KP_N2  &mt_mod_L LALT KP_N3  &kp TILDE  &trans  &trans  &kp F11   &kp KP_PLUS      &kp COMMA  &kp KP_DOT   &kp KP_DIVIDE  &trans
+&trans  &trans                &trans                 &trans                 &mo 3                 &trans     &trans  &trans  &trans    &trans           &trans     &trans       &trans         &trans
             >;
         };
 
