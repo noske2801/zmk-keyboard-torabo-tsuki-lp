@@ -8,13 +8,12 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT 0
-#define KANA 1
-#define LOWER 2
-#define RAISE 3
-#define EXTRA 4
-#define SYSTEM 5
-#define MOUSE 6
-#define SCROLL 7
+#define LOWER 1
+#define RAISE 2
+#define EXTRA 3
+#define SYSTEM 4
+#define MOUSE 5
+#define SCROLL 6
 #define KEYS_L 13 14 15 16 17 25 26 27 28 29 39 40 41 42 43 44 53 54 55
 #define KEYS_L_CSASP 26 27 28 29 40 41 42 43
 #define KEYS_R 18 19 20 21 22 32 33 34 35 36 45 46 47 48 49 50 62 63 64
@@ -105,21 +104,25 @@
         mkp_MB4 {
             bindings = <&mkp MB4>;
             key-positions = <32 33>;
+            layers = <0 5 6>;
         };
 
         mkp_MB5 {
             bindings = <&mkp MB5>;
             key-positions = <36 35>;
+            layers = <0 5 6>;
         };
 
         kp_ESC {
             bindings = <&kp ESCAPE>;
             key-positions = <14 13>;
+            layers = <0 5>;
         };
 
         kp_CTRL_W {
             bindings = <&kp LC(W)>;
             key-positions = <32 36>;
+            layers = <0 2 5>;
         };
 
         kp_CTRL_SHIFT_T {
@@ -155,11 +158,6 @@
         kp_CTRL_V {
             bindings = <&kp LC(V)>;
             key-positions = <40 42>;
-        };
-
-        lt_3_KANA {
-            bindings = <&lt EXTRA LANG1>;
-            key-positions = <60 57>;
         };
     };
 
@@ -367,21 +365,11 @@
 
         DEFAULT {
             bindings = <
-&none  &none             &none              &none              &none             &none                           &none            &none             &none                  &none                &none                     &none
-&none  &kp Q             &kp W              &kp_exit_AML E     &kp R             &kp T                           &kp Y            &kp U             &kp_exit_AML I         &kp O                &kp P                     &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G             &none  &none  &kp H            &kp J             &kp K                  &kp L                &mt_mod_R LGUI BSPC       &none
-&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B             &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
-&none  &none             &none              &none              &lt LOWER LANG2   &mt LSHIFT SPACE  &none  &none  &lt RAISE ENTER  &none             &none                  &none                &none                     &none
-            >;
-        };
-
-        KANA {
-            bindings = <
-&none  &none             &none              &none              &none             &none                           &none            &none             &none                  &none                &none                     &none
-&none  &kp Q             &kp W              &kp_exit_AML E     &kp R             &kp T                           &kp Y            &kp U             &kp_exit_AML I         &kp O                &kp P                     &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G             &none  &none  &kp H            &kp J             &kp K                  &kp MINUS            &mt_mod_R LGUI BSPC       &none
-&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B             &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
-&none  &none             &none              &none              &lt LOWER LANG2   &mt LSHIFT SPACE  &none  &none  &lt RAISE ENTER  &none             &none                  &none                &none                     &none
+&none  &none             &none              &none              &none             &none                                 &none        &none             &none                  &none                &none                     &none
+&none  &kp Q             &kp W              &kp_exit_AML E     &kp R             &kp T                                 &kp Y        &kp U             &kp_exit_AML I         &kp O                &kp P                     &none
+&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G             &none        &none  &kp H        &kp J             &kp K                  &kp L                &mt_mod_R LGUI BSPC       &none
+&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B             &none        &none  &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
+&none  &none             &none              &none              &lt 1 LANG2       &mt LSHIFT SPACE  &lt 3 LANG1  &none  &lt 2 ENTER  &none             &none                  &none                &none                     &none
             >;
         };
 
@@ -389,7 +377,7 @@
             bindings = <
 &trans  &trans               &trans                 &trans                &trans               &trans                  &trans      &trans               &trans                &trans                 &trans                &trans
 &trans  &trans               &kp DQT                &kp LPAR              &kp RPAR             &trans                  &kp AT      &kp EQUAL            &kp SLASH             &kp BSLH               &kp PERCENT           &trans
-&trans  &mt_mod_L LGUI AMPS  &mt_mod_L LCTRL SQT    &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &trans  &trans  &trans  &kp PIPE    &mt_mod_R LALT HASH  &mt_mod_R LSHFT SEMI  &mt_mod_R LCTRL COLON  &kp DEL               &trans
+&trans  &mt_mod_L LGUI AMPS  &mt_mod_L LCTRL SQT    &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &trans  &trans  &trans  &kp PIPE    &mt_mod_R LALT HASH  &mt_mod_R LSHFT SEMI  &mt_mod_R LCTRL COLON  &mt_mod_R LGUI DEL    &trans
 &trans  &kp LGUI             &mt_mod_L LCTRL GRAVE  &mt_mod_L LSHFT LBRC  &mt_mod_L LALT RBRC  &trans  &trans  &trans  &kp DOLLAR  &mt_mod_R LALT STAR  &mt_mod_R LSHFT EXCL  &mt_mod_R LCTRL QMARK  &mt_mod_R LGUI UNDER  &trans
 &trans  &trans               &trans                 &trans                &trans               &trans  &trans  &trans  &trans      &trans               &trans                &trans                 &trans                &trans
             >;
@@ -407,11 +395,11 @@
 
         EXTRA {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans                &trans            &trans        &trans         &trans         &trans
-&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12                      &kp LS(LC(N1))        &kp LS(LC(APOS))  &kp LC(N0)    &kp LS(LG(S))  &trans         &trans
-&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans      &sc_chrome_translate  &kp C_VOL_DN      &trans        &kp C_VOL_UP   &kp LC(LG(T))  &trans
-&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans      &trans                &trans            &kp C_VOL_DN  &kp C_VOL_UP   &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans  &mo SYSTEM  &trans                &trans            &trans        &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans                &trans            &trans        &trans         &trans         &trans
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12                  &kp LS(LC(N1))        &kp LS(LC(APOS))  &kp LC(N0)    &kp LS(LG(S))  &trans         &trans
+&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &sc_chrome_translate  &kp C_VOL_DN      &trans        &kp C_VOL_UP   &kp LC(LG(T))  &trans
+&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans                &trans            &kp C_VOL_DN  &kp C_VOL_UP   &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &mo 4   &trans                &trans            &trans        &trans         &trans         &trans
             >;
         };
 
@@ -427,11 +415,11 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans                 &trans                 &trans                &trans                     &trans  &trans     &trans      &trans     &trans  &trans
-&trans  &trans  &trans                 &mo SCROLL             &trans                &trans                     &trans  &trans     &mo SCROLL  &trans     &trans  &trans
-&trans  &trans  &mt_mod_MOUSE LCTRL S  &mt_mod_MOUSE LSHFT D  &mt_mod_MOUSE LALT F  &trans     &trans  &trans  &trans  &mkp LCLK  &mkp MCLK   &mkp RCLK  &trans  &trans
-&trans  &trans  &mt_mod_MOUSE LCTRL X  &mt_mod_MOUSE LSHFT C  &mt_mod_MOUSE LALT V  &trans     &trans  &trans  &trans  &trans     &trans      &trans     &trans  &trans
-&trans  &trans  &trans                 &trans                 &trans                &kp SPACE  &trans  &trans  &trans  &trans     &trans      &trans     &trans  &trans
+&trans  &trans  &trans                 &trans                 &trans                &trans                     &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans                 &mo 6                  &trans                &trans                     &trans  &trans     &mo 6      &trans     &trans  &trans
+&trans  &trans  &mt_mod_MOUSE LCTRL S  &mt_mod_MOUSE LSHFT D  &mt_mod_MOUSE LALT F  &trans     &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
+&trans  &trans  &mt_mod_MOUSE LCTRL X  &mt_mod_MOUSE LSHFT C  &mt_mod_MOUSE LALT V  &trans     &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans                 &trans                 &trans                &kp SPACE  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
             >;
         };
 
