@@ -398,9 +398,9 @@
         RAISE {
             bindings = <
 &trans  &trans                &trans                 &trans                 &trans                &trans                     &trans    &trans           &trans     &trans       &trans   &trans
-&trans  &kp PERCENT           &kp KP_N7              &kp KP_N8              &kp KP_N9             &kp CARET                  &kp F5    &kp LS(LC(TAB))  &kp UP     &kp LC(TAB)  &trans   &trans
+&trans  &kp PERCENT           &kp KP_N7              &kp KP_N8              &kp KP_N9             &kp CARET                  &kp F5    &kp LS(LC(TAB))  &kp UP     &kp LC(TAB)  &kp F11  &trans
 &trans  &mt_mod_L LGUI KP_N0  &mt_mod_L LCTRL KP_N4  &mt_mod_L LSHFT KP_N5  &mt_mod_L LALT KP_N6  &kp EQUAL  &trans  &trans  &kp HOME  &kp LEFT         &kp DOWN   &kp RIGHT    &kp END  &trans
-&trans  &mt_mod_L LGUI KP_N0  &mt_mod_L LCTRL KP_N1  &mt_mod_L LSHFT KP_N2  &mt_mod_L LALT KP_N3  &kp TILDE  &trans  &trans  &kp PLUS  &kp STAR         &kp COMMA  &kp KP_DOT   &kp F11  &trans
+&trans  &mt_mod_L LGUI KP_N0  &mt_mod_L LCTRL KP_N1  &mt_mod_L LSHFT KP_N2  &mt_mod_L LALT KP_N3  &kp TILDE  &trans  &trans  &kp PLUS  &kp STAR         &kp COMMA  &kp KP_DOT   &trans   &trans
 &trans  &trans                &trans                 &trans                 &trans                &trans     &trans  &trans  &trans    &trans           &trans     &trans       &trans   &trans
             >;
         };
