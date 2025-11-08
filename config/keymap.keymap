@@ -274,9 +274,11 @@
             bindings = <&kp_exit_AML>, <&kp_exit_AML>;
 
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <250>;
+            quick-tap-ms = <(-1)>;
+            require-prior-idle-ms = <(-1)>;
+            hold-while-undecided;
         };
 
         // MOUSEレイヤー用修飾キー
