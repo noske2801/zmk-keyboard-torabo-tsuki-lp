@@ -159,9 +159,14 @@
             key-positions = <40 42>;
         };
 
-        kp_LANG1 {
+        kp_KANA {
             bindings = <&kp LANG1>;
-            key-positions = <60 57>;
+            key-positions = <28 27>;
+        };
+
+        kp_ALPHA {
+            bindings = <&kp LANG2>;
+            key-positions = <34 33>;
         };
     };
 
@@ -373,7 +378,7 @@
 &none  &kp Q             &kp W              &kp_exit_AML E     &kp R             &kp T                                &kp Y        &kp U             &kp_exit_AML I         &kp O                &kp P                     &none
 &none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G             &none       &none  &kp H        &kp J             &kp K                  &kp L                &mt_mod_R LGUI ENTER      &none
 &none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B             &none       &none  &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
-&none  &none             &none              &none              &lt 1 LANG2       &mt LSHIFT SPACE  &lt 3 BSPC  &none  &lt 2 LANG1  &none             &none                  &none                &none                     &none
+&none  &none             &none              &none              &lt 1 LANG1       &mt LSHIFT SPACE  &lt 3 BSPC  &none  &lt 2 LANG2  &none             &none                  &none                &none                     &none
             >;
         };
 
