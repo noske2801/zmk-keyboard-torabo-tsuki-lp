@@ -91,9 +91,10 @@
 
 &lt {
     tapping-term-ms = <200>;
-    quick-tap-ms = <-1>;
+    quick-tap-ms = <(-1)>;
     flavor = "hold-preferred";
     hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始    
+    require-prior-idle-ms = <(-1)>;
 };
 
 / {
