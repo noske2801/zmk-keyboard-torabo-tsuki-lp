@@ -369,11 +369,11 @@
 
         DEFAULT {
             bindings = <
-&none  &none             &none              &none              &none             &none                            &none        &none             &none                  &none                &none                     &none
-&none  &lt 3 Q           &kp W              &kp_exit_AML E     &kp R             &kp T                            &kp Y        &kp U             &kp_exit_AML I         &kp O                &kp BSPC                  &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G            &none    &none  &kp H        &kp J             &kp K                  &kp L                &mt_mod_R LGUI P          &none
-&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B            &kp TAB  &mo 1  &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
-&none  &none             &kp LGUI           &kp LALT           &lt 1 LANG2       &mt LSHFT SPACE  &none    &none  &lt 2 ENTER  &none             &none                  &kp LGUI             &none                     &none
+&none  &none             &none              &none              &none             &none                           &none        &none             &none                  &none                &none                     &none
+&none  &kp Q             &kp W              &kp_exit_AML E     &kp R             &kp T                           &kp Y        &kp U             &kp_exit_AML I         &kp O                &kp P                     &none
+&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G             &none  &none  &kp H        &kp J             &kp K                  &kp L                &mt_mod_R LGUI ENTER      &none
+&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B             &none  &none  &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
+&none  &none             &none              &none              &lt 1 LANG1       &mt LSHIFT SPACE  &none  &none  &lt 2 LANG2  &none             &none                  &none                &none                     &none
             >;
         };
 
@@ -381,7 +381,7 @@
             bindings = <
 &trans  &trans               &trans                 &trans                &trans               &trans                  &trans      &trans               &trans                &trans                 &trans                &trans
 &trans  &trans               &kp DQT                &kp LPAR              &kp RPAR             &trans                  &kp AT      &kp EQUAL            &kp SLASH             &kp BSLH               &kp DEL               &trans
-&trans  &mt_mod_L LGUI AMPS  &mt_mod_L LCTRL SQT    &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &trans  &trans  &trans  &kp PIPE    &mt_mod_R LALT HASH  &mt_mod_R LSHFT SEMI  &mt_mod_R LCTRL COLON  &mt_mod_R LGUI EQUAL  &trans
+&trans  &mt_mod_L LGUI AMPS  &mt_mod_L LCTRL SQT    &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &trans  &trans  &trans  &kp PIPE    &mt_mod_R LALT HASH  &mt_mod_R LSHFT SEMI  &mt_mod_R LCTRL COLON  &trans                &trans
 &trans  &kp LGUI             &mt_mod_L LCTRL GRAVE  &mt_mod_L LSHFT LBRC  &mt_mod_L LALT RBRC  &trans  &trans  &trans  &kp DOLLAR  &mt_mod_R LALT STAR  &mt_mod_R LSHFT EXCL  &mt_mod_R LCTRL QMARK  &mt_mod_R LGUI UNDER  &trans
 &trans  &trans               &trans                 &trans                &trans               &trans  &trans  &trans  &mo 3       &trans               &trans                &trans                 &trans                &trans
             >;
