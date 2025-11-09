@@ -53,10 +53,10 @@
         &zip_temp_layer MOUSE 10000 /* (AMLを適用するレイヤー, レイヤーが解除されるまでの時間(ms)) */
     >;
 
-    lowspeedmode {
-        layers = <EXTRA>;
+    precision_mode {
+        layers = <LOWER>;
         input-processors = <
-            &zip_xy_scaler 1 3 /* カーソル速度を a/b倍 に調整 */
+            &zip_xy_scaler 1 4 /* カーソル速度を a/b倍 に調整 */
             &zip_temp_layer MOUSE 10000
         >;
 
