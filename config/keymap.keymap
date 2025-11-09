@@ -271,14 +271,13 @@
         mt_SandS: mt_SandS {
             compatible = "zmk,behavior-hold-tap";
             label = "mt_SandS";
-            bindings = <&kp_exit_AML>, <&kp_exit_AML>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <(-1)>;
             require-prior-idle-ms = <(-1)>;
-            hold-while-undecided;
         };
 
         // MOUSEレイヤー用修飾キー
