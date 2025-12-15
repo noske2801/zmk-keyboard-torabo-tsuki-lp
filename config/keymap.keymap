@@ -396,11 +396,11 @@
 
         RAISE {
             bindings = <
-&trans  &trans             &trans              &trans              &trans             &trans                     &trans    &trans               &trans                  &trans                  &trans             &trans
-&trans  &kp PERCENT        &kp N7              &kp N8              &kp N9             &kp CARET                  &kp F5    &kp LS(LC(TAB))      &kp UP                  &kp LC(TAB)             &kp F11            &trans
-&trans  &mt_mod_L LGUI N0  &mt_mod_L LCTRL N4  &mt_mod_L LSHFT N5  &mt_mod_L LALT N6  &kp EQUAL  &trans  &trans  &kp HOME  &kp LEFT             &kp DOWN                &kp RIGHT               &kp END            &trans
-&trans  &mt_mod_L LGUI N0  &mt_mod_L LCTRL N1  &mt_mod_L LSHFT N2  &mt_mod_L LALT N3  &kp TILDE  &trans  &trans  &kp PLUS  &mt_mod_R RALT STAR  &mt_mod_R RSHIFT COMMA  &mt_mod_R RCTRL KP_DOT  &mt_mod_R RGUI F2  &trans
-&trans  &trans             &trans              &trans              &mo 3              &trans     &trans  &trans  &trans    &trans               &trans                  &trans                  &trans             &trans
+&trans  &trans             &trans              &trans              &trans             &trans                     &trans    &trans               &trans                  &trans               &trans             &trans
+&trans  &kp PERCENT        &kp N7              &kp N8              &kp N9             &kp CARET                  &kp F5    &kp LS(LC(TAB))      &kp UP                  &kp LC(TAB)          &kp F11            &trans
+&trans  &mt_mod_L LGUI N0  &mt_mod_L LCTRL N4  &mt_mod_L LSHFT N5  &mt_mod_L LALT N6  &kp EQUAL  &trans  &trans  &kp HOME  &kp LEFT             &kp DOWN                &kp RIGHT            &kp END            &trans
+&trans  &mt_mod_L LGUI N0  &mt_mod_L LCTRL N1  &mt_mod_L LSHFT N2  &mt_mod_L LALT N3  &kp TILDE  &trans  &trans  &kp PLUS  &mt_mod_R RALT STAR  &mt_mod_R RSHIFT COMMA  &mt_mod_R RCTRL DOT  &mt_mod_R RGUI F2  &trans
+&trans  &trans             &trans              &trans              &mo 3              &trans     &trans  &trans  &trans    &trans               &trans                  &trans               &trans             &trans
             >;
         };
 
