@@ -200,7 +200,7 @@
             #binding-cells = <0>;
             bindings = <
                 &macro_tap &kp LANG1
-                &to 1
+                &tog_on ROMAJI
             >;
         };
 
@@ -213,7 +213,8 @@
             bindings = <
                 &macro_tap &kp LANG2
                 &macro_wait_time 200
-                &tog_off 1
+                &tog_off ROMAJI
+                &tog_off ROMAJI_SHIFT
             >;
         };
 
@@ -244,6 +245,15 @@
     };
 
     behaviors {
+        /omit-if-no-ref/
+        // レイヤーを有効にするbehavior
+
+        tog_on: toggle_layer_on {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            toggle-mode = "on";
+        };
+
         /omit-if-no-ref/
         // レイヤーを無効化するbehavior
 
