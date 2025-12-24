@@ -415,31 +415,31 @@
 
         DEFAULT {
             bindings = <
-&none  &none             &none              &none              &none                        &none                                 &none            &none             &none                  &none                &none                     &none
-&none  &kp Q             &kp W              &kp E              &kp R                        &kp T                                 &kp Y            &kp U             &kp I                  &kp O                &kp BSPC                  &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F             &kp G                   &none  &none  &kp H            &kp J             &kp K                  &kp L                &mt_mod_R LGUI P          &none
-&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V             &kp B                   &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
-&none  &none             &none              &none              &ht_ime_tap_hold_mo LOWER 1  &mt_SandS LSHIFT SPACE  &none  &none  &lt RAISE ENTER  &none             &none                  &none                &none                     &none
+&none  &none             &none              &none              &none             &none                                 &none            &none             &none                  &none                &none                     &none
+&none  &kp Q             &kp W              &kp E              &kp R             &kp T                                 &kp Y            &kp U             &kp I                  &kp O                &kp BSPC                  &none
+&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G                   &none  &none  &kp H            &kp J             &kp K                  &kp L                &mt_mod_R LGUI P          &none
+&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B                   &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
+&none  &none             &none              &none              &lt LOWER LANG2   &mt_SandS LSHIFT SPACE  &none  &none  &lt RAISE ENTER  &none             &none                  &none                &none                     &none
             >;
         };
 
         ROMAJI {
             bindings = <
-&none  &none             &none              &none              &none             &none                                 &none            &none             &none                  &none                &none                     &none
-&none  &kp Q             &kp W              &kp E              &kp R             &kp T                                 &kp Y            &kp U             &kp I                  &kp O                &kp BSPC                  &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G                   &none  &none  &kp H            &kp J             &kp K                  &kp MINUS            &mt_mod_R LGUI P          &none
-&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B                   &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
-&none  &none             &none              &none              &lt LOWER LANG2   &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none             &none                  &none                &none                     &none
+&none  &none             &none              &none              &none                        &none                                 &none            &none             &none                  &none                &none                     &none
+&none  &kp Q             &kp W              &kp E              &kp R                        &kp T                                 &kp Y            &kp U             &kp I                  &kp O                &kp BSPC                  &none
+&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F             &kp G                   &none  &none  &kp H            &kp J             &kp K                  &kp MINUS            &mt_mod_R LGUI P          &none
+&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V             &kp B                   &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
+&none  &none             &none              &none              &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none             &none                  &none                &none                     &none
             >;
         };
 
         ROMAJI_SHIFT {
             bindings = <
-&none  &none             &none              &none              &none             &none                    &none            &none             &none                  &none                &none                     &none
-&none  &kp Q             &kp W              &kp E              &kp R             &kp T                    &kp Y            &kp U             &kp I                  &kp O                &kp BSPC                  &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G      &none  &none  &kp H            &kp J             &kp K                  &kp SLASH            &mt_mod_R LGUI P          &none
-&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B      &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
-&none  &none             &none              &none              &lt LOWER LANG2   &kp SPACE  &none  &none  &lt RAISE ENTER  &none             &none                  &none                &none                     &none
+&none  &none             &none              &none              &none                        &none                    &none            &none             &none                  &none                &none                     &none
+&none  &kp Q             &kp W              &kp E              &kp R                        &kp T                    &kp Y            &kp U             &kp I                  &kp O                &kp BSPC                  &none
+&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F             &kp G      &none  &none  &kp H            &kp J             &kp K                  &kp SLASH            &mt_mod_R LGUI P          &none
+&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V             &kp B      &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
+&none  &none             &none              &none              &ht_ime_tap_hold_mo LOWER 0  &kp SPACE  &none  &none  &lt RAISE ENTER  &none             &none                  &none                &none                     &none
             >;
         };
 
