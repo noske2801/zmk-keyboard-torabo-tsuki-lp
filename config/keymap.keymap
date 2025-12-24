@@ -198,8 +198,6 @@
 
         // Alt_Hold_Tap用 Layer/Alt制御
 
-        /omit-if-no-ref/
-
         mo_release_alt: mo_release_alt {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
