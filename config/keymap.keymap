@@ -196,58 +196,6 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
         };
 
-        // Alt_Hold_Tap用 Layer/Alt制御
-
-        /omit-if-no-ref/
-
-        mo_release_alt: mo_release_alt {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-
-            bindings = <
-                /* 押下時処理: パラメータで受け取ったレイヤーを有効化(&mo) */
-                &macro_press
-                &macro_param_1to1 &mo MACRO_PLACEHOLDER
-                &macro_pause_for_release /* LTキーが解放されるまでマクロを一時停止する */
-
-                /* 解放時処理: Altを解放*/
-                &macro_release
-                &kp LALT
-            >;
-        };
-
-        // Alt_Hold_Tap用 Layer/Tap 
-
-        /omit-if-no-ref/
-
-        lt_rel_alt: lt_rel_alt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&mo_release_alt &kp>;
-            
-            // Hol/Tap パラメータ
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <(-1)>;
-            flavor = "hold-preferred";
-            hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始
-            require-prior-idle-ms = <(-1)>;
-        };
-
-        /* Alt+Tab起動マクロ (&lt_rel_alt と組み合わせて使用)
-
-        /omit-if-no-ref/
-
-        alt_tab_trigger: alt_tab_trigger {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &macro_press &kp LALT
-                &macro_tap &kp TAB
-            >;
-        };
-        */
-
         // Alt+Tab起動マクロ
 
         /omit-if-no-ref/
@@ -260,20 +208,6 @@
                 &macro_tap &kp TAB
                 &macro_pause_for_release
 
-                &macro_release &kp LALT
-            >;
-        };
-
-        // Alt+Esc 実行マクロ
-
-        /omit-if-no-ref/
-
-        alt_esc: alt_esc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &macro_press &kp LALT
-                &macro_tap &kp ESC
                 &macro_release &kp LALT
             >;
         };
@@ -398,22 +332,6 @@
             hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始
         };
 
-        // Alt_hold_Tab用 Hold/Tap 
-
-        /omit-if-no-ref/
-
-        ht_alt_tab: hold_tap_alt_tab {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&alt_tab_trigger &alt_esc>;
-            
-            // Hol/Tap パラメータ
-            tapping-term-ms = <200>;
-            quick-tap-ms = <(-1)>;
-            flavor = "hold-preferred";
-            require-prior-idle-ms = <(-1)>;
-        };
-
         // Shiftキーを無効にしてIME_ONにする
 
         /omit-if-no-ref/
@@ -495,7 +413,7 @@
         RAISE {
             bindings = <
 &trans  &trans             &trans              &trans              &trans             &trans                     &trans    &trans               &trans                  &trans               &trans             &trans
-&trans  &ht_alt_tab        &kp N7              &kp N8              &kp N9             &kp CARET                  &kp F5    &kp LS(LC(TAB))      &kp UP                  &kp LC(TAB)          &kp F11            &trans
+&trans  &alt_tab_trigger   &kp N7              &kp N8              &kp N9             &kp CARET                  &kp F5    &kp LS(LC(TAB))      &kp UP                  &kp LC(TAB)          &kp F11            &trans
 &trans  &mt_mod_L LGUI N0  &mt_mod_L LCTRL N4  &mt_mod_L LSHFT N5  &mt_mod_L LALT N6  &kp EQUAL  &trans  &trans  &kp HOME  &kp LEFT             &kp DOWN                &kp RIGHT            &kp END            &trans
 &trans  &mt_mod_L LGUI N0  &mt_mod_L LCTRL N1  &mt_mod_L LSHFT N2  &mt_mod_L LALT N3  &kp TILDE  &trans  &trans  &kp PLUS  &mt_mod_R RALT STAR  &mt_mod_R RSHIFT COMMA  &mt_mod_R RCTRL DOT  &mt_mod_R RGUI F2  &trans
 &trans  &trans             &trans              &trans              &mo 3              &trans     &trans  &trans  &trans    &trans               &trans                  &trans               &trans             &trans
