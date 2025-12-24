@@ -449,7 +449,7 @@
         LOWER {
             bindings = <
 &trans  &trans               &trans                 &trans                &trans               &trans                  &trans      &trans               &trans                &trans                 &trans                  &trans
-&trans  &trans               &kp DQT                &kp LPAR              &kp RPAR             &trans                  &kp AT      &kp EQUAL            &kp SLASH             &kp BSLH               &kp DEL                 &trans
+&trans  &macro_ime_off       &kp DQT                &kp LPAR              &kp RPAR             &trans                  &kp AT      &kp EQUAL            &kp SLASH             &kp BSLH               &kp DEL                 &trans
 &trans  &mt_mod_L LGUI AMPS  &mt_mod_L LCTRL SQT    &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &trans  &trans  &trans  &kp PIPE    &mt_mod_R LALT HASH  &mt_mod_R LSHFT SEMI  &mt_mod_R LCTRL COLON  &mt_mod_R LGUI PERCENT  &trans
 &trans  &kp LGUI             &mt_mod_L LCTRL GRAVE  &mt_mod_L LSHFT LBRC  &mt_mod_L LALT RBRC  &trans  &trans  &trans  &kp DOLLAR  &mt_mod_R LALT STAR  &mt_mod_R LSHFT EXCL  &mt_mod_R LCTRL QMARK  &mt_mod_R LGUI UNDER    &trans
 &trans  &trans               &trans                 &trans                &trans               &trans  &trans  &trans  &mo EXTRA   &trans               &trans                &trans                 &trans                  &trans
