@@ -212,7 +212,7 @@
             #binding-cells = <0>;
             bindings = <
                 &macro_tap &kp LANG2
-                &to 0
+                &tog_off 1
             >;
         };
 
@@ -249,7 +249,6 @@
         tog_off: toggle_layer_off {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
-            display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
 
@@ -269,7 +268,7 @@
         };
 
         /omit-if-no-ref/
-        // Hold時にレイヤー切り替え、Tap時にIME切り替えを実行
+        // Hold時にレイヤー切り替え、Tap時にIME off
 
         ht_ime_tap_hold_mo: ime_off_tap_mo_hold {
             compatible = "zmk,behavior-hold-tap";
