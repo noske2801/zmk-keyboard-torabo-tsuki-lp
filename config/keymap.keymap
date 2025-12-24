@@ -404,7 +404,7 @@
 
         ht_alt_tab: hold_tap_alt_tab {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             bindings = <&alt_tab_trigger &alt_esc>;
             
             // Hol/Tap パラメータ
