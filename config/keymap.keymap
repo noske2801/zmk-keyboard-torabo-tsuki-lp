@@ -196,6 +196,22 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
         };
 
+        // Alt+Tab起動マクロ
+
+        /omit-if-no-ref/
+
+        alt_tab_trigger: alt_tab_trigger {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_press &kp LALT
+                &macro_tap &kp TAB
+                &macro_pause_for_release
+
+                &macro_release &kp LALT
+            >;
+        };
+
         // GoogleChromeでページ翻訳を行うショートカット
 
         /omit-if-no-ref/
@@ -376,10 +392,10 @@
 
         DEFAULT {
             bindings = <
-&none  &none             &none              &none              &none             &none                                 &none        &none             &none                  &none                &none                     &none
-&none  &kp Q             &kp W              &kp_exit_AML E     &kp R             &kp T                                 &kp Y        &kp U             &kp_exit_AML I         &kp O                &kp BSPC                  &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G                   &none  &none  &kp H        &kp J             &kp K                  &kp L                &mt_mod_R LGUI P          &none
-&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B                   &none  &none  &kp N        &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
+&none  &none             &none              &none              &none             &none                                 &none         &none             &none                  &none                &none                     &none
+&none  &kp Q             &kp W              &kp_exit_AML E     &kp R             &kp T                                 &kp Y         &kp U             &kp_exit_AML I         &kp O                &kp BSPC                  &none
+&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G                   &none  &none  &kp H         &kp J             &kp K                  &kp L                &mt_mod_R LGUI P          &none
+&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B                   &none  &none  &kp N         &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
 &none  &none             &none              &none              &lt 1 LANG2       &mt_SandS LSHIFT SPACE  &none  &none  &lt 2 ENTER  &none             &none                  &none                &none                     &none
             >;
         };
@@ -397,7 +413,7 @@
         RAISE {
             bindings = <
 &trans  &trans             &trans              &trans              &trans             &trans                     &trans    &trans               &trans                  &trans               &trans             &trans
-&trans  &kp PERCENT        &kp N7              &kp N8              &kp N9             &kp CARET                  &kp F5    &kp LS(LC(TAB))      &kp UP                  &kp LC(TAB)          &kp F11            &trans
+&trans  &alt_tab_trigger   &kp N7              &kp N8              &kp N9             &kp CARET                  &kp F5    &kp LS(LC(TAB))      &kp UP                  &kp LC(TAB)          &kp F11            &trans
 &trans  &mt_mod_L LGUI N0  &mt_mod_L LCTRL N4  &mt_mod_L LSHFT N5  &mt_mod_L LALT N6  &kp EQUAL  &trans  &trans  &kp HOME  &kp LEFT             &kp DOWN                &kp RIGHT            &kp END            &trans
 &trans  &mt_mod_L LGUI N0  &mt_mod_L LCTRL N1  &mt_mod_L LSHFT N2  &mt_mod_L LALT N3  &kp TILDE  &trans  &trans  &kp PLUS  &mt_mod_R RALT STAR  &mt_mod_R RSHIFT COMMA  &mt_mod_R RCTRL DOT  &mt_mod_R RGUI F2  &trans
 &trans  &trans             &trans              &trans              &mo 3              &trans     &trans  &trans  &trans    &trans               &trans                  &trans               &trans             &trans
