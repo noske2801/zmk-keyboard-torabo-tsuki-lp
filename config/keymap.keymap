@@ -159,7 +159,7 @@
         };
 
         kp_IME_on {
-            bindings = <&ime_on_romaji_layer>;
+            bindings = <&macro_ime_on>;
             key-positions = <60 57>;
         };
 
