@@ -212,6 +212,7 @@
             #binding-cells = <0>;
             bindings = <
                 &macro_tap &kp LANG2
+                &macro_wait_time 30
                 &tog_off 1
             >;
         };
