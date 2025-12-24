@@ -96,7 +96,7 @@
     quick-tap-ms = <(-1)>;
     require-prior-idle-ms = <(-1)>;
     flavor = "hold-preferred";
-    hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始    
+    hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始
 };
 
 / {
@@ -159,7 +159,7 @@
         };
 
         kp_IME_on {
-            bindings = <&kp LANG1>;
+            bindings = <&ime_on_romaji_layer>;
             key-positions = <60 57>;
         };
 
@@ -190,6 +190,30 @@
             tap-ms = <0>;
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
+        };
+
+        // IME onと同時にローマ字レイヤーを有効にするマクロ
+        /omit-if-no-ref/
+
+        macro_ime_on: ime_on_romaji_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap &kp LANG1
+                &to 1
+            >;
+        };
+
+        // IME offと同時にデフォルトレイヤーに切り替えるマクロ
+        /omit-if-no-ref/
+
+        macro_ime_off: ime_off_default_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap &kp LANG2
+                &to 0
+            >;
         };
 
         // Alt+Tab起動マクロ
@@ -230,6 +254,37 @@
         };
 
         /omit-if-no-ref/
+        // SandS用設定
+
+        mt_SandS: mt_SandS {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mt_SandS";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            tapping-term-ms = <200>;
+            quick-tap-ms = <(-1)>;
+            require-prior-idle-ms = <(-1)>;
+            flavor = "balanced";
+        };
+
+        /omit-if-no-ref/
+        // Hold時にレイヤー切り替え、Tap時にIME切り替えを実行
+
+        ht_ime_tap_hold_mo: ime_off_tap_mo_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>; 
+
+            bindings = <&mo &macro_ime_off>;
+            
+            tapping-term-ms = <200>;
+            quick-tap-ms = <(-1)>;
+            require-prior-idle-ms = <(-1)>;
+            flavor = "hold-preferred";
+            hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始    
+        };
+
+        /omit-if-no-ref/
         // 左手用修飾キー
 
         mt_mod_L: mt_mod_L {
@@ -262,21 +317,6 @@
             flavor = "balanced";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
-        };
-
-        /omit-if-no-ref/
-        // SandS用設定
-
-        mt_SandS: mt_SandS {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mt_SandS";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
-            tapping-term-ms = <200>;
-            quick-tap-ms = <(-1)>;
-            require-prior-idle-ms = <(-1)>;
-            flavor = "balanced";
         };
 
         /omit-if-no-ref/
@@ -368,11 +408,11 @@
 
         DEFAULT {
             bindings = <
-&none  &none             &none              &none              &none             &none                                 &none            &none             &none                  &none                &none                     &none
-&none  &kp Q             &kp W              &kp E              &kp R             &kp T                                 &kp Y            &kp U             &kp I                  &kp O                &kp BSPC                  &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G                   &none  &none  &kp H            &kp J             &kp K                  &kp L                &mt_mod_R LGUI P          &none
-&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B                   &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
-&none  &none             &none              &none              &lt LOWER LANG2   &mt_SandS LSHIFT SPACE  &none  &none  &lt RAISE ENTER  &none             &none                  &none                &none                     &none
+&none  &none             &none              &none              &none                        &none                                 &none            &none             &none                  &none                &none                     &none
+&none  &kp Q             &kp W              &kp E              &kp R                        &kp T                                 &kp Y            &kp U             &kp I                  &kp O                &kp BSPC                  &none
+&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F             &kp G                   &none  &none  &kp H            &kp J             &kp K                  &kp L                &mt_mod_R LGUI P          &none
+&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V             &kp B                   &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI MINUS  &none
+&none  &none             &none              &none              &ht_ime_tap_hold_mo LOWER 0  &mt_SandS LSHIFT SPACE  &none  &none  &lt RAISE ENTER  &none             &none                  &none                &none                     &none
             >;
         };
 
