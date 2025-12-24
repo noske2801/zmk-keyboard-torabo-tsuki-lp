@@ -214,6 +214,7 @@
                 &macro_tap &kp LANG2
                 &macro_wait_time 30
                 &tog_off 1
+                &to 0
             >;
         };
 
