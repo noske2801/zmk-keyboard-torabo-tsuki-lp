@@ -212,9 +212,8 @@
             #binding-cells = <0>;
             bindings = <
                 &macro_tap &kp LANG2
-                &macro_wait_time 200
+                &macro_wait_time 30
                 &tog_off ROMAJI
-                &tog_off ROMAJI_SHIFT
             >;
         };
 
@@ -288,8 +287,6 @@
             bindings = <&mo &macro_ime_off>;
             
             tapping-term-ms = <200>;
-            quick-tap-ms = <(-1)>;
-            require-prior-idle-ms = <(-1)>;
             flavor = "hold-preferred";
             hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始    
         };
