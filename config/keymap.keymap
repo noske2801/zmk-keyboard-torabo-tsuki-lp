@@ -10,12 +10,13 @@
 #define DEFAULT 0
 #define ROMAJI 1
 #define ROMAJI_SHIFT 2
-#define LOWER 3
-#define RAISE 4
-#define EXTRA 5
-#define SYSTEM 6
-#define MOUSE 7
-#define SCROLL 8
+#define BLANK 3
+#define LOWER 4
+#define RAISE 5
+#define EXTRA 6
+#define SYSTEM 7
+#define MOUSE 8
+#define SCROLL 9
 #define KEYS_L 13 14 15 16 17 25 26 27 28 29 39 40 41 42 43 44 53 54 55
 #define KEYS_L_CSASP 26 27 28 29 40 41 42 43
 #define KEYS_R 18 19 20 21 22 32 33 34 35 36 45 46 47 48 49 50 62 63 64
@@ -443,10 +444,20 @@
             >;
         };
 
+        BLANK { // レイヤー3の18,19キーで設定と異なるキーコードが出力される不具合の回避用レイヤー
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
         LOWER {
             bindings = <
 &trans  &trans               &trans                 &trans                &trans               &trans                  &trans      &trans               &trans                &trans                 &trans                  &trans
-&trans  &kp AT               &kp DQT                &kp LPAR              &kp RPAR             &trans                  &kp AT      &kp EQUAL            &kp SLASH             &kp BSLH               &kp DEL                 &trans
+&trans  &trans               &kp DQT                &kp LPAR              &kp RPAR             &trans                  &kp AT      &kp EQUAL            &kp SLASH             &kp BSLH               &kp DEL                 &trans
 &trans  &mt_mod_L LGUI AMPS  &mt_mod_L LCTRL SQT    &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &trans  &trans  &trans  &kp PIPE    &mt_mod_R LALT HASH  &mt_mod_R LSHFT SEMI  &mt_mod_R LCTRL COLON  &mt_mod_R LGUI PERCENT  &trans
 &trans  &kp LGUI             &mt_mod_L LCTRL GRAVE  &mt_mod_L LSHFT LBRC  &mt_mod_L LALT RBRC  &trans  &trans  &trans  &kp DOLLAR  &mt_mod_R LALT STAR  &mt_mod_R LSHFT EXCL  &mt_mod_R LCTRL QMARK  &mt_mod_R LGUI UNDER    &trans
 &trans  &trans               &trans                 &trans                &trans               &trans  &trans  &trans  &mo EXTRA   &trans               &trans                &trans                 &trans                  &trans
@@ -465,11 +476,11 @@
 
         EXTRA {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans                &trans            &trans      &trans         &trans         &trans
-&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12                  &kp LS(LC(N1))        &kp LS(LC(APOS))  &kp LC(N0)  &kp LS(LG(S))  &trans         &trans
-&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &trans                &kp C_VOL_DN      &trans      &kp C_VOL_UP   &kp LC(LG(T))  &trans
-&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans                &trans            &trans      &trans         &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans                &trans            &trans      &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans        &trans      &trans         &trans         &trans
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12                  &trans  &trans        &kp LC(N0)  &kp LS(LG(S))  &trans         &trans
+&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &trans  &kp C_VOL_DN  &trans      &kp C_VOL_UP   &kp LC(LG(T))  &trans
+&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans  &trans        &trans      &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans        &trans      &trans         &trans         &trans
             >;
         };
 
