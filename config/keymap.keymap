@@ -177,7 +177,7 @@
 
         kp_IME_on_noLayer {
             bindings = <&kp LANG1>;
-            key-positions = <11 10>;
+            key-positions = <22 21>;
         };
     };
 
@@ -480,11 +480,11 @@
 
         ROMAJI {
             bindings = <
-&none  &none   &none      &none      &none                        &none                                 &none              &none   &none   &none      &none     &none
-&none  &kp F7  &kp R      &kp H      &kp M                        &none                                 &none              &kp_yu  &kp U   &kp_yo     &kp BSPC  &none
-&none  &kp N   &kp T      &kp K      &kp S                        &kp W                   &none  &none  &kp_nn             &kp I   &kp A   &kp O      &kp E     &none
-&none  &kp X   &kp COMMA  &kp MINUS  &kp F                        &kp LEFT_BRACKET        &none  &none  &kp RIGHT_BRACKET  &kp Y   &kp_ya  &kp LCTRL  &none     &none
-&none  &none   &none      &none      &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER    &none   &none   &none      &none     &none
+&none  &none             &none                  &none                   &none                        &none                                 &none              &none   &none   &none      &none     &none
+&none  &kp F7            &kp R                  &kp H                   &kp M                        &none                                 &none              &kp_yu  &kp U   &kp_yo     &kp BSPC  &none
+&none  &kp N             &kp T                  &kp K                   &kp S                        &kp W                   &none  &none  &kp_nn             &kp I   &kp A   &kp O      &kp E     &none
+&none  &mt_mod_L X LGUI  &mt_mod_L LCTRL COMMA  &mt_mod_L LSHIFT MINUS  &mt_mod_L LALT F             &kp LEFT_BRACKET        &none  &none  &kp RIGHT_BRACKET  &kp Y   &kp_ya  &kp LCTRL  &none     &none
+&none  &none             &none                  &none                   &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER    &none   &none   &none      &none     &none
             >;
         };
 
