@@ -527,9 +527,9 @@
         ROMAJI {
             bindings = <
 &none  &none             &none                   &none                   &none                        &none                                 &none                  &none                  &none                  &none          &none                   &none
-&none  &kp F7            &kp R                   &kp H                   &kp M                        &none                                 &none                  &romaji_V kp_yo kp_yo  &romaji_V U U          &romaji_V O O  &kp BSPC                &none
-&none  &kp N             &kp T                   &kp K                   &kp S                        &kp W                   &none  &none  &romaji_V kp_yu kp_yu  &romaji_V A A          &romaji_V I I          &romaji_V E E  &romaji_V  kp_nn kp_nn  &none
-&none  &mt_mod_L X LGUI  &mt_mod_L LCTRL PERIOD  &mt_mod_L LSHIFT COMMA  &mt_mod_L LALT F             &kp LEFT_BRACKET        &none  &none  &kp RIGHT_BRACKET      &kp Y                  &romaji_V kp_ya kp_ya  &kp MINUS      &none                   &none
+&none  &kp F7            &kp R                   &kp H                   &kp M                        &none                                 &none                  &kp_yo  &romaji_V U U          &romaji_V O O  &kp BSPC                &none
+&none  &kp N             &kp T                   &kp K                   &kp S                        &kp W                   &none  &none  &kp_yu  &romaji_V A A          &romaji_V I I          &romaji_V E E  &kp_nn  &none
+&none  &mt_mod_L X LGUI  &mt_mod_L LCTRL PERIOD  &mt_mod_L LSHIFT COMMA  &mt_mod_L LALT F             &kp LEFT_BRACKET        &none  &none  &kp RIGHT_BRACKET      &kp Y                  &kp_ya  &kp MINUS      &none                   &none
 &none  &none             &none                   &none                   &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER        &none                  &none                  &none          &none                   &none
             >;
         };
