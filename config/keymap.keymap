@@ -179,13 +179,6 @@
             bindings = <&kp LANG1>;
             key-positions = <22 21>;
         };
-
-        kp_you {
-            bindings = <&kp_you>;
-            key-positions = <21 20>;
-            layers = <1 2>;
-            timeout-ms = <20>;
-        };
     };
 
     macros {
@@ -282,6 +275,7 @@
             #binding-cells = <0>;
             bindings = <&kp Y &kp O>;
             label = "KP_YO";
+            wait-ms = <3>;
         };
 
         kp_nn: kp_nn {
@@ -289,13 +283,6 @@
             #binding-cells = <0>;
             bindings = <&kp N &kp N>;
             label = "KP_NN";
-        };
-
-        kp_you: kp_you {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Y &kp O &kp U>;
-            label = "KP_YOU";
         };
     };
 
