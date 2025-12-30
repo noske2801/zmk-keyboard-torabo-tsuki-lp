@@ -261,6 +261,7 @@
             #binding-cells = <0>;
             bindings = <&kp Y &kp A>;
             label = "KP_YA";
+            wait-ms = <5>;
         };
 
         kp_yu: kp_yu {
@@ -268,6 +269,7 @@
             #binding-cells = <0>;
             bindings = <&kp Y &kp U>;
             label = "KP_YU";
+            wait-ms = <5>;
         };
 
         kp_yo: kp_yo {
@@ -275,6 +277,7 @@
             #binding-cells = <0>;
             bindings = <&kp Y &kp O>;
             label = "KP_YO";
+            wait-ms = <5>;
         };
 
         kp_nn: kp_nn {
@@ -282,6 +285,7 @@
             #binding-cells = <0>;
             bindings = <&kp N &kp N>;
             label = "KP_NN";
+            wait-ms = <5>;
         };
     };
 
