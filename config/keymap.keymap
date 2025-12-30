@@ -494,20 +494,20 @@
         ROMAJI {
             bindings = <
 &none  &none             &none                   &none                   &none                        &none                                 &none              &none   &none   &none      &none     &none
-&none  &kp F7            &kp R                   &kp H                   &kp M                        &none                                 &none              &kp_yu  &kp U   &kp_yo     &kp BSPC  &none
-&none  &kp N             &kp T                   &kp K                   &kp S                        &kp W                   &none  &none  &kp MINUS          &kp I   &kp A   &kp O      &kp E     &none
-&none  &mt_mod_L X LGUI  &mt_mod_L LCTRL PERIOD  &mt_mod_L LSHIFT COMMA  &mt_mod_L LALT F             &kp LEFT_BRACKET        &none  &none  &kp RIGHT_BRACKET  &kp Y   &kp_ya  &kp LCTRL  &none     &none
+&none  &kp F7            &kp R                   &kp H                   &kp M                        &none                                 &none              &kp_yo  &kp U   &kp O      &kp BSPC  &none
+&none  &kp N             &kp T                   &kp K                   &kp S                        &kp W                   &none  &none  &kp_yu             &kp A   &kp I   &kp E      &kp_nn    &none
+&none  &mt_mod_L X LGUI  &mt_mod_L LCTRL PERIOD  &mt_mod_L LSHIFT COMMA  &mt_mod_L LALT F             &kp LEFT_BRACKET        &none  &none  &kp RIGHT_BRACKET  &kp Y   &kp_ya  &kp MINUS  &none     &none
 &none  &none             &none                   &none                   &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER    &none   &none   &none      &none     &none
             >;
         };
 
         ROMAJI_SHIFT {
             bindings = <
-&none  &none   &none         &none     &none   &none                               &none                  &none   &none   &none   &none   &none
-&none  &kp F8  &kp P         &kp B     &trans  &trans                              &trans                 &trans  &trans  &trans  &trans  &none
-&none  &kp_nn  &kp D         &kp G     &kp Z   &kp V                 &none  &none  &kp TILDE              &trans  &trans  &trans  &trans  &none
-&none  &trans  &kp QUESTION  &kp EXCL  &trans  &kp LEFT_PARENTHESIS  &none  &none  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans  &none
-&none  &none   &none         &none     &trans  &kp SPACE             &none  &none  &trans                 &none   &none   &none   &none   &none
+&none  &none   &none         &none     &none   &none                               &none                  &none   &none   &none      &none   &none
+&none  &kp F8  &kp P         &kp B     &trans  &trans                              &trans                 &trans  &trans  &trans     &trans  &none
+&none  &trans  &kp D         &kp G     &kp Z   &kp V                 &none  &none  &trans                 &trans  &trans  &trans     &trans  &none
+&none  &trans  &kp QUESTION  &kp EXCL  &trans  &kp LEFT_PARENTHESIS  &none  &none  &kp RIGHT_PARENTHESIS  &trans  &trans  &kp TILDE  &trans  &none
+&none  &none   &none         &none     &trans  &kp SPACE             &none  &none  &trans                 &none   &none   &none      &none   &none
             >;
         };
 
