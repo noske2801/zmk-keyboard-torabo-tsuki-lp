@@ -180,11 +180,13 @@
             key-positions = <22 21>;
         };
 
+        /*
         kp_you {
             bindings = <&kp_you>;
             key-positions = <21 20>;
             layers = <1 2>;
         };
+        */
     };
 
     macros {
@@ -262,60 +264,40 @@
             label = "SC_CHROME_TRANSLATE";
         };
 
-        /omit-if-no-ref/
-
         kp_ya: kp_ya {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp Y &kp A>;
+            label = "KP_YA";
         };
-
-        /omit-if-no-ref/
 
         kp_yu: kp_yu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp Y &kp U>;
+            label = "KP_YU";
         };
-
-        /omit-if-no-ref/
 
         kp_yo: kp_yo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp Y &kp O>;
+            label = "KP_YO";
         };
-
-        /omit-if-no-ref/
 
         kp_nn: kp_nn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N &kp N>;
+            label = "KP_NN";
         };
-
-        /omit-if-no-ref/
 
         kp_you: kp_you {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp Y &kp O &kp U>;
+            label = "KP_YOU";
         };
-
-        /omit-if-no-ref/
-
-        // Hold時に <母音> と <MINUS> を連続出力するマクロ
-
-        macro_vowel_long: macro_vowel_long {
-        compatible = "zmk,behavior-macro-one-param";
-        #binding-cells = <1>; 
-
-        bindings = <
-            &macro_param_1to1     /* 1. マクロが受け取ったパラメータ1 (母音キーコード) を、次の &kp のパラメータとして渡す */
-            &kp MACRO_PLACEHOLDER /* 2. 受け取ったパラメータ (例: A) を &kp で出力 */
-            &kp MINUS             /* 3. 次に '-' (MINUS) を &kp で出力 */
-        >;
-    };
     };
 
     behaviors {
@@ -456,19 +438,6 @@
             keep-mods = <0>; // 明示的にShiftキーを無効化
         };
 
-         /omit-if-no-ref/
-
-        // Tap: 母音出力 (&kp), Hold: 母音+長音記号出力 (&macro_vowel_long)
-
-        romaji_V: ht_vowel_tap_long_hold {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; 
-            bindings = <&macro_vowel_long &kp>; 
-
-            flavor = "tap-preferred";
-            tapping-term-ms = <100>; 
-        };
-
         /omit-if-no-ref/
 
         // <Shift + ,>で<!>を入力
@@ -526,11 +495,11 @@
 
         ROMAJI {
             bindings = <
-&none  &none             &none                   &none                   &none                        &none                                 &none                  &none                  &none                  &none          &none                   &none
-&none  &kp F7            &kp R                   &kp H                   &kp M                        &none                                 &none                  &kp_yo  &romaji_V U U          &romaji_V O O  &kp BSPC                &none
-&none  &kp N             &kp T                   &kp K                   &kp S                        &kp W                   &none  &none  &kp_yu  &romaji_V A A          &romaji_V I I          &romaji_V E E  &kp_nn  &none
-&none  &mt_mod_L X LGUI  &mt_mod_L LCTRL PERIOD  &mt_mod_L LSHIFT COMMA  &mt_mod_L LALT F             &kp LEFT_BRACKET        &none  &none  &kp RIGHT_BRACKET      &kp Y                  &kp_ya  &kp MINUS      &none                   &none
-&none  &none             &none                   &none                   &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER        &none                  &none                  &none          &none                   &none
+&none  &none             &none                   &none                   &none                        &none                                 &none              &none   &none   &none      &none     &none
+&none  &kp F7            &kp R                   &kp H                   &kp M                        &none                                 &none              &kp_yo  &kp U   &kp O      &kp BSPC  &none
+&none  &kp N             &kp T                   &kp K                   &kp S                        &kp W                   &none  &none  &kp_yu             &kp A   &kp I   &kp E      &kp_nn    &none
+&none  &mt_mod_L X LGUI  &mt_mod_L LCTRL PERIOD  &mt_mod_L LSHIFT COMMA  &mt_mod_L LALT F             &kp LEFT_BRACKET        &none  &none  &kp RIGHT_BRACKET  &kp Y   &kp_ya  &kp MINUS  &none     &none
+&none  &none             &none                   &none                   &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER    &none   &none   &none      &none     &none
             >;
         };
 
