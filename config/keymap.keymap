@@ -107,13 +107,13 @@
         mkp_MB4 {
             bindings = <&mkp MB4>;
             key-positions = <32 33>;
-            layers = <0 8>;
+            layers = <0>;
         };
 
         mkp_MB5 {
             bindings = <&mkp MB5>;
             key-positions = <36 35>;
-            layers = <0 8>;
+            layers = <0>;
         };
 
         kp_ESC {
@@ -124,13 +124,11 @@
         kp_CTRL_W {
             bindings = <&kp LC(W)>;
             key-positions = <32 36>;
-            layers = <0 8>;
         };
 
         kp_CTRL_SHIFT_T {
             bindings = <&kp LS(LC(T))>;
             key-positions = <18 22>;
-            layers = <0 8>;
         };
 
         kp_Win_1 {
@@ -496,8 +494,8 @@
         ROMAJI {
             bindings = <
 &none  &none             &none              &none               &none                        &none                                 &none            &none     &none      &none      &none     &none
-&none  &kp F7            &kp H              &kp R               &kp P                        &kp QUESTION                          &kp FSLH         &kp U     &kp O      &kp Y      &kp BSPC  &none
-&none  &kp N             &kp T              &kp K               &kp S                        &kp COMMA               &none  &none  &kp MINUS        &kp A     &kp E      &kp I      &kp_nn    &none
+&none  &kp F7            &kp R              &kp H               &kp P                        &kp QUESTION                          &kp FSLH         &kp Y     &kp O      &kp U      &kp BSPC  &none
+&none  &kp S             &kp T              &kp K               &kp N                        &kp COMMA               &none  &none  &kp MINUS        &kp I     &kp E      &kp A      &kp_nn    &none
 &none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHIFT C  &mt_mod_L LALT V             &none                   &none  &none  &none            &kp LALT  &kp LSHFT  &kp LCTRL  &kp LGUI  &none
 &none  &none             &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none     &none      &none      &none     &none
             >;
@@ -506,8 +504,8 @@
         ROMAJI_SHIFT {
             bindings = <
 &none  &none   &none   &none   &none   &none                     &none      &none   &none   &none   &none        &none
-&none  &kp F6  &kp B   &kp M   &kp F   &kp EXCL                  &kp COLON  &trans  &trans  &trans  &kp LS(DEL)  &none
-&none  &kp W   &kp D   &kp G   &kp Z   &kp PERIOD  &none  &none  &trans     &trans  &trans  &trans  &trans       &none
+&none  &kp F6  &kp M   &kp B   &kp F   &kp EXCL                  &kp COLON  &trans  &trans  &trans  &kp LS(DEL)  &none
+&none  &kp Z   &kp D   &kp G   &kp M   &kp PERIOD  &none  &none  &trans     &trans  &trans  &trans  &trans       &none
 &none  &trans  &trans  &trans  &trans  &trans      &none  &none  &trans     &trans  &trans  &trans  &trans       &none
 &none  &none   &none   &none   &trans  &kp SPACE   &none  &none  &trans     &none   &none   &none   &none        &none
             >;
