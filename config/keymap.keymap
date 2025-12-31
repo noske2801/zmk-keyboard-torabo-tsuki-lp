@@ -495,7 +495,7 @@
             bindings = <
 &none  &none             &none              &none               &none                        &none                                 &none            &none     &none      &none      &none     &none
 &none  &kp F7            &kp R              &kp H               &kp P                        &kp QUESTION                          &kp FSLH         &kp Y     &kp U      &kp O      &kp BSPC  &none
-&none  &kp S             &kp T              &kp K               &kp N                        &kp COMMA               &none  &none  &kp MINUS        &kp I     &kp A      &kp E      &kp_nn    &none
+&none  &kp N             &kp T              &kp K               &kp S                        &kp COMMA               &none  &none  &kp MINUS        &kp I     &kp A      &kp E      &kp_nn    &none
 &none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHIFT C  &mt_mod_L LALT V             &none                   &none  &none  &none            &kp LALT  &kp LSHFT  &kp LCTRL  &kp LGUI  &none
 &none  &none             &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none     &none      &none      &none     &none
             >;
@@ -505,7 +505,7 @@
             bindings = <
 &none  &none   &none   &none   &none   &none                     &none      &none   &none   &none   &none   &none
 &none  &kp F6  &kp W   &kp B   &kp F   &kp EXCL                  &kp COLON  &trans  &trans  &trans  &trans  &none
-&none  &kp Z   &kp D   &kp G   &kp M   &kp PERIOD  &none  &none  &trans     &trans  &trans  &trans  &trans  &none
+&none  &kp M   &kp D   &kp G   &kp Z   &kp PERIOD  &none  &none  &trans     &trans  &trans  &trans  &trans  &none
 &none  &trans  &trans  &trans  &trans  &trans      &none  &none  &trans     &trans  &trans  &trans  &trans  &none
 &none  &none   &none   &none   &trans  &kp SPACE   &none  &none  &trans     &none   &none   &none   &none   &none
             >;
