@@ -107,13 +107,13 @@
         mkp_MB4 {
             bindings = <&mkp MB4>;
             key-positions = <32 33>;
-            layers = <0>;
+            layers = <0 8>;
         };
 
         mkp_MB5 {
             bindings = <&mkp MB5>;
             key-positions = <36 35>;
-            layers = <0>;
+            layers = <0 8>;
         };
 
         kp_ESC {
