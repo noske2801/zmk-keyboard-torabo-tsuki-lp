@@ -182,18 +182,21 @@
             bindings = <&kp_dh>;
             key-positions = <26 16>;
             layers = <2>;
+            timeout-ms = <150>;
         };
 
         kp_wh {
             bindings = <&kp_wh>;
             key-positions = <15 16>;
             layers = <1 2>;
+            timeout-ms = <150>;
         };
 
         kp_tw {
             bindings = <&kp_tw>;
             key-positions = <26 15>;
             layers = <1>;
+            timeout-ms = <150>;
         };
 
         /*
