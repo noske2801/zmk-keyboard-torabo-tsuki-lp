@@ -503,11 +503,11 @@
 
         ROMAJI_SHIFT {
             bindings = <
-&none  &none   &none   &none   &none   &none                     &none      &none   &none   &none   &none   &none
-&none  &kp F6  &kp W   &kp B   &kp P   &kp EXCL                  &kp COLON  &trans  &trans  &trans  &trans  &none
-&none  &kp F   &kp D   &kp G   &kp Z   &kp PERIOD  &none  &none  &trans     &trans  &trans  &trans  &trans  &none
-&none  &trans  &trans  &trans  &trans  &trans      &none  &none  &trans     &trans  &trans  &trans  &trans  &none
-&none  &none   &none   &none   &trans  &kp SPACE   &none  &none  &trans     &none   &none   &none   &none   &none
+&none  &none   &none   &none   &none   &none                     &none      &none   &none   &none   &none      &none
+&none  &kp F6  &kp W   &kp B   &kp P   &kp EXCL                  &kp COLON  &trans  &trans  &trans  &trans     &none
+&none  &kp F   &kp D   &kp G   &kp Z   &kp PERIOD  &none  &none  &trans     &trans  &trans  &trans  &kp MINUS  &none
+&none  &trans  &trans  &trans  &trans  &trans      &none  &none  &trans     &trans  &trans  &trans  &trans     &none
+&none  &none   &none   &none   &trans  &kp SPACE   &none  &none  &trans     &none   &none   &none   &none      &none
             >;
         };
 
