@@ -205,6 +205,12 @@
             layers = <1 2>;
         };
 
+        kp_F7 {
+            bindings = <&kp F7>;
+            key-positions = <29 32>;
+            layers = <1 2>;
+        };
+
         /*
         kp_you {
             bindings = <&kp_you>;
@@ -541,21 +547,21 @@
 
         ROMAJI {
             bindings = <
-&none  &none   &none              &none               &none                        &none                                 &none            &none     &none      &none      &none     &none
-&none  &kp F7  &kp R              &kp M               &kp H                        &none                                 &kp TILDE        &kp Y     &kp U      &kp O      &kp BSPC  &none
-&none  &kp N   &kp T              &kp K               &kp S                        &kp COMMA               &none  &none  &kp MINUS        &kp I     &kp A      &kp E      &kp_nn    &none
-&none  &kp Z   &mt_mod_L LCTRL X  &mt_mod_L LSHIFT C  &mt_mod_L LALT V             &none                   &none  &none  &none            &kp LALT  &kp LSHFT  &kp LCTRL  &none     &none
-&none  &none   &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none     &none      &none      &none     &none
+&none  &none      &none              &none               &none                        &none                                 &none            &none     &none      &none      &none     &none
+&none  &kp COMMA  &kp R              &kp M               &kp H                        &none                                 &none            &kp Y     &kp U      &kp O      &kp BSPC  &none
+&none  &kp N      &kp T              &kp K               &kp S                        &kp MINUS               &none  &none  &kp QUESTION     &kp I     &kp A      &kp E      &kp_nn    &none
+&none  &kp Z      &mt_mod_L LCTRL X  &mt_mod_L LSHIFT C  &mt_mod_L LALT V             &none                   &none  &none  &none            &kp LALT  &kp LSHFT  &kp LCTRL  &none     &none
+&none  &none      &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none     &none      &none      &none     &none
             >;
         };
 
         ROMAJI_SHIFT {
             bindings = <
-&none  &none   &none   &none   &none   &none                     &none   &none   &none   &none   &none   &none
-&none  &kp F6  &kp P   &kp W   &kp B   &trans                    &trans  &trans  &trans  &trans  &trans  &none
-&none  &kp F   &kp D   &kp G   &kp Z   &kp PERIOD  &none  &none  &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans  &trans  &trans  &trans  &trans      &none  &none  &trans  &trans  &trans  &trans  &trans  &none
-&none  &none   &none   &none   &trans  &kp SPACE   &none  &none  &trans  &none   &none   &none   &none   &none
+&none  &none       &none   &none   &none   &none                    &none     &none   &none   &none   &none   &none
+&none  &kp PERIOD  &kp P   &kp W   &kp B   &trans                   &trans    &trans  &trans  &trans  &trans  &none
+&none  &kp F       &kp D   &kp G   &kp Z   &kp TILDE  &none  &none  &kp EXCL  &trans  &trans  &trans  &trans  &none
+&none  &trans      &trans  &trans  &trans  &trans     &none  &none  &trans    &trans  &trans  &trans  &trans  &none
+&none  &none       &none   &none   &trans  &kp SPACE  &none  &none  &trans    &none   &none   &none   &none   &none
             >;
         };
 
