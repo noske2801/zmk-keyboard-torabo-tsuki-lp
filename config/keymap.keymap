@@ -525,6 +525,13 @@
             label = "KP_ZY";
         };
 
+        kp_dy: kp_dy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp Y>;
+            label = "KP_DY";
+        };
+
         kp_by: kp_by {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -539,7 +546,7 @@
             label = "KP_PY";
         };
 
-        kp_th: kp_dh {
+        kp_th: kp_th {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp T &kp H>;
