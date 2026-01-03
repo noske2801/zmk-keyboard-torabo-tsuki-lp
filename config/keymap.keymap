@@ -547,21 +547,21 @@
 
         ROMAJI {
             bindings = <
-&none  &none      &none              &none               &none                        &none                                 &none            &none     &none      &none      &none     &none
-&none  &kp COMMA  &kp R              &kp M               &kp H                        &none                                 &none            &kp Y     &kp U      &kp O      &kp BSPC  &none
-&none  &kp N      &kp T              &kp K               &kp S                        &kp MINUS               &none  &none  &kp QUESTION     &kp I     &kp A      &kp E      &kp_nn    &none
-&none  &kp Z      &mt_mod_L LCTRL X  &mt_mod_L LSHIFT C  &mt_mod_L LALT V             &none                   &none  &none  &none            &kp LALT  &kp LSHFT  &kp LCTRL  &none     &none
-&none  &none      &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none     &none      &none      &none     &none
+&none  &none   &none              &none               &none                        &none                                 &none            &none      &none      &none      &none     &none
+&none  &kp F7  &kp N              &kp R               &kp M                        &none                                 &none            &kp MINUS  &kp U      &kp O      &kp BSPC  &none
+&none  &kp Y   &kp T              &kp K               &kp S                        &kp COMMA               &none  &none  &kp P            &kp I      &kp A      &kp E      &kp_nn    &none
+&none  &kp Z   &mt_mod_L LCTRL X  &mt_mod_L LSHIFT C  &mt_mod_L LALT V             &none                   &none  &none  &none            &kp LALT   &kp LSHFT  &kp LCTRL  &none     &none
+&none  &none   &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none      &none      &none      &none     &none
             >;
         };
 
         ROMAJI_SHIFT {
             bindings = <
-&none  &none       &none   &none   &none   &none                    &none     &none   &none   &none   &none   &none
-&none  &kp PERIOD  &kp P   &kp W   &kp B   &trans                   &trans    &trans  &trans  &trans  &trans  &none
-&none  &kp F       &kp D   &kp G   &kp Z   &kp TILDE  &none  &none  &kp EXCL  &trans  &trans  &trans  &trans  &none
-&none  &trans      &trans  &trans  &trans  &trans     &none  &none  &trans    &trans  &trans  &trans  &trans  &none
-&none  &none       &none   &none   &trans  &kp SPACE  &none  &none  &trans    &none   &none   &none   &none   &none
+&none  &none   &none   &none   &none   &none                     &none   &none      &none   &none   &none   &none
+&none  &kp F8  &kp W   &kp H   &kp B   &trans                    &trans  &kp TILDE  &trans  &trans  &trans  &none
+&none  &trans  &kp D   &kp G   &kp Z   &kp PERIOD  &none  &none  &kp F   &trans     &trans  &trans  &trans  &none
+&none  &trans  &trans  &trans  &trans  &trans      &none  &none  &trans  &trans     &trans  &trans  &trans  &none
+&none  &none   &none   &none   &trans  &kp SPACE   &none  &none  &trans  &none      &none   &none   &none   &none
             >;
         };
 
