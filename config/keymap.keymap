@@ -178,6 +178,127 @@
             key-positions = <22 21>;
         };
 
+        // ローマ字同時押し用コンボ //
+
+        kp_ann {
+            bindings = <&kp_ann>;
+            key-positions = <34 36>;
+            layers = <1 2>;
+            timeout-ms = <150>;
+        };
+
+        kp_inn {
+            bindings = <&kp_inn>;
+            key-positions = <33 36>;
+            layers = <1 2>;
+            timeout-ms = <150>;
+        };
+
+        kp_unn {
+            bindings = <&kp_unn>;
+            key-positions = <20 36>;
+            layers = <1 2>;
+            timeout-ms = <150>;
+        };
+
+        kp_enn {
+            bindings = <&kp_enn>;
+            key-positions = <35 36>;
+            layers = <1 2>;
+            timeout-ms = <150>;
+        };
+
+        kp_onn {
+            bindings = <&kp_onn>;
+            key-positions = <21 36>;
+            layers = <1 2>;
+            timeout-ms = <150>;
+        };
+
+        kp_ky {
+            bindings = <&kp_ky>;
+            key-positions = <27 25>;
+            layers = <1>;
+            timeout-ms = <150>;
+        };
+
+        kp_sy {
+            bindings = <&kp_sy>;
+            key-positions = <28 25>;
+            layers = <1>;
+            timeout-ms = <150>;
+        };
+
+        kp_ty {
+            bindings = <&kp_ty>;
+            key-positions = <26 25>;
+            layers = <1>;
+            timeout-ms = <150>;
+        };
+
+        kp_ny {
+            bindings = <&kp_ny>;
+            key-positions = <14 25>;
+            layers = <1>;
+            timeout-ms = <150>;
+        };
+
+        kp_hy {
+            bindings = <&kp_hy>;
+            key-positions = <15 25>;
+            layers = <2>;
+            timeout-ms = <150>;
+        };
+
+        kp_my {
+            bindings = <&kp_my>;
+            key-positions = <16 25>;
+            layers = <1>;
+            timeout-ms = <150>;
+        };
+
+        kp_ry {
+            bindings = <&kp_ry>;
+            key-positions = <15 25>;
+            layers = <1>;
+            timeout-ms = <150>;
+        };
+
+        kp_gy {
+            bindings = <&kp_gy>;
+            key-positions = <27 25>;
+            layers = <2>;
+            timeout-ms = <150>;
+        };
+
+        kp_zy {
+            bindings = <&kp_zy>;
+            key-positions = <28 25>;
+            layers = <2>;
+            timeout-ms = <150>;
+        };
+
+        kp_dy {
+            bindings = <&kp_dy>;
+            key-positions = <24 25>;
+            layers = <2>;
+            timeout-ms = <150>;
+        };
+
+        kp_by {
+            bindings = <&kp_by>;
+            key-positions = <16 25>;
+            layers = <2>;
+            timeout-ms = <150>;
+        };
+
+        kp_py {
+            bindings = <&kp_py>;
+            key-positions = <32 25>;
+            layers = <1>;
+            timeout-ms = <150>;
+        };
+
         kp_th {
             bindings = <&kp_th>;
             key-positions = <26 15>;
@@ -199,25 +320,6 @@
             timeout-ms = <150>;
         };
 
-        kp_WIN_SLASH {
-            bindings = <&kp LG(FSLH)>;
-            key-positions = <18 17>;
-            layers = <1 2>;
-        };
-
-        kp_F7 {
-            bindings = <&kp F7>;
-            key-positions = <29 32>;
-            layers = <1 2>;
-        };
-
-        /*
-        kp_you {
-            bindings = <&kp_you>;
-            key-positions = <21 20>;
-            layers = <1 2>;
-        };
-        */
     };
 
     macros {
@@ -295,6 +397,8 @@
             label = "SC_CHROME_TRANSLATE";
         };
 
+        // ローマ字同時押し用マクロ
+
         kp_ya: kp_ya {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -323,11 +427,116 @@
             label = "KP_NN";
         };
 
-        kp_you: kp_you {
+        kp_ann: kp_ann {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp Y &kp O &kp U>;
-            label = "KP_YOU";
+            bindings = <&kp A &kp N &kp N>;
+            label = "KP_ANN";
+        };
+
+        kp_inn: kp_inn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp N &kp N>;
+            label = "KP_INN";
+        };
+
+        kp_unn: kp_unn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N &kp N>;
+            label = "KP_UNN";
+        };
+
+        kp_enn: kp_enn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp N &kp N>;
+            label = "KP_ENN";
+        };
+
+        kp_onn: kp_onn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp O &kp N &kp N>;
+            label = "KP_ONN";
+        };
+
+        kp_ky: kp_ky {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K &kp Y>;
+            label = "KP_KY";
+        };
+
+        kp_sy: kp_sy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp Y>;
+            label = "KP_SY";
+        };
+
+        kp_ty: kp_ty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp Y>;
+            label = "KP_TY";
+        };
+
+        kp_ny: kp_ny {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp Y>;
+            label = "KP_NY";
+        };
+
+        kp_hy: kp_hy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp Y>;
+            label = "KP_HY";
+        };
+
+        kp_my: kp_my {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp Y>;
+            label = "KP_MY";
+        };
+
+        kp_ry: kp_ry {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp Y>;
+            label = "KP_RY";
+        };
+
+        kp_gy: kp_gy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp Y>;
+            label = "KP_GY";
+        };
+
+        kp_zy: kp_zy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp Y>;
+            label = "KP_ZY";
+        };
+
+        kp_by: kp_by {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp B &kp Y>;
+            label = "KP_BY";
+        };
+
+        kp_py: kp_py {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp Y>;
+            label = "KP_PY";
         };
 
         kp_th: kp_dh {
