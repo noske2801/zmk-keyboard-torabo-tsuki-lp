@@ -178,24 +178,24 @@
             key-positions = <22 21>;
         };
 
-        kp_dh {
-            bindings = <&kp_dh>;
-            key-positions = <26 16>;
-            layers = <2>;
+        kp_th {
+            bindings = <&kp_th>;
+            key-positions = <26 15>;
+            layers = <1>;
             timeout-ms = <150>;
         };
 
         kp_wh {
             bindings = <&kp_wh>;
-            key-positions = <15 16>;
+            key-positions = <15 14>;
             layers = <1 2>;
             timeout-ms = <150>;
         };
 
         kp_tw {
             bindings = <&kp_tw>;
-            key-positions = <26 15>;
-            layers = <1>;
+            key-positions = <26 14>;
+            layers = <1 2>;
             timeout-ms = <150>;
         };
 
@@ -330,10 +330,10 @@
             label = "KP_YOU";
         };
 
-        kp_dh: kp_dh {
+        kp_th: kp_dh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp D &kp H>;
+            bindings = <&kp T &kp H>;
             label = "KP_DH";
         };
 
