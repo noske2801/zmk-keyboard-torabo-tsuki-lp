@@ -187,23 +187,23 @@
 
         kp_wh {
             bindings = <&kp_wh>;
-            key-positions = <15 14>;
+            key-positions = <26 27>;
             layers = <2>;
             timeout-ms = <150>;
         };
 
         kp_f {
-            bindings = <&kp F>;
+            bindings = <&kp W>;
             key-positions = <26 27>;
             timeout-ms = <150>;
-            layers = <1 2>;
+            layers = <1>;
         };
 
         kp_m {
             bindings = <&kp M>;
             key-positions = <14 15>;
             timeout-ms = <150>;
-            layers = <1>;
+            layers = <1 2>;
         };
     };
 
@@ -523,11 +523,11 @@
 
         ROMAJI_SHIFT {
             bindings = <
-&none  &none   &none   &none   &none   &none                     &none      &none   &none   &none   &none   &none
-&none  &kp F8  &kp P   &kp B   &trans  &trans                    &trans     &trans  &trans  &trans  &trans  &none
-&none  &kp W   &kp D   &kp G   &kp Z   &kp PERIOD  &none  &none  &kp TILDE  &trans  &trans  &trans  &trans  &none
-&none  &trans  &trans  &trans  &trans  &trans      &none  &none  &trans     &trans  &trans  &trans  &trans  &none
-&none  &none   &none   &none   &trans  &kp SPACE   &none  &none  &trans     &none   &none   &none   &none   &none
+&none  &none      &none   &none   &none   &none                     &none      &none   &none   &none   &none   &none
+&none  &kp F8     &kp P   &kp B   &trans  &trans                    &trans     &trans  &trans  &trans  &trans  &none
+&none  &kp LA(F)  &kp D   &kp G   &kp Z   &kp PERIOD  &none  &none  &kp TILDE  &trans  &trans  &trans  &trans  &none
+&none  &trans     &trans  &trans  &trans  &trans      &none  &none  &trans     &trans  &trans  &trans  &trans  &none
+&none  &none      &none   &none   &trans  &kp SPACE   &none  &none  &trans     &none   &none   &none   &none   &none
             >;
         };
 
