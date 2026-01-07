@@ -212,6 +212,41 @@
             layers = <1 2>;
             timeout-ms = <150>;
         };
+
+        kp_d {
+            bindings = <&kp D>;
+            key-positions = <26 57>;
+            layers = <1 2>;
+            timeout-ms = <150>;
+        };
+
+        kp_g {
+            bindings = <&kp G>;
+            key-positions = <27 57>;
+            timeout-ms = <150>;
+            layers = <1 2>;
+        };
+
+        kp_b {
+            bindings = <&kp B>;
+            key-positions = <15 57>;
+            timeout-ms = <150>;
+            layers = <1 2>;
+        };
+
+        kp_p {
+            bindings = <&kp P>;
+            key-positions = <14 57>;
+            layers = <1 2>;
+            timeout-ms = <150>;
+        };
+
+        kp_f {
+            bindings = <&kp F>;
+            key-positions = <25 57>;
+            timeout-ms = <150>;
+            layers = <1 2>;
+        };
     };
 
     macros {
