@@ -247,41 +247,6 @@
             timeout-ms = <150>;
             layers = <1 2>;
         };
-
-        kp_ann {
-            bindings = <&kp_ann>;
-            key-positions = <60 34>;
-            timeout-ms = <150>;
-            layers = <1 2>;
-        };
-
-        kp_inn {
-            bindings = <&kp_inn>;
-            key-positions = <60 33>;
-            timeout-ms = <150>;
-            layers = <1 2>;
-        };
-
-        kp_unn {
-            bindings = <&kp_unn>;
-            key-positions = <60 20>;
-            timeout-ms = <150>;
-            layers = <1 2>;
-        };
-
-        kp_enn {
-            bindings = <&kp_enn>;
-            key-positions = <60 35>;
-            timeout-ms = <150>;
-            layers = <1 2>;
-        };
-
-        kp_onn {
-            bindings = <&kp_onn>;
-            key-positions = <60 21>;
-            timeout-ms = <150>;
-            layers = <1 2>;
-        };
     };
 
     macros {
@@ -399,6 +364,41 @@
             #binding-cells = <0>;
             bindings = <&kp Y &kp A>;
             label = "KP_YA";
+        };
+
+        kp_ann: kp_an {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp N &kp N>;
+            label = "KP_AN";
+        };
+
+        kp_inn: kp_jnn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp N &kp N>;
+            label = "KP_JNN";
+        };
+
+        kp_unn: kp_unn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N &kp N>;
+            label = "KP_UNN";
+        };
+
+        kp_enn: kp_enn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp N &kp N>;
+            label = "KP_ENN";
+        };
+
+        kp_onn: kp_onn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp O &kp N &kp N>;
+            label = "KP_ONN";
         };
     };
 
