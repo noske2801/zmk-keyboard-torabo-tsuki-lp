@@ -215,7 +215,7 @@
 
         kp_ya {
             bindings = <&kp_ya>;
-            key-positions = <20 35>;
+            key-positions = <19 34>;
             layers = <1 2>;
             timeout-ms = <150>;
         };
