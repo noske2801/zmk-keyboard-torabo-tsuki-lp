@@ -400,41 +400,6 @@
             bindings = <&kp Y &kp A>;
             label = "KP_YA";
         };
-
-        kp_ann: kp_an {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp A &kp N &kp N>;
-            label = "KP_AN";
-        };
-
-        kp_inn: kp_jnn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp I &kp N &kp N>;
-            label = "KP_JNN";
-        };
-
-        kp_unn: kp_unn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp U &kp N &kp N>;
-            label = "KP_UNN";
-        };
-
-        kp_enn: kp_enn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp E &kp N &kp N>;
-            label = "KP_ENN";
-        };
-
-        kp_onn: kp_onn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp O &kp N &kp N>;
-            label = "KP_ONN";
-        };
     };
 
     behaviors {
@@ -492,7 +457,7 @@
 
         // Hold時にレイヤー切り替え、Tap時に`nn`を入力
 
-        ht_nn_tap_hold_mo: ime_off_tap_mo_hold {
+        ht_nn_tap_hold_mo: nn_tap_mo_hold {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&mo &kp_nn>;
