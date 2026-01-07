@@ -210,7 +210,14 @@
             bindings = <&kp F>;
             key-positions = <15 16>;
             timeout-ms = <150>;
-            layers = <1>;
+            layers = <1 2>;
+        };
+
+        kp_ya {
+            bindings = <&kp_ya>;
+            key-positions = <20 35>;
+            layers = <1 2>;
+            timeout-ms = <150>;
         };
     };
 
@@ -322,6 +329,13 @@
             #binding-cells = <0>;
             bindings = <&kp T &kp H>;
             label = "KP_TH";
+        };
+
+        kp_ya: kp_ya {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp A>;
+            label = "KP_YA";
         };
     };
 
