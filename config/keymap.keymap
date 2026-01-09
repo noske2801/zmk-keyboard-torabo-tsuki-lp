@@ -187,20 +187,20 @@
 
         kp_wh {
             bindings = <&kp_wh>;
-            key-positions = <14 15>;
-            layers = <2>;
+            key-positions = <25 26>;
+            layers = <1 2>;
             timeout-ms = <150>;
         };
 
-        kp_w {
-            bindings = <&kp W>;
+        kp_p {
+            bindings = <&kp P>;
             key-positions = <14 15>;
             timeout-ms = <150>;
-            layers = <1>;
+            layers = <1 2>;
         };
 
-        kp_m {
-            bindings = <&kp M>;
+        kp_f {
+            bindings = <&kp F>;
             key-positions = <27 26>;
             timeout-ms = <150>;
             layers = <1 2>;
@@ -365,41 +365,6 @@
             bindings = <&kp Y &kp A>;
             label = "KP_YA";
         };
-
-        kp_ann: kp_an {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp A &kp N &kp N>;
-            label = "KP_AN";
-        };
-
-        kp_inn: kp_jnn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp I &kp N &kp N>;
-            label = "KP_JNN";
-        };
-
-        kp_unn: kp_unn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp U &kp N &kp N>;
-            label = "KP_UNN";
-        };
-
-        kp_enn: kp_enn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp E &kp N &kp N>;
-            label = "KP_ENN";
-        };
-
-        kp_onn: kp_onn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp O &kp N &kp N>;
-            label = "KP_ONN";
-        };
     };
 
     behaviors {
@@ -448,19 +413,6 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&mo &macro_ime_off>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始    
-        };
-
-        /omit-if-no-ref/
-
-        // Hold時にレイヤー切り替え、Tap時に`nn`を入力
-
-        ht_nn_tap_hold_mo: nn_tap_mo_hold {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&mo &kp_nn>;
             tapping-term-ms = <200>;
             flavor = "hold-preferred";
             hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始    
@@ -610,21 +562,21 @@
 
         ROMAJI {
             bindings = <
-&none  &none   &none              &none               &none                        &none                                 &none                       &none      &none   &none      &none      &none
-&none  &kp F7  &kp R              &kp H               &none                        &none                                 &none                       &kp Y      &kp U   &kp O      &kp BSPC   &none
-&none  &kp N   &kp T              &kp K               &kp S                        &kp COMMA               &none  &none  &kp ENTER                   &kp I      &kp A   &kp E      &kp MINUS  &none
-&none  &kp Z   &mt_mod_L LCTRL X  &mt_mod_L LSHIFT C  &mt_mod_L LALT V             &none                   &none  &none  &none                       &kp LSHFT  &kp_ya  &kp LCTRL  &none      &none
-&none  &none   &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &ht_nn_tap_hold_mo RAISE 0  &none      &none   &none      &none      &none
+&none  &none   &none              &none               &none                        &none                                 &none            &none      &none   &none      &none     &none
+&none  &kp F7  &kp R              &kp H               &none                        &none                                 &none            &kp Y      &kp U   &kp O      &kp BSPC  &none
+&none  &kp N   &kp T              &kp K               &kp S                        &kp COMMA               &none  &none  &kp MINUS        &kp I      &kp A   &kp E      &kp_nn    &none
+&none  &kp Z   &mt_mod_L LCTRL X  &mt_mod_L LSHIFT C  &mt_mod_L LALT V             &none                   &none  &none  &none            &kp LSHFT  &kp_ya  &kp LCTRL  &none     &none
+&none  &none   &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none      &none   &none      &none     &none
             >;
         };
 
         ROMAJI_SHIFT {
             bindings = <
-&none  &none   &none   &none   &none   &none                     &none   &none   &none   &none   &none      &none
-&none  &kp F8  &kp P   &kp B   &trans  &trans                    &trans  &trans  &trans  &trans  &trans     &none
-&none  &kp F   &kp D   &kp G   &kp Z   &kp PERIOD  &none  &none  &trans  &trans  &trans  &trans  &kp TILDE  &none
-&none  &trans  &trans  &trans  &trans  &trans      &none  &none  &trans  &trans  &trans  &trans  &trans     &none
-&none  &none   &none   &none   &trans  &kp SPACE   &none  &none  &trans  &none   &none   &none   &none      &none
+&none  &none   &none   &none   &none   &none                     &none      &none   &none   &none   &none   &none
+&none  &kp F8  &kp M   &kp B   &trans  &trans                    &trans     &trans  &trans  &trans  &trans  &none
+&none  &kp W   &kp D   &kp G   &kp Z   &kp PERIOD  &none  &none  &kp TILDE  &trans  &trans  &trans  &trans  &none
+&none  &trans  &trans  &trans  &trans  &trans      &none  &none  &trans     &trans  &trans  &trans  &trans  &none
+&none  &none   &none   &none   &trans  &kp SPACE   &none  &none  &trans     &none   &none   &none   &none   &none
             >;
         };
 
