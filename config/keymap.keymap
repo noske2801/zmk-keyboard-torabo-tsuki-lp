@@ -234,15 +234,15 @@
             layers = <1 2>;
         };
 
-        kp_p {
-            bindings = <&kp P>;
+        kp_m {
+            bindings = <&kp M>;
             key-positions = <14 57>;
             layers = <1 2>;
             timeout-ms = <150>;
         };
 
-        kp_f {
-            bindings = <&kp F>;
+        kp_w {
+            bindings = <&kp W>;
             key-positions = <25 57>;
             timeout-ms = <150>;
             layers = <1 2>;
