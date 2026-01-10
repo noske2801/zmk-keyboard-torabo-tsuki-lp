@@ -247,6 +247,27 @@
             timeout-ms = <50>;
             layers = <1 2>;
         };
+
+        kp_ya {
+            bindings = <&kp_ya>;
+            key-positions = <34 60>;
+            timeout-ms = <150>;
+            layers = <1 2>;
+        };
+
+        kp_yu {
+            bindings = <&kp_yu>;
+            key-positions = <60 20>;
+            timeout-ms = <150>;
+            layers = <1 2>;
+        };
+
+        kp_yo {
+            bindings = <&kp_yo>;
+            key-positions = <60 21>;
+            timeout-ms = <150>;
+            layers = <1 2>;
+        };
     };
 
     macros {
@@ -364,6 +385,20 @@
             #binding-cells = <0>;
             bindings = <&kp Y &kp A>;
             label = "KP_YA";
+        };
+
+        kp_yu: kp_yu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp U>;
+            label = "KP_YU";
+        };
+
+        kp_yo: kp_yo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp O>;
+            label = "KP_YO";
         };
     };
 
