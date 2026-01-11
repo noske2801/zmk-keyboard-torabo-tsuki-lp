@@ -179,14 +179,14 @@
         };
 
         kp_dh {
-            bindings = <&kp_dh>;
+            bindings = <&kp2 D H>;
             key-positions = <26 15>;
             layers = <2>;
             timeout-ms = <150>;
         };
 
         kp_wh {
-            bindings = <&kp_wh>;
+            bindings = <&kp2 W H>;
             key-positions = <14 15>;
             layers = <2>;
             timeout-ms = <150>;
@@ -249,7 +249,7 @@
         };
 
         kp_ya {
-            bindings = <&kp_ya>;
+            bindings = <&kp2 Y A>;
             key-positions = <34 19>;
             timeout-ms = <150>;
             layers = <1 2>;
@@ -329,6 +329,19 @@
             #binding-cells = <0>;
             bindings = <&kp LS(F10) &kp T>;
             label = "SC_CHROME_TRANSLATE";
+        };
+
+        // 2つのキーコードを連続入力する汎用マクロ
+
+        /omit-if-no-ref/
+
+        kp2: kp_2chars {
+        compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+
+            bindings
+                = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, // 1つ目のキー
+                  <&macro_param_2to1>, <&kp MACRO_PLACEHOLDER>; // 2つ目のキー
         };
 
         kp_nn: kp_nn {
@@ -585,7 +598,7 @@
             bindings = <
 &none  &none   &none              &none               &none                        &none                                 &none            &none     &none      &none      &none     &none
 &none  &kp F7  &kp R              &kp H               &none                        &none                                 &none            &kp Y     &kp U      &kp O      &kp BSPC  &none
-&none  &kp N   &kp T              &kp K               &kp S                        &kp COMMA               &none  &none  &kp MINUS        &kp I     &kp A      &kp E      &kp_nn    &none
+&none  &kp N   &kp T              &kp K               &kp S                        &kp COMMA               &none  &none  &kp MINUS        &kp I     &kp A      &kp E      &kp2 N N  &none
 &none  &kp Z   &mt_mod_L LCTRL X  &mt_mod_L LSHIFT C  &mt_mod_L LALT V             &none                   &none  &none  &none            &kp LALT  &kp LSHFT  &kp LCTRL  &none     &none
 &none  &none   &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none     &none      &none      &none     &none
             >;
