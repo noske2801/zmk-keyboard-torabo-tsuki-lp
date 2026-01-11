@@ -143,11 +143,6 @@
             layers = <0 8>;
         };
 
-        kp_TAB {
-            bindings = <&kp TAB>;
-            key-positions = <47 46>;
-        };
-
         kp_WIN {
             bindings = <&kp LGUI>;
             key-positions = <13 22>;
@@ -181,15 +176,15 @@
         kp_dh {
             bindings = <&kp2 D H>;
             key-positions = <26 15>;
-            layers = <2>;
             timeout-ms = <150>;
+            layers = <2>;
         };
 
         kp_wh {
             bindings = <&kp2 W H>;
             key-positions = <14 15>;
-            layers = <2>;
             timeout-ms = <150>;
+            layers = <2>;
         };
 
         kp_w {
@@ -209,15 +204,15 @@
         kp_z {
             bindings = <&kp Z>;
             key-positions = <28 57>;
-            layers = <1 2>;
             timeout-ms = <50>;
+            layers = <1 2>;
         };
 
         kp_d {
             bindings = <&kp D>;
             key-positions = <26 57>;
-            layers = <1 2>;
             timeout-ms = <50>;
+            layers = <1 2>;
         };
 
         kp_g {
@@ -237,8 +232,8 @@
         kp_p {
             bindings = <&kp P>;
             key-positions = <14 57>;
-            layers = <1 2>;
             timeout-ms = <50>;
+            layers = <1 2>;
         };
 
         kp_f {
@@ -258,8 +253,8 @@
         kp_LPAR {
             bindings = <&kp LPAR>;
             key-positions = <14 15>;
-            layers = <5>;
             timeout-ms = <150>;
+            layers = <5>;
         };
 
         kp_RPAR {
@@ -362,17 +357,6 @@
                 <&kp LALT>;
         };
 
-        // GoogleChromeでページ翻訳を行うショートカット
-
-        /omit-if-no-ref/
-
-        sc_chrome_translate: sc_chrome_translate {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(F10) &kp T>;
-            label = "SC_CHROME_TRANSLATE";
-        };
-
         // 2つのキーコードを連続入力する汎用マクロ
 
         /omit-if-no-ref/
@@ -382,6 +366,10 @@
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>; // 2つ目のキー
         };
+
+        // []を順次入力するマクロ
+
+        /omit-if-no-ref/
 
         kp_bracket: kp_bracket {
             compatible = "zmk,behavior-macro";
@@ -498,6 +486,24 @@
             flavor = "balanced";
             hold-while-undecided; // KeyPress後 すぐにHold-behaviorが開始
             // hold-trigger-key-positions = <KEYS_L_CSASP KEYS_R THUMBS>;
+        };
+
+        /omit-if-no-ref/
+
+        // 左手用修飾キーと[]マクロを両立
+
+        mt_mod_L_bracket: mt_mod_L_bracket {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mt_mod_L_bracket";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp_bracket>;
+
+            tapping-term-ms = <350>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_R THUMBS>; // 右手キーが押されたら即時Hold判定
+            hold-trigger-on-release; // 上の設定を"右手キーが離されたら"に変更
         };
 
         /omit-if-no-ref/
@@ -626,11 +632,11 @@
 
         RAISE {
             bindings = <
-&trans  &trans                &trans               &trans          &trans               &trans                     &trans    &trans           &trans        &trans        &trans       &trans
-&trans  &alt_tab_trigger      &kp GRAVE            &kp2 LPAR RPAR  &kp AMPS             &trans                     &kp F5    &kp LS(LC(TAB))  &kp UP        &kp LC(TAB)   &kp LA(F11)  &trans
-&trans  &mt_mod_L LGUI UNDER  &mt_mod_L LCTRL SQT  &kp2 LBKT RBKT  &mt_mod_L LALT HASH  &kp COLON  &trans  &trans  &kp HOME  &kp LEFT         &kp DOWN      &kp RIGHT     &kp END      &trans
-&trans  &kp PIPE              &kp DOUBLE_QUOTES    &kp2 LBRC RBRC  &kp AT               &kp SEMI   &trans  &trans  &trans    &kp F2           &kp C_VOL_DN  &kp C_VOL_UP  &trans       &trans
-&trans  &trans                &trans               &trans          &mo EXTRA            &trans     &trans  &trans  &trans    &trans           &trans        &trans        &trans       &trans
+&trans  &trans                &trans               &trans                     &trans               &trans                     &trans    &trans           &trans        &trans        &trans   &trans
+&trans  &alt_tab_trigger      &kp GRAVE            &kp2 LPAR RPAR             &kp AMPS             &trans                     &kp F5    &kp LS(LC(TAB))  &kp UP        &kp LC(TAB)   &kp F11  &trans
+&trans  &mt_mod_L LGUI UNDER  &mt_mod_L LCTRL SQT  &mt_mod_L_bracket LSHFT 0  &mt_mod_L LALT HASH  &kp COLON  &trans  &trans  &kp HOME  &kp LEFT         &kp DOWN      &kp RIGHT     &kp END  &trans
+&trans  &kp PIPE              &kp DOUBLE_QUOTES    &kp2 LBRC RBRC             &kp AT               &kp SEMI   &trans  &trans  &trans    &kp F2           &kp C_VOL_DN  &kp C_VOL_UP  &trans   &trans
+&trans  &trans                &trans               &trans                     &mo EXTRA            &trans     &trans  &trans  &trans    &trans           &trans        &trans        &trans   &trans
             >;
         };
 
