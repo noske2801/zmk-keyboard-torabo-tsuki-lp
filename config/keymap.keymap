@@ -481,6 +481,42 @@
 
         /omit-if-no-ref/
 
+        // 右手用修飾キーとmod-morph「,/!」を両立
+
+        mt_mod_COMMA_EX: mt_mod_COMMA_EX {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mt_mod_COMMA_EX";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&mm_COMMA_EXCLAMATION>;
+
+            tapping-term-ms = <350>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        /omit-if-no-ref/
+
+        // 右手用修飾キーとmod-morph「./?」を両立
+
+        mt_mod_PERIOD_QM: mt_mod_PERIOD_QM {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mt_mod_PERIOD_QM";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&mm_PERIOD_QUESTION>;
+
+            tapping-term-ms = <350>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        /omit-if-no-ref/
+
         // 左手用修飾キーと[]マクロを両立
 
         mt_mod_L_bracket: mt_mod_L_bracket {
@@ -573,11 +609,11 @@
 
         DEFAULT {
             bindings = <
-&none  &none             &none              &none              &none             &none                                 &none            &none             &none                  &none                &none                   &none
-&none  &kp Q             &kp W              &kp E              &kp R             &kp T                                 &kp Y            &kp U             &kp I                  &kp O                &kp BSPC                &none
-&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G                   &none  &none  &kp H            &kp J             &kp K                  &kp L                &mt_mod_R LGUI P        &none
-&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B                   &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_R LSHFT COMMA  &mt_mod_R LCTRL DOT  &mt_mod_R LEFT_GUI TAB  &none
-&none  &none             &none              &none              &lt LOWER LANG2   &mt_SandS LSHIFT SPACE  &none  &none  &lt RAISE ENTER  &none             &none                  &none                &none                   &none
+&none  &none             &none              &none              &none             &none                                 &none            &none             &none                         &none                        &none                   &none
+&none  &kp Q             &kp W              &kp E              &kp R             &kp T                                 &kp Y            &kp U             &kp I                         &kp O                        &kp BSPC                &none
+&none  &mt_mod_L LGUI A  &mt_mod_L LCTRL S  &mt_mod_L LSHFT D  &mt_mod_L LALT F  &kp G                   &none  &none  &kp H            &kp J             &kp K                         &kp L                        &mt_mod_R LGUI P        &none
+&none  &mt_mod_L LGUI Z  &mt_mod_L LCTRL X  &mt_mod_L LSHFT C  &mt_mod_L LALT V  &kp B                   &none  &none  &kp N            &mt_mod_R LALT M  &mt_mod_COMMA_EX LSHFT COMMA  &mt_mod_PERIOD_QM LCTRL DOT  &mt_mod_R LEFT_GUI TAB  &none
+&none  &none             &none              &none              &lt LOWER LANG2   &mt_SandS LSHIFT SPACE  &none  &none  &lt RAISE ENTER  &none             &none                         &none                        &none                   &none
             >;
         };
 
