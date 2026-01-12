@@ -251,6 +251,7 @@
             timeout-ms = <50>;
             layers = <1 2>;
         };
+
     };
 
     macros {
@@ -348,6 +349,8 @@
             bindings = <&kp LBKT &kp RBKT &kp LEFT>;
             label = "MACRO_BRACKET";
         };
+
+
     };
 
     behaviors {
@@ -617,8 +620,8 @@
         ROMAJI {
             bindings = <
 &none  &none   &none              &none               &none                        &none                                 &none            &none     &none      &none      &none     &none
-&none  &kp F7  &kp R              &kp H               &none                        &none                                 &none            &kp2 N N  &kp U      &kp O      &kp BSPC  &none
-&none  &kp N   &mt_mod_T LCTRL T  &mt_mod_T LSHIFT K  &mt_mod_T LALT S             &kp COMMA               &none  &none  &kp MINUS        &kp I     &kp A      &kp E      &kp Y     &none
+&none  &kp F7  &kp R              &kp H               &none                        &none                                 &none            &kp Y     &kp U      &kp O      &kp BSPC  &none
+&none  &kp N   &mt_mod_T LCTRL T  &mt_mod_T LSHIFT K  &mt_mod_T LALT S             &kp COMMA               &none  &none  &kp MINUS        &kp I     &kp A      &kp E      &kp2 N N  &none
 &none  &kp Z   &mt_mod_T LCTRL X  &mt_mod_T LSHIFT C  &mt_mod_T LALT V             &none                   &none  &none  &none            &kp LALT  &kp LSHFT  &kp LCTRL  &kp TAB   &none
 &none  &none   &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none     &none      &none      &none     &none
             >;
