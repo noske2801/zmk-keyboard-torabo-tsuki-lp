@@ -354,6 +354,7 @@
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>; // 2つ目のキー
         };
+    };
 
     behaviors {
         /omit-if-no-ref/
