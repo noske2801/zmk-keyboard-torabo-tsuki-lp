@@ -258,6 +258,27 @@
             timeout-ms = <150>;
             layers = <1 3>;
         };
+
+        kp_par {
+            bindings = <&kp2 LPAR RPAR>;
+            key-positions = <15 16>;
+            timeout-ms = <150>;
+            layers = <5>;
+        };
+
+        kp_bkt {
+            bindings = <&kp2 LBKT RBKT>;
+            key-positions = <27 28>;
+            timeout-ms = <150>;
+            layers = <5>;
+        };
+
+        kp_brc {
+            bindings = <&kp2 LBRC RBRC>;
+            key-positions = <41 42>;
+            timeout-ms = <150>;
+            layers = <5>;
+        };
     };
 
     macros {
@@ -338,30 +359,10 @@
 
         /omit-if-no-ref/
 
-        kp2_enclose: kp2_enclose {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
-            label = "MC_ENCLOSE";
-        };
 
         // []を順次入力してその中に移動するマクロ(Hold/Tap用)
 
         /omit-if-no-ref/
-
-        mc_bracket: macro_bracket {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT &kp RBKT>;
-            label = "MACRO_BRACKET";
-        };
-
-        kp_add_nn: kp_xnn {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp2 N N>;
-            label = "KP_XNN";
-        };
     };
 
     behaviors {
@@ -632,7 +633,7 @@
             bindings = <
 &none  &none   &none              &none               &none                        &none                                 &none            &none      &none     &none      &none     &none
 &none  &kp F7  &kp R              &kp H               &kp P                        &none                                 &none            &kp Y      &kp U     &kp O      &kp BSPC  &none
-&none  &kp N   &mt_mod_T LCTRL T  &mt_mod_T LSHIFT K  &mt_mod_T LALT S             &kp COMMA               &none  &none  &kp MINUS        &kp I      &kp A     &kp E      &sl 3     &none
+&none  &kp N   &mt_mod_T LCTRL T  &mt_mod_T LSHIFT K  &mt_mod_T LALT S             &kp COMMA               &none  &none  &kp MINUS        &kp I      &kp A     &kp E      &kp2 N N  &none
 &none  &kp Z   &mt_mod_T LCTRL X  &mt_mod_T LSHIFT C  &mt_mod_T LALT V             &none                   &none  &none  &none            &kp SLASH  &kp EXCL  &kp QMARK  &kp TAB   &none
 &none  &none   &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none      &none     &none      &none     &none
             >;
@@ -650,11 +651,11 @@
 
         ROMAJI_NN {
             bindings = <
-&none  &none   &none   &none   &none   &none                 &none   &none         &none         &none         &none     &none
-&none  &trans  &trans  &trans  &trans  &trans                &trans  &trans        &kp_add_nn U  &kp_add_nn O  &trans    &none
-&none  &trans  &trans  &trans  &trans  &trans  &none  &none  &trans  &kp_add_nn I  &kp_add_nn A  &kp_add_nn E  &kp2 N N  &none
-&none  &trans  &trans  &trans  &trans  &trans  &none  &none  &trans  &trans        &trans        &trans        &trans    &none
-&none  &none   &none   &none   &trans  &trans  &none  &none  &trans  &none         &none         &none         &none     &none
+&none  &none   &none   &none   &none   &none                 &none   &none   &none   &none   &none   &none
+&none  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans  &trans  &trans  &trans  &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans  &trans  &trans  &trans  &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &none
+&none  &none   &none   &none   &trans  &trans  &none  &none  &trans  &none   &none   &none   &none   &none
             >;
         };
 
@@ -670,11 +671,11 @@
 
         RAISE {
             bindings = <
-&trans  &trans                &trans               &trans                     &trans               &trans                     &trans    &trans           &trans        &trans        &trans   &trans
-&trans  &alt_tab_trigger      &kp GRAVE            &kp2 LPAR RPAR             &kp AMPS             &kp PIPE                   &kp F5    &kp LS(LC(TAB))  &kp UP        &kp LC(TAB)   &kp DEL  &trans
-&trans  &mt_mod_L LGUI UNDER  &mt_mod_L LCTRL SQT  &mt_mod_L_bracket LSHFT 0  &mt_mod_L LALT HASH  &kp COLON  &trans  &trans  &kp HOME  &kp LEFT         &kp DOWN      &kp RIGHT     &kp END  &trans
-&trans  &kp LC(Z)             &kp DOUBLE_QUOTES    &kp2 LBRC RBRC             &kp AT               &kp SEMI   &trans  &trans  &none     &kp F2           &kp C_VOL_DN  &kp C_VOL_UP  &kp F11  &trans
-&trans  &trans                &trans               &trans                     &mo EXTRA            &trans     &trans  &trans  &trans    &trans           &trans        &trans        &trans   &trans
+&trans  &trans                &trans               &trans                &trans               &trans                     &trans    &trans           &trans        &trans        &trans   &trans
+&trans  &alt_tab_trigger      &kp GRAVE            &kp LPAR              &kp AMPS             &kp PIPE                   &kp F5    &kp LS(LC(TAB))  &kp UP        &kp LC(TAB)   &kp DEL  &trans
+&trans  &mt_mod_L LGUI UNDER  &mt_mod_L LCTRL SQT  &mt_mod_L LSHFT LBKT  &mt_mod_L LALT HASH  &kp COLON  &trans  &trans  &kp HOME  &kp LEFT         &kp DOWN      &kp RIGHT     &kp END  &trans
+&trans  &kp LC(Z)             &kp DOUBLE_QUOTES    &kp LBRC              &kp AT               &kp SEMI   &trans  &trans  &none     &kp F2           &kp C_VOL_DN  &kp C_VOL_UP  &kp F11  &trans
+&trans  &trans                &trans               &trans                &mo EXTRA            &trans     &trans  &trans  &trans    &trans           &trans        &trans        &trans   &trans
             >;
         };
 
