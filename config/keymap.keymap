@@ -185,7 +185,7 @@
 
         kp_dh {
             bindings = <&kp2 D H>;
-            key-positions = <26 15>;
+            key-positions = <26 27>;
             timeout-ms = <150>;
             layers = <2>;
         };
@@ -194,21 +194,14 @@
             bindings = <&kp2 W H>;
             key-positions = <14 15>;
             timeout-ms = <150>;
-            layers = <2>;
+            layers = <1 2>;
         };
 
-        kp_w {
-            bindings = <&kp W>;
-            key-positions = <14 15>;
-            timeout-ms = <150>;
-            layers = <1>;
-        };
-
-        kp_m {
-            bindings = <&kp M>;
+        kp_th {
+            bindings = <&kp2 T H>;
             key-positions = <27 26>;
             timeout-ms = <150>;
-            layers = <1 2>;
+            layers = <1>;
         };
 
         kp_z {
@@ -241,7 +234,7 @@
 
         kp_p {
             bindings = <&kp P>;
-            key-positions = <14 57>;
+            key-positions = <57 16>;
             timeout-ms = <50>;
             layers = <1 2>;
         };
@@ -250,6 +243,48 @@
             bindings = <&kp F>;
             key-positions = <25 57>;
             timeout-ms = <50>;
+            layers = <1 2>;
+        };
+
+        kp_w {
+            bindings = <&kp W>;
+            key-positions = <14 57>;
+            timeout-ms = <150>;
+            layers = <1 2>;
+        };
+
+        kp_ann {
+            bindings = <&kp_add_nn A>;
+            key-positions = <34 36>;
+            timeout-ms = <150>;
+            layers = <1 2>;
+        };
+
+        kp_inn {
+            bindings = <&kp_add_nn I>;
+            key-positions = <33 36>;
+            timeout-ms = <150>;
+            layers = <1 2>;
+        };
+
+        kp_unn {
+            bindings = <&kp_add_nn U>;
+            key-positions = <36 20>;
+            timeout-ms = <150>;
+            layers = <1 2>;
+        };
+
+        kp_enn {
+            bindings = <&kp_add_nn E>;
+            key-positions = <36 35>;
+            timeout-ms = <150>;
+            layers = <1 2>;
+        };
+
+        kp_onn {
+            bindings = <&kp_add_nn O>;
+            key-positions = <36 21>;
+            timeout-ms = <150>;
             layers = <1 2>;
         };
     };
@@ -348,6 +383,13 @@
             #binding-cells = <0>;
             bindings = <&kp LBKT &kp RBKT>;
             label = "MACRO_BRACKET";
+        };
+
+        kp_add_nn: kp_xnn {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp2 N N>;
+            label = "KP_XNN";
         };
     };
 
@@ -618,7 +660,7 @@
         ROMAJI {
             bindings = <
 &none  &none   &none              &none               &none                        &none                                 &none            &none      &none     &none      &none     &none
-&none  &kp F8  &kp R              &kp H               &none                        &none                                 &none            &kp Y      &kp U     &kp O      &kp BSPC  &none
+&none  &kp F7  &kp R              &kp H               &kp M                        &none                                 &none            &kp Y      &kp U     &kp O      &kp BSPC  &none
 &none  &kp N   &mt_mod_T LCTRL T  &mt_mod_T LSHIFT K  &mt_mod_T LALT S             &kp COMMA               &none  &none  &kp MINUS        &kp I      &kp A     &kp E      &kp2 N N  &none
 &none  &kp Z   &mt_mod_T LCTRL X  &mt_mod_T LSHIFT C  &mt_mod_T LALT V             &none                   &none  &none  &none            &kp SLASH  &kp EXCL  &kp QMARK  &kp TAB   &none
 &none  &none   &none              &none               &ht_ime_tap_hold_mo LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none      &none     &none      &none     &none
@@ -628,7 +670,7 @@
         ROMAJI_SHIFT {
             bindings = <
 &none  &none   &none   &none   &none   &none                     &none      &none   &none   &none   &none   &none
-&none  &kp F7  &kp P   &kp B   &trans  &trans                    &trans     &trans  &trans  &trans  &trans  &none
+&none  &kp F8  &kp W   &kp B   &kp P   &trans                    &trans     &trans  &trans  &trans  &trans  &none
 &none  &kp F   &kp D   &kp G   &kp Z   &kp PERIOD  &none  &none  &kp TILDE  &trans  &trans  &trans  &trans  &none
 &none  &trans  &trans  &trans  &trans  &trans      &none  &none  &trans     &trans  &trans  &trans  &trans  &none
 &none  &none   &none   &none   &trans  &kp SPACE   &none  &none  &trans     &none   &none   &none   &none   &none
