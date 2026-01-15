@@ -251,6 +251,13 @@
             timeout-ms = <150>;
             layers = <1 2 3>;
         };
+
+        kp_w {
+            bindings = <&kp W>;
+            key-positions = <14 15>;
+            timeout-ms = <150>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -644,7 +651,7 @@
         ROMAJI_NN {
             bindings = <
 &none  &none   &none   &none   &none   &none                 &none   &none         &none         &none         &none     &none
-&none  &trans  &trans  &trans  &trans  &trans                &trans  &kp2 Y A      &kp_add_nn U  &kp_add_nn O  &trans    &none
+&none  &trans  &trans  &trans  &trans  &trans                &trans  &trans        &kp_add_nn U  &kp_add_nn O  &trans    &none
 &none  &trans  &trans  &trans  &trans  &trans  &none  &none  &trans  &kp_add_nn I  &kp_add_nn A  &kp_add_nn E  &kp2 N N  &none
 &none  &trans  &trans  &trans  &trans  &trans  &none  &none  &trans  &trans        &trans        &trans        &trans    &none
 &none  &none   &none   &none   &trans  &trans  &none  &none  &trans  &none         &none         &none         &none     &none
