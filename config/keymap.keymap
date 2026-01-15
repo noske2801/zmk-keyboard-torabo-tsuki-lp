@@ -520,24 +520,6 @@
 
         /omit-if-no-ref/
 
-        // 左手用修飾キーと[]マクロを両立
-
-        mt_mod_L_bracket: mt_mod_L_bracket {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mt_mod_L_bracket";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&mc_bracket>;
-
-            tapping-term-ms = <350>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <200>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <KEYS_R THUMBS>; // 右手キーが押されたら即時Hold判定
-            hold-trigger-on-release; // 上の設定を"右手キーが離されたら"に変更
-        };
-
-        /omit-if-no-ref/
-
         // SCROLLレイヤー用 Layer/Tap
 
         lt_SCROLL: lt_SCROLL {
