@@ -347,7 +347,7 @@
             
             <&macro_release>,
             <&macro_param_1to1>,
-            <&kp LANG1>;
+            <&kp LANG1>,
             <&mo MACRO_PLACEHOLDER>;
         };
 
