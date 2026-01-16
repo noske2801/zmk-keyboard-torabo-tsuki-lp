@@ -348,7 +348,7 @@
             <&macro_release>,
             <&macro_param_1to1>,
             <&kp LANG1>;
-            <&mo MACRO_PLACEHOLDER>, 
+            <&mo MACRO_PLACEHOLDER>;
         };
 
         // Alt+Tab起動マクロ
