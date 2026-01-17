@@ -168,7 +168,8 @@
 
         kp_IME_on {
             bindings = <&mc_ime_on>;
-            key-positions = <60 57>;
+            key-positions = <57 60>;
+            timeout-ms = <50>;
         };
 
         sl_SYSTEM {
@@ -263,49 +264,35 @@
             bindings = <&kp2 LPAR RPAR>;
             key-positions = <15 16>;
             timeout-ms = <150>;
-            layers = <1 2>;
+            layers = <2>;
         };
 
         kp_bkt {
             bindings = <&kp2 LBKT RBKT>;
             key-positions = <27 28>;
             timeout-ms = <150>;
-            layers = <1 2>;
-        };
-
-        kp_PIPE {
-            bindings = <&kp PIPE>;
-            key-positions = <28 29>;
-            timeout-ms = <150>;
-            layers = <5>;
-        };
-
-        kp_COLON {
-            bindings = <&kp COLON>;
-            key-positions = <26 27>;
-            timeout-ms = <150>;
-            layers = <5>;
-        };
-
-        kp_SEMI {
-            bindings = <&kp SEMI>;
-            key-positions = <26 25>;
-            timeout-ms = <150>;
-            layers = <5>;
+            layers = <2>;
         };
 
         kp_rarrow {
             bindings = <&kp2 MINUS GT>;
             key-positions = <28 29>;
             timeout-ms = <150>;
-            layers = <1 2>;
+            layers = <2>;
         };
 
         kp_larrow {
             bindings = <&kp2 LT MINUS>;
             key-positions = <25 26>;
             timeout-ms = <150>;
-            layers = <1 2>;
+            layers = <2>;
+        };
+
+        kp_IME_on_finger {
+            bindings = <&mc_ime_on>;
+            key-positions = <35 34>;
+            timeout-ms = <150>;
+            layers = <0 8>;
         };
     };
 
@@ -677,11 +664,11 @@
 
         ROMAJI {
             bindings = <
-&none  &none   &none              &none               &none                      &none                                 &none                    &none      &none     &none      &none     &none
-&none  &kp F7  &kp R              &kp H               &kp P                      &kp LG(SLASH)                         &none                    &kp Y      &kp U     &kp O      &kp BSPC  &none
-&none  &kp N   &mt_mod_T LCTRL T  &mt_mod_T LSHIFT K  &mt_mod_T LALT S           &kp COMMA               &none  &none  &kp MINUS                &kp I      &kp A     &kp E      &kp2 N N  &none
-&none  &kp Z   &mt_mod_T LCTRL X  &mt_mod_T LSHIFT C  &mt_mod_T LALT V           &none                   &none  &none  &none                    &kp SLASH  &kp EXCL  &kp QMARK  &kp TAB   &none
-&none  &none   &none              &none               &lt_ime_off_fixed LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt_ime_off RAISE ENTER  &none      &none     &none      &none     &none
+&none  &none   &none              &none               &none                      &none                                 &none            &none      &none     &none      &none     &none
+&none  &kp F7  &kp R              &kp H               &kp P                      &kp LG(SLASH)                         &none            &kp Y      &kp U     &kp O      &kp BSPC  &none
+&none  &kp N   &mt_mod_T LCTRL T  &mt_mod_T LSHIFT K  &mt_mod_T LALT S           &kp COMMA               &none  &none  &kp MINUS        &kp I      &kp A     &kp E      &kp2 N N  &none
+&none  &kp Z   &mt_mod_T LCTRL X  &mt_mod_T LSHIFT C  &mt_mod_T LALT V           &none                   &none  &none  &none            &kp SLASH  &kp EXCL  &kp QMARK  &kp TAB   &none
+&none  &none   &none              &none               &lt_ime_off_fixed LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none      &none     &none      &none     &none
             >;
         };
 
@@ -707,21 +694,21 @@
 
         LOWER {
             bindings = <
-&trans  &trans                &trans                &trans                &trans               &trans                  &trans      &trans  &trans  &trans  &trans    &trans
-&trans  &kp CARET             &kp LT                &kp MINUS             &kp GT               &none                   &none       &kp N7  &kp N8  &kp N9  &kp BSPC  &trans
-&trans  &mt_mod_L LGUI EQUAL  &mt_mod_L LCTRL PLUS  &mt_mod_L LSHFT STAR  &mt_mod_L LALT FSLH  &none   &trans  &trans  &kp PERIOD  &kp N4  &kp N5  &kp N6  &kp N0    &trans
-&trans  &mt_mod_L LGUI TILDE  &mt_mod_L LGUI PRCNT  &mt_mod_L LGUI DLLR   &mt_mod_L LGUI BSLH  &none   &trans  &trans  &kp COMMA   &kp N1  &kp N2  &kp N3  &kp N0    &trans
-&trans  &trans                &trans                &trans                &trans               &trans  &trans  &trans  &mo EXTRA   &trans  &trans  &trans  &trans    &trans
+&trans  &trans                &trans                &trans                &trans               &trans                                 &trans      &trans  &trans  &trans  &trans    &trans
+&trans  &kp CARET             &kp LT                &kp MINUS             &kp GT               &none                                  &none       &kp N7  &kp N8  &kp N9  &kp BSPC  &trans
+&trans  &mt_mod_L LGUI EQUAL  &mt_mod_L LCTRL PLUS  &mt_mod_L LSHFT STAR  &mt_mod_L LALT FSLH  &none                  &trans  &trans  &kp PERIOD  &kp N4  &kp N5  &kp N6  &kp N0    &trans
+&trans  &mt_mod_L LGUI TILDE  &mt_mod_L LGUI PRCNT  &mt_mod_L LGUI DLLR   &mt_mod_L LGUI BSLH  &none                  &trans  &trans  &kp COMMA   &kp N1  &kp N2  &kp N3  &kp N0    &trans
+&trans  &trans                &trans                &trans                &trans               &mt_SandS LSHFT SPACE  &trans  &trans  &mo EXTRA   &trans  &trans  &trans  &trans    &trans
             >;
         };
 
         RAISE {
             bindings = <
-&trans  &trans                &trans               &trans                &trans               &trans                    &trans    &trans           &trans        &trans        &trans   &trans
-&trans  &alt_tab_trigger      &kp GRAVE            &kp LPAR              &kp RPAR             &kp AMPS                  &kp F5    &kp LS(LC(TAB))  &kp UP        &kp LC(TAB)   &kp DEL  &trans
-&trans  &mt_mod_L LGUI UNDER  &mt_mod_L LCTRL SQT  &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &kp HASH  &trans  &trans  &kp HOME  &kp LEFT         &kp DOWN      &kp RIGHT     &kp END  &trans
-&trans  &kp LC(Z)             &kp DOUBLE_QUOTES    &kp LBRC              &kp RBRC             &kp AT    &trans  &trans  &none     &kp F2           &kp C_VOL_DN  &kp C_VOL_UP  &kp F11  &trans
-&trans  &trans                &trans               &trans                &mo EXTRA            &trans    &trans  &trans  &trans    &trans           &trans        &trans        &trans   &trans
+&trans  &trans                &trans               &trans                &trans               &trans                                 &trans    &trans           &trans        &trans        &trans   &trans
+&trans  &alt_tab_trigger      &kp GRAVE            &kp LPAR              &kp RPAR             &none                                  &kp F5    &kp LS(LC(TAB))  &kp UP        &kp LC(TAB)   &kp DEL  &trans
+&trans  &mt_mod_L LGUI UNDER  &mt_mod_L LCTRL SQT  &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &kp SEMI               &trans  &trans  &kp HOME  &kp LEFT         &kp DOWN      &kp RIGHT     &kp END  &trans
+&trans  &kp LC(Z)             &kp HASH             &kp AMPS              &kp AT               &kp PIPE               &trans  &trans  &none     &kp F2           &kp C_VOL_DN  &kp C_VOL_UP  &kp F11  &trans
+&trans  &trans                &trans               &trans                &mo EXTRA            &mt_SandS LSHFT SPACE  &trans  &trans  &trans    &trans           &trans        &trans        &trans   &trans
             >;
         };
 
