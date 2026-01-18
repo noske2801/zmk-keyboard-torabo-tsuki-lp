@@ -273,13 +273,6 @@
             timeout-ms = <150>;
             layers = <2>;
         };
-
-        kp_IME_off_MOUSE {
-            bindings = <&mc_ime_off>;
-            key-positions = <35 34>;
-            timeout-ms = <150>;
-            layers = <0 8>;
-        };
     };
 
     macros {
@@ -512,9 +505,9 @@
 
         /omit-if-no-ref/
 
-        // 対親指用修飾キー
+        // ローマ字レイヤー用修飾キー Enter, Tab, BS のみ適用可能
 
-        mt_mod_T: mt_mod_T {
+        mt_mod_ROMAJI: mt_mod_ROMAJI {
             compatible = "zmk,behavior-hold-tap";
             label = "mt_mod_T";
             #binding-cells = <2>;
@@ -524,7 +517,7 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <200>;
             flavor = "balanced";
-            hold-trigger-key-positions = <THUMBS>;
+            hold-trigger-key-positions = <22 60 50>;
             hold-trigger-on-release;
         };
 
@@ -650,11 +643,11 @@
 
         ROMAJI {
             bindings = <
-&none  &none   &none              &none               &none                      &none                                 &none            &none      &none     &none      &none     &none
-&none  &kp F7  &kp R              &kp H               &kp P                      &kp LG(SLASH)                         &none            &kp Y      &kp U     &kp O      &kp BSPC  &none
-&none  &kp N   &mt_mod_T LCTRL T  &mt_mod_T LSHIFT K  &mt_mod_T LALT S           &kp COMMA               &none  &none  &kp MINUS        &kp I      &kp A     &kp E      &kp2 N N  &none
-&none  &kp Z   &mt_mod_T LCTRL X  &mt_mod_T LSHIFT C  &mt_mod_T LALT V           &none                   &none  &none  &none            &kp SLASH  &kp EXCL  &kp QMARK  &kp TAB   &none
-&none  &none   &none              &none               &lt_ime_off_fixed LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none      &none     &none      &none     &none
+&none  &none   &none                   &none                    &none                      &none                                 &none            &none      &none     &none      &none     &none
+&none  &kp F7  &kp R                   &kp H                    &kp P                      &kp LG(SLASH)                         &none            &kp Y      &kp U     &kp O      &kp BSPC  &none
+&none  &kp N   &mt_mod_ROMAJI LCTRL T  &mt_mod_ROMAJI LSHIFT K  &mt_mod_ROMAJI LALT S      &kp COMMA               &none  &none  &kp MINUS        &kp I      &kp A     &kp E      &kp2 N N  &none
+&none  &kp Z   &mt_mod_ROMAJI LCTRL X  &mt_mod_ROMAJI LSHIFT C  &mt_mod_ROMAJI LALT V      &none                   &none  &none  &none            &kp SLASH  &kp EXCL  &kp QMARK  &kp TAB   &none
+&none  &none   &none                   &none                    &lt_ime_off_fixed LOWER 0  &lt ROMAJI_SHIFT SPACE  &none  &none  &lt RAISE ENTER  &none      &none     &none      &none     &none
             >;
         };
 
