@@ -168,9 +168,8 @@
 
         kp_IME_on {
             bindings = <&mc_ime_on>;
-            key-positions = <34 35>;
-            timeout-ms = <100>;
-            layers = <0 1 8>;
+            key-positions = <60 57>;
+            timeout-ms = <50>;
         };
 
         sl_SYSTEM {
