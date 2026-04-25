@@ -67,7 +67,7 @@
         process-next;
     };
 
-    scroller_x { /* X軸方向のみスクロール */
+    scroller_x {
         layers = <SCROLL_X>; /* このレイヤーにいるとき自動的にスクロールモードに変更 */
         input-processors = <
             &zip_y_scaler 0 1 /* Y軸の移動量を0倍にして遮断 */
@@ -78,8 +78,8 @@
 
         process-next;
     };
-    
-    scroller_y { /* Y軸方向のみスクロール */
+
+    scroller_y {
         layers = <SCROLL_Y>; /* このレイヤーにいるとき自動的にスクロールモードに変更 */
         input-processors = <
             &zip_x_scaler 0 1 /* X軸の移動量を0倍にして遮断 */
@@ -91,7 +91,7 @@
         process-next;
     };
 
-    scroller_xy { /* 自由方向スクロール */
+    scroller_xy {
         layers = <SCROLL_XY>; /* このレイヤーにいるとき自動的にスクロールモードに変更 */
         input-processors = <
             &zip_xy_to_scroll_mapper
@@ -739,11 +739,11 @@
 
         MOUSE {
             bindings = <
-&trans  &trans         &trans                 &trans                 &trans                &trans                     &trans  &trans     &trans        &trans        &trans         &trans
-&trans  &mo SCROLL_XY  &mo SCROLL_X           &mo SCROLL_Y           &trans                &trans                     &trans  &trans     &mo SCROLL_Y  &mo SCROLL_X  &mo SCROLL_XY  &trans
-&trans  &trans         &mt_mod_MOUSE LCTRL S  &mt_mod_MOUSE LSHFT D  &mt_mod_MOUSE LALT F  &trans     &trans  &trans  &trans  &mkp LCLK  &mkp MCLK     &mkp RCLK     &trans         &trans
-&trans  &trans         &mt_mod_MOUSE LCTRL X  &mt_mod_MOUSE LSHFT C  &mt_mod_MOUSE LALT V  &trans     &trans  &trans  &trans  &trans     &trans        &trans        &trans         &trans
-&trans  &trans         &trans                 &trans                 &trans                &kp SPACE  &trans  &trans  &trans  &trans     &trans        &trans        &trans         &trans
+&trans  &trans  &trans                 &trans                 &trans                &trans                     &trans  &trans     &trans        &trans     &trans  &trans
+&trans  &trans  &mo 11                 &mo SCROLL_Y           &mo 9                 &trans                     &trans  &mo 9      &mo SCROLL_Y  &mo 11     &trans  &trans
+&trans  &trans  &mt_mod_MOUSE LCTRL S  &mt_mod_MOUSE LSHFT D  &mt_mod_MOUSE LALT F  &trans     &trans  &trans  &trans  &mkp LCLK  &mkp MCLK     &mkp RCLK  &trans  &trans
+&trans  &trans  &mt_mod_MOUSE LCTRL X  &mt_mod_MOUSE LSHFT C  &mt_mod_MOUSE LALT V  &trans     &trans  &trans  &trans  &trans     &trans        &trans     &trans  &trans
+&trans  &trans  &trans                 &trans                 &trans                &kp SPACE  &trans  &trans  &trans  &trans     &trans        &trans     &trans  &trans
             >;
         };
 
