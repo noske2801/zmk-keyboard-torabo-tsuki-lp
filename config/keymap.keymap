@@ -16,7 +16,9 @@
 #define EXTRA 6
 #define SYSTEM 7
 #define MOUSE 8
-#define SCROLL 9
+#define SCROLL_X 9
+#define SCROLL_Y 10
+#define SCROLL_XY 11
 #define KEYS_L 13 14 15 16 17 25 26 27 28 29 39 40 41 42 43 44 53 54 55
 #define KEYS_R 18 19 20 21 22 32 33 34 35 36 45 46 47 48 49 50 62 63 64
 #define THUMBS 50 56 57 58 59 60 61
@@ -65,8 +67,32 @@
         process-next;
     };
 
-    scroller {
-        layers = <SCROLL>; /* このレイヤーにいるとき自動的にスクロールモードに変更 */
+    scroller_x { /* X軸方向のみスクロール */
+        layers = <SCROLL_X>; /* このレイヤーにいるとき自動的にスクロールモードに変更 */
+        input-processors = <
+            &zip_y_scaler 0 1 /* Y軸の移動量を0倍にして遮断 */
+            &zip_xy_to_scroll_mapper
+            &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT) /* X軸方向の動きを反転 */
+            &zip_scroll_scaler 1 10 /* スクロールの速度を a/b倍 に調整 */
+        >;
+
+        process-next;
+    };
+    
+    scroller_y { /* Y軸方向のみスクロール */
+        layers = <SCROLL_Y>; /* このレイヤーにいるとき自動的にスクロールモードに変更 */
+        input-processors = <
+            &zip_x_scaler 0 1 /* X軸の移動量を0倍にして遮断 */
+            &zip_xy_to_scroll_mapper
+            &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT) /* X軸方向の動きを反転 */
+            &zip_scroll_scaler 1 10 /* スクロールの速度を a/b倍 に調整 */
+        >;
+
+        process-next;
+    };
+
+    scroller_xy { /* 自由方向スクロール */
+        layers = <SCROLL_XY>; /* このレイヤーにいるとき自動的にスクロールモードに変更 */
         input-processors = <
             &zip_xy_to_scroll_mapper
             &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT) /* X軸方向の動きを反転 */
@@ -713,15 +739,35 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans                 &trans                 &trans                &trans                     &trans  &trans     &trans      &trans     &trans  &trans
-&trans  &trans  &trans                 &mo SCROLL             &trans                &trans                     &trans  &trans     &mo SCROLL  &trans     &trans  &trans
-&trans  &trans  &mt_mod_MOUSE LCTRL S  &mt_mod_MOUSE LSHFT D  &mt_mod_MOUSE LALT F  &trans     &trans  &trans  &trans  &mkp LCLK  &mkp MCLK   &mkp RCLK  &trans  &trans
-&trans  &trans  &mt_mod_MOUSE LCTRL X  &mt_mod_MOUSE LSHFT C  &mt_mod_MOUSE LALT V  &trans     &trans  &trans  &trans  &trans     &trans      &trans     &trans  &trans
-&trans  &trans  &trans                 &trans                 &trans                &kp SPACE  &trans  &trans  &trans  &trans     &trans      &trans     &trans  &trans
+&trans  &trans         &trans                 &trans                 &trans                &trans                     &trans  &trans     &trans        &trans        &trans         &trans
+&trans  &mo SCROLL_XY  &mo SCROLL_X           &mo SCROLL_Y           &trans                &trans                     &trans  &trans     &mo SCROLL_Y  &mo SCROLL_X  &mo SCROLL_XY  &trans
+&trans  &trans         &mt_mod_MOUSE LCTRL S  &mt_mod_MOUSE LSHFT D  &mt_mod_MOUSE LALT F  &trans     &trans  &trans  &trans  &mkp LCLK  &mkp MCLK     &mkp RCLK     &trans         &trans
+&trans  &trans         &mt_mod_MOUSE LCTRL X  &mt_mod_MOUSE LSHFT C  &mt_mod_MOUSE LALT V  &trans     &trans  &trans  &trans  &trans     &trans        &trans        &trans         &trans
+&trans  &trans         &trans                 &trans                 &trans                &kp SPACE  &trans  &trans  &trans  &trans     &trans        &trans        &trans         &trans
             >;
         };
 
-        SCROLL {
+        SCROLL_X {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        SCROLL_Y {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        SCROLL_XY {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
