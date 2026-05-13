@@ -709,11 +709,11 @@
 
         RAISE {
             bindings = <
-&trans  &trans                &trans               &trans                &trans               &trans                                 &trans    &trans           &trans        &trans        &trans        &trans
-&trans  &alt_tab_trigger      &kp GRAVE            &kp LPAR              &kp RPAR             &kp COLON                              &kp F5    &kp LS(LC(TAB))  &kp UP        &kp LC(TAB)   &kp DEL       &trans
-&trans  &mt_mod_L LGUI UNDER  &mt_mod_L LCTRL SQT  &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &kp SEMI               &trans  &trans  &kp HOME  &kp LEFT         &kp DOWN      &kp RIGHT     &kp END       &trans
-&trans  &kp LC(Z)             &kp HASH             &kp AMPS              &kp AT               &kp PIPE               &trans  &trans  &none     &kp F2           &kp C_VOL_DN  &kp C_VOL_UP  &kp F11       &trans
-&trans  &trans                &trans               &trans                &mo EXTRA            &mt_SandS LSHFT SPACE  &trans  &trans  &trans    &trans           &trans        &bt BT_SEL 0  &bt BT_SEL 1  &trans
+&trans  &trans                &trans               &trans                &trans               &trans                                       &trans    &trans           &trans        &trans        &trans   &trans
+&trans  &alt_tab_trigger      &kp GRAVE            &kp LPAR              &kp RPAR             &kp COLON                                    &kp F5    &kp LS(LC(TAB))  &kp UP        &kp LC(TAB)   &kp DEL  &trans
+&trans  &mt_mod_L LGUI UNDER  &mt_mod_L LCTRL SQT  &mt_mod_L LSHFT LBKT  &mt_mod_L LALT RBKT  &kp SEMI               &trans  &trans        &kp HOME  &kp LEFT         &kp DOWN      &kp RIGHT     &kp END  &trans
+&trans  &kp LC(Z)             &kp HASH             &kp AMPS              &kp AT               &kp PIPE               &trans  &bt BT_SEL 0  &none     &kp F2           &kp C_VOL_DN  &kp C_VOL_UP  &kp F11  &trans
+&trans  &trans                &trans               &trans                &mo EXTRA            &mt_SandS LSHFT SPACE  &trans  &bt BT_SEL 1  &trans    &trans           &trans        &trans        &trans   &trans
             >;
         };
 
