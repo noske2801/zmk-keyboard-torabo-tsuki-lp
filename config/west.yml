@@ -9,26 +9,26 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: edf5c0814fd3ea202e43aad2d68fd32e882a518c # v0.3
       import: app/west.yml
     - name: zmk-component-bmp-boost
       remote: sekigon-gonnoc
       import: west.yml
-      revision: v0.2
+      revision: 7dc3f9e4d344db0d1916170ac1a87a937dd717d9 # v0.2
     - name: zmk-feature-status-led
       remote: sekigon-gonnoc
-      revision: main
+      revision: 572d0e16ecdd6b6d57e96461643cc55e7b9164d3 # main
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc
-      revision: main
+      revision: df652881be2520bde4f64ab6ca35e4c5708f4f9b # main
     - name: zmk-feature-cdc-acm-bootloader-trigger
       remote: sekigon-gonnoc
-      revision: v0.2
+      revision: 3fc210f840433bb9204a510f3a2c78b4fa11482f # v0.2
     - name: zmk-feature-non-lipo-battery-management
       remote: sekigon-gonnoc
-      revision: main
+      revision: 43fa56fb7d1e065393e926b6caa0ea02cb86eca7 # main
     - name: zmk-layout-shift
       remote: kot149
-      revision: v1
+      revision: 4d71f7cb743256ac619873dd44f510e9e9562739 # v1
   self:
     path: config
