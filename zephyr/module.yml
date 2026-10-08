@@ -1,4 +1,6 @@
 build:
   cmake: .
+  depends:
+    - zmk-feature-non-lipo-battery-management
   settings:
     board_root: .
