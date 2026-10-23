@@ -5,11 +5,3 @@
 &size_s_transform {
     col-offset = <7>;
 };
-
-// &size_m_transform {
-//     col-offset = <7>;
-// };
-
-&size_l_transform {
-    col-offset = <7>;
-};
